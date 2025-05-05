@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hotel, Booking">
+    <meta name="keywords" content="tourism, famous places, nature, resort, booking, lowcost">
+    <link rel='stylesheet' href="../css/style.css">
+    <title>Hotel - Resort Booking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        #activityheroimg {
+            height: 70vh;
+        }
+
+        .activityherodiv {
+            max-width: 100%;
+            position: relative;
+        }
+
+        .activityherodiv img {
+            max-width: 100%;
+            height: 60vh;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .photoheroimgp1 {
+            position: absolute;
+            top: 200px;
+            left: 120px;
+            padding: 0px 20px;
+            color: rgb(236, 234, 234);
+            font-size: 28px;
+            font-family: "PoppinsItal";
+            font-style: italic;
+            animation: fadeIn 2s 1s ease-in-out forwards;
+        }
+
+        .galleryreviewbox {
+                position: relative;
+                display: inline-block;
+                overflow: hidden;
+            }
+
+            .galleryreviewbox img {
+                transition: all linear 0.7s;
+            }
+
+            .galhover-img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+              
+
+            }
+
+            .galleryreviewbox:hover img {
+                opacity: 0;
+            }
+
+            .galleryreviewbox:hover img.galhover-img {
+                opacity: 1;
+            }
+
+
+        #maingallery h3 {
+            text-align: center;
+        }
+
+
+        .photo-gallery {
+            margin: 50px 100px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(11, auto);
+            grid-gap: 15px;
+        }
+
+        .galleryimg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .galleryitem1 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+        .galleryitem2 {
+            grid-column-start: 4;
+            grid-column-end: 9;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+
+        .galleryitem3 {
+            grid-column-start: 4;
+            grid-column-end: 9;
+            grid-row-start: 2;
+            grid-row-end: 2;
+        }
+
+        .galleryitem4 {
+            grid-column-start: 1;
+            grid-column-end: 6;
+            grid-row-start: 3;
+            grid-row-end: 5;
+        }
+
+        .galleryitem5 {
+            grid-column-start: 6;
+            grid-column-end: 9;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+
+        .galleryitem6 {
+            grid-column-start: 6;
+            grid-column-end: 9;
+            grid-row-start: 4;
+            grid-row-end: 5;
+        }
+
+        .galleryitem7 {
+            grid-column-start: 1;
+            grid-column-end: 9;
+            grid-row-start: 5;
+            grid-row-end: 8;
+        }
+
+        .galleryitem8 {
+            grid-column-start: 1;
+            grid-column-end: 6;
+            grid-row-start: 8;
+            grid-row-end: 10;
+        }
+
+        .galleryitem9 {
+            grid-column-start: 6;
+            grid-column-end: 9;
+            grid-row-start: 8;
+            grid-row-end: 10;
+        }
+        .modalcontent {
+                display: flex;
+                gap: 10%;
+            }
+
+            .modalbooknowmain {
+                margin-left: 15%;
+                margin-right: auto;
+                display: flex;
+                gap: 15%;
+
+            }
+
+            .modalbooknow {
+                background-color: #5AC807;
+                border: none;
+                width: 180px;
+                height: 60px;
+                color: white;
+                font-size: 22px;
+            }
+
+            .modalenquirenow {
+                background-color: #5AC807;
+                border: none;
+                width: 180px;
+                height: 60px;
+                color: white;
+                font-size: 22px;
+            }
+
+            .conmodalbox {
+                height: 500px;
+                width: 800px;
+                text-align: center;
+            }
+
+            .sublocmodal2 {
+                text-align: left;
+                line-height: 0cap;
+            }
+
+            .modalcontact {
+                text-align: left;
+                color: black;
+
+            }
+
+            .modalcontact p {
+                color: black;
+                font-size: 17px;
+            }
+
+            .loginmodalbox {
+                height: 600px;
+                width: 500px;
+                text-align: center;
+            }
+
+            .logindetail {
+                padding: 20px;
+                justify-content: center;
+                font-size: 25px;
+                justify-items: center;
+            }
+
+            .logmail,
+            .pwd {
+                padding: 15px;
+                width: 250px;
+                height: 50px;
+                border: none;
+                box-shadow: 5px 5px 5px rgb(49, 49, 49);
+
+            }
+
+            .log {
+
+                width: 250px;
+                height: 3rem;
+                border: none;
+                font-size: 22px;
+                color: black;
+                background-color: #5AC807;
+
+            }
+
+            .forgotpwd {
+                color: #5AC807;
+                text-align: right;
+                font-size: 15px;
+                margin-left: 25%;
+            }
+            .tinyurl a{
+                text-decoration: none;
+                color:black;
+
+            }
+            .breadcrumb-item{
+                color:black;
+                font-size: 22px;
+            }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-default">
+            <div class="container">
+                <div class="brand">
+                    <img class="logo" src="../images/logo.png">
+                    <p class="brandh1">Tranquil Escape</p>
+                    <p class="brandh2">Resort and Spa</p>
+                </div>
+
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navContent">
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item"><a class="nav-link active link" href="/Hotel Booking/index.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link link" href="../pages/2roomssuites.html">ROOMS &
+                                SUITES</a></li>
+                        <li class="nav-item"><a class="nav-link link" href="../pages/3packages.html">PACKAGES</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link link" href="../pages/4photogallery.html">GALLERY</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link link thingsmenu" href="../pages/5activities.html">THINGS
+                                TO
+                                DO</a>
+                            <ul class="dropdownmenu">
+                                <li class="nav-item"><a class="nav-link link dropa" href="../pages/5activities.html">
+                                        Activities</a>
+                                </li>
+                                <hr class="drophr">
+                                <li class="nav-item"><a class="nav-link link dropa" href="../pages/5.2dining.html">
+                                        Dining</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link link" data-bs-toggle="modal" data-bs-target="#myModal"
+                                href="./assets/pages/contactmodal.html">CONTACT</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link link" data-bs-toggle="modal"
+                                data-bs-target="#loginModal" href="./assets/pages/login.html">LOGIN</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+    </header>
+
+    <main>
+        <section id="activityheroimg">
+            <div class="activityherodiv">
+                <div class="galleryreviewbox">
+                    <img src="../images/activitymainimg.jpg">
+                    <img class="galhover-img" src="../images/mountain.png">
+                    <div>
+
+                        <p class="photoheroimgp1">Experience Munnar <br>Like Never Before</p>
+                    </div>
+                </div>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item tinyurl"><a href="/Hotel Booking/index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Gallery</li>
+                  </ol>
+        </section>
+        <section id="maingallery">
+            <h3>PHOTO GALLERY</h3>
+            <div class="photo-gallery">
+                <div class="gallery">
+                    <figure class="galleryitem galleryitem1">
+                        <img src="../images/galleryimg1.png" class="galleryimg" alt="Image 1">
+                    </figure>
+                    <figure class="galleryitem galleryitem2">
+                        <img src="../images/galaryimg2.png" class="galleryimg" alt="Image 2">
+                    </figure>
+                    <figure class="galleryitem galleryitem3">
+                        <img src="../images/galleryimg3.png" class="galleryimg" alt="Image 3">
+                    </figure>
+                    <figure class="galleryitem galleryitem4">
+                        <img src="../images/galleryimg4.png" class="galleryimg" alt="Image 4">
+                    </figure>
+                    <figure class="galleryitem galleryitem5">
+                        <img src="../images/galleryimg5.png" class="galleryimg" alt="Image 5">
+                    </figure>
+                    <figure class="galleryitem galleryitem6">
+                        <img src="../images/galleryimg6.png" class="galleryimg" alt="Image 6">
+                    </figure>
+                    <figure class="galleryitem galleryitem7">
+                        <img src="../images/galleryimg7.png" class="galleryimg" alt="Image 7">
+                    </figure>
+                    <figure class="galleryitem galleryitem8">
+                        <img src="../images/galleryimg8.png" class="galleryimg" alt="Image 8">
+                    </figure>
+                    <figure class="galleryitem galleryitem9">
+                        <img src="../images/galleryimg9.png" class="galleryimg" alt="Image 9">
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog ">
+                <div class="modal-content p-5 m-3 modalbox conmodalbox ">
+                    <!-- <h5 class="modal-title">Contact Us</h5>
+                    <input type="text" class="form-control my-2" placeholder="Your Name"> -->
+                    <div class="modalcontent p-5  m-3 ">
+                        <div class="locationmodal">
+                            <div class="sublocmodal">
+                                <img class="logo" src="../images/modallogo.PNG">
+                                <p class="brandh1">Tranquil Escape</p>
+                                <p class="brandh2">Resort and Spa</p>
+                            </div>
+                            <div class="sublocmodal2">
+                                <p><span><img src="../images/locationicon.PNG"></span>Attukad Waterfalls</p>
+                                <p>Aluva - Munnar Rd</p>
+                                <p>Pallivasal,Munnar - 685565</p>
+                            </div>
+
+
+                        </div>
+                        <div class="modalcontact">
+                            <h5>HELP DESK</h5>
+                            <p class="modalmail"><span><img src="../images/lettericon.PNG"></span>
+                                tranquilescape@gmail.com</p>
+                            <p class="mdoalphone"><span><img src="../images/phoneicon.PNG"></span>+91 9234567890,
+                                9846576373</p>
+                            <br>
+                            <h5>FOLLOW US</h5>
+                            <img src="../images/fbicon.PNG">
+                            <img src="../images/youtubeicon.PNG">
+                            <img src="../images/instaicon.PNG">
+                            <img src="../images/twittericon.PNG">
+                        </div>
+                    </div>
+
+                    <div class="modalbooknowmain">
+                        <div class="modalbooknowbtn">
+                            <button class="modalbooknow">BOOK NOW</button>
+                        </div>
+                        <div class="modalenquirenowbtn">
+                            <button class="modalenquirenow">Enquire Now</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="modal fade" id="loginModal">
+            <div class="modal-dialog ">
+                <div class="modal-content p-5 m-3 modalbox loginmodalbox">
+
+                    <div class="logindetail ">
+
+                        <h3>LOGIN</h3>
+                        <label for="email"></label><br>
+                        <input class="logmail" type="email" id="email" name="email" required placeholder="Email"
+                            title="enter valid email-id">
+                        <br><br>
+                        <label for="password"></label><br>
+                        <input class="pwd" type="password" id="password" name="password" required placeholder="Password"
+                            title="enter password">
+                        <br><br>
+                        <p class="forgotpwd">Forgot password?</p><br>
+
+                        <div class="logg">
+                            <button class="log" id="submit">LOG IN</button>
+                        </div>
+                        <br><br>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+    </main>
+    <footer>
+        <div class="footer-div container-fluid align-items-center">
+            <div class="row">
+
+                <div class="footer-div1 foot1 col-12 col-sm-12 col-lg-2 col-md-6">
+                    <div class="brand">
+                        <img class="logo" src="../images/logo.png">
+                        <p class="brandh1">Tranquil Escape</p>
+                        <p class="brandh2">Resort and Spa</p>
+                    </div>
+                    <div class="locationfooter">
+                        <p>Attukad Waterfalls</p>
+                        <p>Aluva - Munnar Rd</p>
+                        <p>Pallivasal,Munnar - 685565</p>
+                    </div>
+                </div>
+
+                <div class="footer-div1 col-sm-12 col-12 col-lg-2 col-md-6">
+                    <h5>QUICK LINKS</h5>
+                    <ul>
+                        <li><a href="/Hotel Booking/index.html">Home</a></li>
+                        <li><a href="../pages/2roomssuites.html">Rooms & Suites</a></li>
+                        <li><a href="../pages/3packages.html">Packages</a></li>
+                        <li><a href="../pages/4photogallery.html">Gallery</a></li>
+                        <li><a href="../pages/5activities.html">Things to do</a></li>
+                    </ul>
+                </div>
+                <div class="footer-div1 col-sm-12 col-12 col-lg-3 col-md-6 ">
+                    <h5>ROOMS & SUITES</h5>
+                    <ul>
+
+                        <li><a href="../pages/2roomssuites.html">Premier Suite</a></li>
+                        <li><a href="../pages/2roomssuites.html">Family Suite</a></li>
+                        <li><a href="../pages/2roomssuites.html">Honeymoon Suite</a></li>
+                        <li><a href="../pages/2roomssuites.html">Presidential Suite</a></li>
+                    </ul>
+                </div>
+                <div class="footer-div1 col-sm-12 col-12 col-lg-2 col-md-6">
+                    <h5>ABOUT US</h5>
+                    <ul>
+                        <li><a href="../pages/privacypolicy.html">Privacy Policy</a></li>
+                        <li><a class="nav-link link" data-bs-toggle="modal" data-bs-target="#myModal"
+                            href="./assets/pages/contactmodal.html">Contact Us</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-div1 foot1 col-sm-12 col-12 col-lg-3 col-md-6">
+                    <h5>HELP DESK</h5>
+                    <p>tranquilescape@gmail.com</p>
+                    <p>+91 9234567890, 9846576373</p>
+                    <h5>FOLLOW US</h5>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <script src="js/bootstrap.bundle.min.js">
+
+    </script>
+</body>
+
+</html>

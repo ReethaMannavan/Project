@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hotel, Booking">
+    <meta name="keywords" content="tourism, famous places, nature, resort, booking, lowcost">
+    <link rel='stylesheet' href="../css/style.css">
+    <title>rooms and suites</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        /* #roomsandsuiteshero-img {
+            height: 65vh;
+            background-image: url('../images/bookingheroimg.jpg');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            position: relative;
+            z-index: -1;
+        } */
+        @media (min-width:1024px) {
+
+
+            ul li ul.dropdownmenu li {
+                display: block;
+
+            }
+
+            ul li ul.dropdownmenu {
+
+                background-color: #D0FFB7;
+                position: absolute;
+                z-index: 5;
+                display: none;
+                padding-left: 0;
+                width: 180px;
+                text-align: center;
+            }
+
+            ul li ul.dropdownmenu a {
+                color: black;
+                font-size: 20px;
+                font-weight: bold;
+                text-decoration: none;
+                list-style: none;
+
+            }
+
+
+
+            ul li:hover ul.dropdownmenu {
+                display: block;
+            }
+
+            .drophr {
+                color: black;
+            }
+
+            #roomsandsuiteshero-img {
+                max-width: 100%;
+                height: 75vh;
+            }
+
+            .animatedimg img {
+                max-width: 100%;
+
+            }
+
+            #roomand-suites {
+                margin: 5%;
+            }
+
+            .sub1 {
+                text-align: center;
+                font-size: 22px;
+                font-weight: bold;
+            }
+
+            .p1 {
+                font-size: 22px;
+                color: black;
+            }
+
+            .mainroomdivision1 {
+                margin-top: 20px;
+                margin-left: auto;
+                margin-right: auto;
+                border: 2px solid rgb(92, 92, 92);
+                width: 750px;
+                height: 120px;
+                border-radius: 20px;
+                align-content: center;
+                background-color: #D0FFB7;
+                text-align: center;
+
+            }
+
+            .mainroomdivision1 h5 {
+                padding: 5px;
+                text-align: center;
+                color: black;
+            }
+
+            .mainroomdivision1 p {
+                text-align: center;
+                color: black;
+                font-size: 18px;
+            }
+
+            .suiteroomsrow {
+                margin-left: auto;
+                margin-right: auto;
+                padding: 5%;
+
+            }
+
+
+            .suiterooms img {
+                height: 450px;
+                width: 700px;
+                border-radius: 20px;
+            }
+
+            .mainroomdiv1 p {
+                color: black;
+
+            }
+
+            .mainhorizontalline {
+                margin-top: 5%;
+                width: 800px;
+                height: 2px;
+                color: black;
+            }
+
+            .booknowmain {
+                margin-left: 3%;
+                margin-right: auto;
+                display: flex;
+                gap: 15%;
+            }
+
+            .booknow {
+                background-color: #5AC807;
+                border: none;
+                width: 180px;
+                height: 60px;
+                color: white;
+                font-size: 22px;
+            }
+
+            .enquirenow {
+                background-color: #D0FFB7;
+                border: none;
+                width: 180px;
+                height: 60px;
+                color: black;
+                font-size: 22px;
+            }
+
+            .postmain2 {
+                margin: 0;
+                padding: 0;
+
+
+            }
+
+            .post2 {
+                position: relative;
+                width: 500px;
+                height: 450px;
+                cursor: pointer;
+            }
+
+            .post2:hover .post-slide2 {
+                width: 1343px;
+
+            }
+
+            .post2 img {
+                display: block;
+                width: 1343px;
+                height: 450px;
+            }
+
+            .post-slide2 {
+
+                position: absolute;
+                width: 0px;
+                height: 450px;
+                top: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                transition: 0.7s ease;
+            }
+
+
+            .postmain3 {
+                margin: 0;
+                padding: 0;
+
+
+            }
+
+            .post3 {
+                position: relative;
+                width: 650px;
+                height: 450px;
+                cursor: pointer;
+
+            }
+
+            .post3:hover .post-slide3 {
+                width: 650px;
+
+            }
+
+            .post3 img {
+                display: block;
+                width: 650px;
+                height: 450px;
+                border-radius: 20px;
+            }
+
+            .post-slide3 {
+
+                position: absolute;
+                width: 0px;
+                height: 450px;
+                top: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                transition: 0.7s ease;
+            }
+
+
+
+
+
+
+
+            .modalcontent {
+                display: flex;
+                gap: 10%;
+            }
+
+            .modalbooknowmain {
+                margin-left: 15%;
+                margin-right: auto;
+                display: flex;
+                gap: 15%;
+
+            }
+
+            .modalbooknow {
+                background-color: #5AC807;
+                border: none;
+                width: 180px;
+                height: 60px;
+                color: white;
+                font-size: 22px;
+            }
+
+            .modalenquirenow {
+                background-color: #5AC807;
+                border: none;
+                width: 180px;
+                height: 60px;
+                color: white;
+                font-size: 22px;
+            }
+
+            .conmodalbox {
+                height: 500px;
+                width: 800px;
+                text-align: center;
+            }
+
+            .sublocmodal2 {
+                text-align: left;
+                line-height: 0cap;
+            }
+
+            .modalcontact {
+                text-align: left;
+                color: black;
+
+            }
+
+            .modalcontact p {
+                color: black;
+                font-size: 17px;
+            }
+
+            .loginmodalbox {
+                height: 600px;
+                width: 500px;
+                text-align: center;
+            }
+
+            .logindetail {
+                padding: 20px;
+                justify-content: center;
+                font-size: 25px;
+                justify-items: center;
+            }
+
+            .logmail,
+            .pwd {
+                padding: 15px;
+                width: 250px;
+                height: 50px;
+                border: none;
+                box-shadow: 5px 5px 5px rgb(49, 49, 49);
+
+            }
+
+            .log {
+
+                width: 250px;
+                height: 3rem;
+                border: none;
+                font-size: 22px;
+                color: black;
+                background-color: #5AC807;
+
+            }
+
+            .forgotpwd {
+                color: #5AC807;
+                text-align: right;
+                font-size: 15px;
+                margin-left: 25%;
+            }
+            .tinyurl a{
+                text-decoration: none;
+                color:black;
+
+            }
+            .breadcrumb-item{
+                color:black;
+                font-size: 22px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-default">
+            <div class="container">
+                <div class="brand">
+                    <img class="logo" src="../images/logo.png">
+                    <p class="brandh1">Tranquil Escape</p>
+                    <p class="brandh2">Resort and Spa</p>
+                </div>
+
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navContent">
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item"><a class="nav-link active link" href="/Hotel Booking/index.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link link" href="../pages/2roomssuites.html">ROOMS &
+                                SUITES</a></li>
+                        <li class="nav-item"><a class="nav-link link" href="../pages/3packages.html">PACKAGES</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link link" href="../pages/4photogallery.html">GALLERY</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link link thingsmenu" href="../pages/5activities.html">THINGS
+                                TO
+                                DO</a>
+                            <ul class="dropdownmenu">
+                                <li class="nav-item"><a class="nav-link link dropa" href="../pages/5activities.html">
+                                        Activities</a>
+                                </li>
+                                <hr class="drophr">
+                                <li class="nav-item"><a class="nav-link link dropa" href="../pages/5.2dining.html">
+                                        Dining</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link link" data-bs-toggle="modal" data-bs-target="#myModal"
+                                href="./assets/pages/contactmodal.html">CONTACT</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link link" data-bs-toggle="modal"
+                                data-bs-target="#loginModal" href="./assets/pages/login.html">LOGIN</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <section id="roomsandsuiteshero-img">
+            <div class="postmain2">
+                <div class="post2">
+                    <img class="post2img" src="../images/roomsandsuitesmainimg.PNG">
+                    <div class="animatedimg post-slide2">
+                        <img src="../images/rooms animated image.png">
+                    </div>
+                </div>
+            </div>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item tinyurl"><a href="/Hotel Booking/index.html">Home</a></li>
+                <li class="breadcrumb-item active">Rooms & Suites</li>
+              </ol>
+            
+        </section>
+
+
+        <section id="roomand-suites">
+            <div class="container-fluid roomandsuites">
+                <div class="row">
+                    <div class="mainroomdiv col12 col-sm-12 col-md-12 col-lg-12">
+                        <h5 class="sub1">Where Luxury Weds Nature - Five Star Resorts in Munnar</h5>
+                        <p class="p1">True to What a five star facility resort should offer, We at Tranquil resort and
+                            Spa offers
+                            the most modern and luxurious experience to our guests. This is reflected in our
+                            accommodation facilities and it truly reflects what a hormonious blend of luxury and
+                            aesthetics should be. A perfect union of the beauty of nature and the opulence of top end
+                            luxury is what the accommodation at Tranquil can offer the discerning guest in you. At
+                            Tranquil, 5 star resorts in Munnar. We have 42 rooms of occupancy and all these rooms boasts
+                            of the best in line facilities and breathtaking beauty in terms of the aesthetic design,
+                            architecture and natural views. All these ensure that Tranquil resort is the perfect getaway
+                            for the hopeless romantic in you.
+                        </p>
+                    </div>
+                    <div class="row">
+                        <div class="mainroomdivision1 col12 col-sm-12 col-md-12 col-lg-12">
+                            <h5>ROOMS & SUITES</h5>
+                            <p> A perfect union of the beauty of nature and opulence of top end luxury is what the
+                                accommodation at Blanket can offer the discerning guest in you
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+        </section>
+
+        <section id="rooms-suites">
+            <div class="container-fluid suiteroomsrow">
+
+                <div class="row suiteroomsrow1">
+                    <h2>Premier Suite Room</h2>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-7 suiteroom postmain3">
+                        <div class="post3">
+                            <img class="post3img" src="../images/Premier suite room.PNG">
+                            <div class="animatedimg post-slide3">
+                                <img src="../images/Premier suite room animated image.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-5">
+                        <div class="mainroomdiv1">
+                            <p>with a view that rivals the most romantic novels, tranquil camelia with its big glass
+                                window
+                                opening to the scenic valley, offers facilities like 32inch TV, minibar, hair dryer,
+                                iron
+                                box, safe locker, air - conditioning and Wifi. The room with the floor area of 285
+                                square
+                                feet, comes with a cubicle wash room replete with all the basic toiletries. You can
+                                indulge
+                                in the cool breeze that blows from the mountains and sip on a warm beverage with your
+                                loved
+                                one by your side as you take in the ethereal beauty of Munnar and its Mountains.</p>
+                        </div>
+                        <hr>
+                        <div class="roomicons">
+                            <img src="../images/roomicon1.PNG">
+                            <img src="../images/roomicon2.PNG">
+                            <img src="../images/roomicon3.PNG">
+                            <img src="../images/roomicon4.PNG">
+                            <img src="../images/roomicon5.PNG">
+                            <img src="../images/roomicon6.PNG">
+                            <img src="../images/roomicon7.PNG">
+                        </div>
+                        <div class="booknowmain">
+                            <div class="booknowbtn">
+                                <a href="../pages/premiersuitebooking.html"><button class="booknow">BOOK
+                                        NOW</button></a>
+                            </div>
+                            <div class="enquirenowbtn">
+                                <a class="nav-link link" data-bs-toggle="modal" data-bs-target="#myModal"
+                                    href="../pages/contactmodal.html"> <button class="enquirenow">Enquire
+                                        Now</button></a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row ">
+                    <h2>Family Suites</h2>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-7 suiterooms postmain3">
+                        <div class="post3">
+                            <img src="../images/family suite room.PNG">
+                            <div class="post-slide3">
+                                <img src="../images/Presidentaial suite room animated image.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-5">
+                        <div class="mainroomdiv1">
+                            <p>A Spacious room with 543 square feet of the floor space, The tranquil premier gives you a
+                                picture postcard view from the balcony of the river, tea plantations and the valley. It
+                                has a host of modern facilities like a 42 inch LED TV, minibar, hair dryer, ironbox,
+                                safe lockers, air-conditioning and Wi-Fi. Graced with a queen sized bed and cubicle
+                                shower bathroom , the room will make you feel spoiled and wishing you could stay that
+                                bit longer. </p>
+                        </div>
+                        <hr>
+                        <div class="roomicons">
+                            <img src="../images/roomicon1.PNG">
+                            <img src="../images/roomicon2.PNG">
+                            <img src="../images/roomicon3.PNG">
+                            <img src="../images/roomicon4.PNG">
+                            <img src="../images/roomicon5.PNG">
+                            <img src="../images/roomicon6.PNG">
+                            <img src="../images/roomicon7.PNG">
+                        </div>
+                        <div class="booknowmain">
+                            <div class="booknowbtn">
+                                <a href="../pages/familysuitebooking.html"><button class="booknow">BOOK NOW</button></a>
+                            </div>
+                            <div class="enquirenowbtn">
+                                <a class="nav-link link" data-bs-toggle="modal" data-bs-target="#myModal"
+                                    href="../pages/contactmodal.html"> <button class="enquirenow">Enquire
+                                        Now</button></a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row ">
+                    <h2>Honeymoon Suite</h2>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-7 suiterooms postmain3">
+                        <div class="post3">
+                            <img src="../images/honeymoon suiteroom.PNG">
+                            <div class="post-slide3">
+                                <img src="../images/honey moon suite room animated image.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-5">
+                        <div class="mainroomdiv1">
+                            <p>This is a honeymooner dreams comes true. Offering an experience that you should
+                                definitely not miss out on is the Blanket Honeymoon Pavillion. with it's spacious 400
+                                square feet floor area, the room is ideal for a honeymoon couple or those looking for a
+                                romantic getaway. with basic amenities like 40 inch Tv , mini bar, hair dryer, iron box,
+                                safe locker, air - conditioning and Wi-Fi. The room offers an exclusive private balcony
+                                that gives couples a 180 degree picturesque and the panoramic view of the mountains,
+                                waterfalls, river, tea plantations and the valley. </p>
+                        </div>
+                        <hr>
+                        <div class="roomicons">
+                            <img src="../images/roomicon1.PNG">
+                            <img src="../images/roomicon2.PNG">
+                            <img src="../images/roomicon3.PNG">
+                            <img src="../images/roomicon4.PNG">
+                            <img src="../images/roomicon5.PNG">
+                            <img src="../images/roomicon6.PNG">
+                            <img src="../images/roomicon7.PNG">
+                        </div>
+                        <div class="booknowmain">
+                            <div class="booknowbtn">
+                                <a href="../pages/honeymoonsuitebooking.html"><button class="booknow">BOOK
+                                        NOW</button></a>
+                            </div>
+                            <div class="enquirenowbtn">
+                                <a class="nav-link link" data-bs-toggle="modal" data-bs-target="#myModal"
+                                    href="../pages/contactmodal.html"> <button class="enquirenow">Enquire
+                                        Now</button></a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <h2>Presidential Suites</h2>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-7 suiterooms postmain3">
+                        <div class="post3">
+                            <img src="../images/presidentialsuiteroom.PNG">
+                            <div class="post-slide3">
+                                <img src="../images/Presidentaial suite room animated image.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-5">
+                        <div class="mainroomdiv1">
+                            <p>The Presidential suite is a room that fits the name. A room that is fit for a royalty, it
+                                comes with a jacuzzi that offers a view of the valley, the majestic attukad falls, river
+                                and lush green tea plantations. It redefines luxury with a host of modern facilities and
+                                you can be rest assured of nothing short of an experience that leaves you wanting more.
+                                There is a coffee machine in the living room for those who are always in need of their
+                                caffeine shots. A cubicle shower washroom and other basic amenities like 42 inch TV,
+                                Mini bar, hair dryer, iron box, safe locker, air - conditioning and Wi-Fi. </p>
+                        </div>
+                        <hr>
+                        <div class="roomicons">
+                            <img src="../images/roomicon1.PNG">
+                            <img src="../images/roomicon2.PNG">
+                            <img src="../images/roomicon3.PNG">
+                            <img src="../images/roomicon4.PNG">
+                            <img src="../images/roomicon5.PNG">
+                            <img src="../images/roomicon6.PNG">
+                            <img src="../images/roomicon7.PNG">
+                        </div>
+                        <div class="booknowmain">
+                            <div class="booknowbtn">
+                                <a href="../pages/presidentialsuitebooking.html"> <button class="booknow">BOOK
+                                        NOW</button></a>
+                            </div>
+                            <div class="enquirenowbtn">
+                                <a class="nav-link link" data-bs-toggle="modal" data-bs-target="#myModal"
+                                    href="../pages/contactmodal.html"> <button class="enquirenow">Enquire
+                                        Now</button></a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog ">
+                <div class="modal-content p-5 m-3 modalbox conmodalbox ">
+                    <!-- <h5 class="modal-title">Contact Us</h5>
+                    <input type="text" class="form-control my-2" placeholder="Your Name"> -->
+                    <div class="modalcontent p-5  m-3 ">
+                        <div class="locationmodal">
+                            <div class="sublocmodal">
+                                <img class="logo" src="../images/modallogo.PNG">
+                                <p class="brandh1">Tranquil Escape</p>
+                                <p class="brandh2">Resort and Spa</p>
+                            </div>
+                            <div class="sublocmodal2">
+                                <p><span><img src="../images/locationicon.PNG"></span>Attukad Waterfalls</p>
+                                <p>Aluva - Munnar Rd</p>
+                                <p>Pallivasal,Munnar - 685565</p>
+                            </div>
+
+
+                        </div>
+                        <div class="modalcontact">
+                            <h5>HELP DESK</h5>
+                            <p class="modalmail"><span><img src="../images/lettericon.PNG"></span>
+                                tranquilescape@gmail.com</p>
+                            <p class="mdoalphone"><span><img src="../images/phoneicon.PNG"></span>+91 9234567890,
+                                9846576373</p>
+                            <br>
+                            <h5>FOLLOW US</h5>
+                            <img src="../images/fbicon.PNG">
+                            <img src="../images/youtubeicon.PNG">
+                            <img src="../images/instaicon.PNG">
+                            <img src="../images/twittericon.PNG">
+                        </div>
+                    </div>
+
+                    <div class="modalbooknowmain">
+                        <div class="modalbooknowbtn">
+                            <a href="../pages/bookingfamily.html"> <button class="modalbooknow">BOOK NOW</button></a>
+                        </div>
+                        <div class="modalenquirenowbtn">
+                            <button class="modalenquirenow">Enquire Now</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="modal fade" id="loginModal">
+            <div class="modal-dialog ">
+                <div class="modal-content p-5 m-3 modalbox loginmodalbox">
+
+                    <div class="logindetail ">
+
+                        <h3>LOGIN</h3>
+                        <label for="email"></label><br>
+                        <input class="logmail" type="email" id="email" name="email" required placeholder="Email"
+                            title="enter valid email-id">
+                        <br><br>
+                        <label for="password"></label><br>
+                        <input class="pwd" type="password" id="password" name="password" required placeholder="Password"
+                            title="enter password">
+                        <br><br>
+                        <p class="forgotpwd">Forgot password?</p><br>
+
+                        <div class="logg">
+                            <button class="log" id="submit">LOG IN</button>
+                        </div>
+                        <br><br>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+    </main>
+    <footer>
+        <div class="footer-div container-fluid align-items-center">
+            <div class="row">
+
+                <div class="footer-div1 foot1 col-12 col-sm-12 col-lg-2 col-md-6">
+                    <div class="brand">
+                        <img class="logo" src="../images/logo.png">
+                        <p class="brandh1">Tranquil Escape</p>
+                        <p class="brandh2">Resort and Spa</p>
+                    </div>
+                    <div class="locationfooter">
+                        <p>Attukad Waterfalls</p>
+                        <p>Aluva - Munnar Rd</p>
+                        <p>Pallivasal,Munnar - 685565</p>
+                    </div>
+                </div>
+
+                <div class="footer-div1 col-sm-12 col-12 col-lg-2 col-md-6">
+                    <h5>QUICK LINKS</h5>
+                    <ul>
+                        <li><a href="/Hotel Booking/index.html">Home</a></li>
+                        <li><a href="../pages/2roomssuites.html">Rooms & Suites</a></li>
+                        <li><a href="../pages/3packages.html">Packages</a></li>
+                        <li><a href="../pages/4photogallery.html">Gallery</a></li>
+                        <li><a href="../pages/5activities.html">Things to do</a></li>
+                    </ul>
+                </div>
+                <div class="footer-div1 col-sm-12 col-12 col-lg-3 col-md-6 ">
+                    <h5>ROOMS & SUITES</h5>
+                    <ul>
+
+                        <li><a href="../pages/2roomssuites.html">Premier Suite</a></li>
+                        <li><a href="../pages/2roomssuites.html">Family Suite</a></li>
+                        <li><a href="../pages/2roomssuites.html">Honeymoon Suite</a></li>
+                        <li><a href="../pages/2roomssuites.html">Presidential Suite</a></li>
+                    </ul>
+                </div>
+                <div class="footer-div1 col-sm-12 col-12 col-lg-2 col-md-6">
+                    <h5>ABOUT US</h5>
+                    <ul>
+                        <li><a href="../pages/privacypolicy.html">Privacy Policy</a></li>
+                        <li><a class="nav-link link" data-bs-toggle="modal" data-bs-target="#myModal"
+                            href="./assets/pages/contactmodal.html">Contact Us</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-div1 foot1 col-sm-12 col-12 col-lg-3 col-md-6">
+                    <h5>HELP DESK</h5>
+                    <p>tranquilescape@gmail.com</p>
+                    <p>+91 9234567890, 9846576373</p>
+                    <h5>FOLLOW US</h5>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <script src="js/bootstrap.bundle.min.js">
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hotel, Booking">
+    <meta name="keywords" content="tourism, famous places, nature, resort, booking, lowcost">
+    <link rel='stylesheet' href="../css/style.css">
+    <title>Hotel - Resort Booking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        #activityheroimg {
+            height: 70vh;
+        }
+
+        .activityherodiv {
+            max-width: 100%;
+            position: relative;
+        }
+
+        .activityherodiv img {
+            max-width: 100%;
+            height: 60vh;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .photoheroimgp1 {
+            position: absolute;
+            top: 200px;
+            left: 120px;
+            padding: 0px 20px;
+            color: rgb(236, 234, 234);
+            font-size: 28px;
+            font-family: "PoppinsItal";
+            font-style: italic;
+            animation: fadeIn 2s 1s ease-in-out forwards;
+        }
+
+        .galleryreviewbox {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        .galleryreviewbox img {
+            transition: all linear 0.7s;
+        }
+
+        .galhover-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+
+
+        }
+
+        .galleryreviewbox:hover img {
+            opacity: 0;
+        }
+
+        .galleryreviewbox:hover img.galhover-img {
+            opacity: 1;
+        }
+
+
+        #maingallery h3 {
+            text-align: center;
+        }
+
+
+        .photo-gallery {
+            margin: 50px 100px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(11, auto);
+            grid-gap: 15px;
+        }
+
+        .galleryimg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .galleryitem1 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+        .galleryitem2 {
+            grid-column-start: 4;
+            grid-column-end: 9;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+
+        .galleryitem3 {
+            grid-column-start: 4;
+            grid-column-end: 9;
+            grid-row-start: 2;
+            grid-row-end: 2;
+        }
+
+        .galleryitem4 {
+            grid-column-start: 1;
+            grid-column-end: 6;
+            grid-row-start: 3;
+            grid-row-end: 5;
+        }
+
+        .galleryitem5 {
+            grid-column-start: 6;
+            grid-column-end: 9;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+
+        .galleryitem6 {
+            grid-column-start: 6;
+            grid-column-end: 9;
+            grid-row-start: 4;
+            grid-row-end: 5;
+        }
+
+        .galleryitem7 {
+            grid-column-start: 1;
+            grid-column-end: 9;
+            grid-row-start: 5;
+            grid-row-end: 8;
+        }
+
+        .galleryitem8 {
+            grid-column-start: 1;
+            grid-column-end: 6;
+            grid-row-start: 8;
+            grid-row-end: 10;
+        }
+
+        .galleryitem9 {
+            grid-column-start: 6;
+            grid-column-end: 9;
+            grid-row-start: 8;
+            grid-row-end: 10;
+        }
+
+        .modalcontent {
+            display: flex;
+            gap: 10%;
+        }
+
+        .modalbooknowmain {
+            margin-left: 15%;
+            margin-right: auto;
+            display: flex;
+            gap: 15%;
+
+        }
+
+        .modalbooknow {
+            background-color: #5AC807;
+            border: none;
+            width: 180px;
+            height: 60px;
+            color: white;
+            font-size: 22px;
+        }
+
+        .modalenquirenow {
+            background-color: #5AC807;
+            border: none;
+            width: 180px;
+            height: 60px;
+            color: white;
+            font-size: 22px;
+        }
+
+        .conmodalbox {
+            height: 500px;
+            width: 800px;
+            text-align: center;
+        }
+
+        .sublocmodal2 {
+            text-align: left;
+            line-height: 0cap;
+        }
+
+        .modalcontact {
+            text-align: left;
+            color: black;
+
+        }
+
+        .modalcontact p {
+            color: black;
+            font-size: 17px;
+        }
+
+        .loginmodalbox {
+            height: 600px;
+            width: 500px;
+            text-align: center;
+        }
+
+        .logindetail {
+            padding: 20px;
+            justify-content: center;
+            font-size: 25px;
+            justify-items: center;
+        }
+
+        .logmail,
+        .pwd {
+            padding: 15px;
+            width: 250px;
+            height: 50px;
+            border: none;
+            box-shadow: 5px 5px 5px rgb(49, 49, 49);
+
+        }
+
+        .log {
+
+            width: 250px;
+            height: 3rem;
+            border: none;
+            font-size: 22px;
+            color: black;
+            background-color: #5AC807;
+
+        }
+
+        .forgotpwd {
+            color: #5AC807;
+            text-align: right;
+            font-size: 15px;
+            margin-left: 25%;
+        }
+
+        .tinyurl a {
+            text-decoration: none;
+            color: black;
+
+        }
+
+        .breadcrumb-item {
+            color: black;
+            font-size: 22px;
+        }
+        #privacy{
+            margin:7%;
+        }
+        .privacypolicy p{
+            color:black;
+            font-size: 22px;
+        }
+        .privacypolicy ul li{
+            font-size: 21px;
+            color:black;
+        }
+        #privacycontact{
+            margin:7%;
+        }
+        .privacycontactrow{
+            justify-content: center;
+           text-align: justify;
+        }
+        .helpdesk{
+            margin-top: 5%;
+
+        }
+        .followuss{
+            margin-top: 7%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-default">
+            <div class="container">
+                <div class="brand">
+                    <img class="logo" src="../images/logo.png">
+                    <p class="brandh1">Tranquil Escape</p>
+                    <p class="brandh2">Resort and Spa</p>
+                </div>
+
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navContent">
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item"><a class="nav-link active link" href="/Hotel Booking/index.html">HOME</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link link" href="../pages/2roomssuites.html">ROOMS &
+                                SUITES</a></li>
+                        <li class="nav-item"><a class="nav-link link" href="../pages/3packages.html">PACKAGES</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link link" href="../pages/4photogallery.html">GALLERY</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link link thingsmenu" href="../pages/5activities.html">THINGS
+                                TO
+                                DO</a>
+                            <ul class="dropdownmenu">
+                                <li class="nav-item"><a class="nav-link link dropa" href="../pages/5activities.html">
+                                        Activities</a>
+                                </li>
+                                <hr class="drophr">
+                                <li class="nav-item"><a class="nav-link link dropa" href="../pages/5.2dining.html">
+                                        Dining</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link link" data-bs-toggle="modal" data-bs-target="#myModal"
+                                href="./assets/pages/contactmodal.html">CONTACT</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link link" data-bs-toggle="modal"
+                                data-bs-target="#loginModal" href="./assets/pages/login.html">LOGIN</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+    </header>
+
+    <main>
+        <section id="activityheroimg">
+            <div class="activityherodiv">
+                <div class="galleryreviewbox">
+                    <img src="../images/activitymainimg.jpg">
+                    <img class="galhover-img" src="../images/mountain.png">
+                    <div>
+
+                        <p class="photoheroimgp1">Experience Munnar <br>Like Never Before</p>
+                    </div>
+                </div>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item tinyurl"><a href="/Hotel Booking/index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Privacy policy</li>
+                </ol>
+        </section>
+
+        <section id="privacy">
+            <div class="privacypolicy">
+                <p>Welcome to Blanket hotel and spa, Munnar. Your trust is our top priority adn we're dedicated to
+                    protecting your privacy. This policy explains how we will handle your personal information, ensuring
+                    transparency and care every step of the way. What information do we Collect? <br>We collect only the
+                    information we need to provide with you an unforgettable experience. such as,</p>
+                <ul>
+                    <li>Personal Details: Your name, contact information and preferences shared during reservations.
+                    </li>
+                    <li>Booking information: Details from online platform or agents confirm your stay.</li>
+                    <li>Spa and wellness preferences : if you share health details for tailored treatments, we handle
+                        them with strict confidentiality. </li>
+                    <li>Browsing information : To enhance your online experience , we may use cooking to understand how
+                        you interact with our website. </li>
+
+                </ul>
+                <p>How do we use your information?<br>Your information help us create magical moments and smooth
+                    experiences during your visit. here's how we use it.</p>
+                <ul>
+                    <li>Confirm and manage reservations</li>
+                    <li>Customize your stay to suit your preferences</li>
+                    <li>Keep you updated with booking details, offers and events and blankets hotel and spa</li>
+                    <li>Ensure our website and services work seamlessly to you</li>
+                </ul>
+                <p>Who do we share your information with?<br>We value your trust. so we never sell your information.
+                    However we may share it responsibly when needed:</p>
+                <ul>
+                    <li>
+                        Trusted partners: For payment processing or technology support
+                    </li>
+                    <li>Booking agents : if you booked through a third party, to complete your reservations</li>
+                    <li>Legal requirements: if the law demands it, we comply to ensure safety and transparency </li>
+                </ul>
+                <p>How do we keep information safe? <br> Your data is in safe hands. we use:</p>
+                <ul>
+                    <li>Secure system to provide your payment details</li>
+                    <li>Limited access ensuring only authorized personnel handle sensitive information</li>
+                    <li>Regular checks to maintain top-notch security standars</li>
+                </ul>
+                <p>Your choices and rights <br> Your privacy, your rules. You can</p>
+                <ul>
+                    <li>Access the data we have about you </li>
+                    <li>Update your information if something changes</li>
+                    <li>Opt out of market communications Anytime</li>
+                    <li>Request us to delete your information , subject to legal obligations</li>
+                </ul>
+                <p>Simply reach out to us at +919446436700 and we ll be happy to assist.<br>What about cookies?
+                    <br>Cookies help us to make your experiences better by remembering your preferences and improving
+                    website funcionality.<br>Don't like cookies? you can manage them in browser settings. though it
+                    might impact how the site works. <br>How long do we keep your information? We keep your information
+                    only as long as needed- whether it's for your current stay or to meet legal requirements. after that
+                    it securely remvoed
+                </p>
+                <p>Policy update<br>We are always looking to improve, so our privacy policy may change from time to
+                    time. you'll always find the latest version on our website and we 'll keep you informed of
+                    significant updates.</p>
+                <p>Let's talk</p>
+                <p>Have questions or concerns about your privacy? we're here for you.</p>
+            </div>
+        </section>
+
+        <section id="privacycontact">
+
+            <div class="container-fluid">
+                <div class="row privacycontactrow">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+
+
+                        <div class="locationmodal">
+                            <div class="sublocmodal">
+                                <img class="logo" src="../images/modallogo.PNG">
+                                <h5>Tranquil Escape</h5>
+                                <p class="brandh2">Resort and Spa</p>
+                            </div>
+                            <div class="sublocmodal2">
+                                <p><span><img src="../images/locationicon.PNG"></span>Attukad Waterfalls</p>
+                                <p>Aluva - Munnar Rd</p>
+                                <p>Pallivasal,Munnar - 685565</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4  helpdesk">
+                        <div class="modalcontact">
+                            <h5>HELP DESK</h5>
+                            <p class="modalmail"><span><img src="../images/lettericon.PNG"></span>
+                                tranquilescape@gmail.com</p>
+                            <p class="mdoalphone"><span><img src="../images/phoneicon.PNG"></span>+91 9234567890,
+                                9846576373</p>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 followuss">
+                        <h5>FOLLOW US</h5>
+                        <img src="../images/fbicon.PNG">
+                        <img src="../images/youtubeicon.PNG">
+                        <img src="../images/instaicon.PNG">
+                        <img src="../images/twittericon.PNG">
+                    </div>
+                </div>
+            </div>
+
+            </div>
+            </div>
+
+        </section>
+
+
+
+
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog ">
+                <div class="modal-content p-5 m-3 modalbox conmodalbox ">
+                    <!-- <h5 class="modal-title">Contact Us</h5>
+                    <input type="text" class="form-control my-2" placeholder="Your Name"> -->
+                    <div class="modalcontent p-5  m-3 ">
+                        <div class="locationmodal">
+                            <div class="sublocmodal">
+                                <img class="logo" src="../images/modallogo.PNG">
+                                <p class="brandh1">Tranquil Escape</p>
+                                <p class="brandh2">Resort and Spa</p>
+                            </div>
+                            <div class="sublocmodal2">
+                                <p><span><img src="../images/locationicon.PNG"></span>Attukad Waterfalls</p>
+                                <p>Aluva - Munnar Rd</p>
+                                <p>Pallivasal,Munnar - 685565</p>
+                            </div>
+
+
+                        </div>
+                        <div class="modalcontact">
+                            <h5>HELP DESK</h5>
+                            <p class="modalmail"><span><img src="../images/lettericon.PNG"></span>
+                                tranquilescape@gmail.com</p>
+                            <p class="mdoalphone"><span><img src="../images/phoneicon.PNG"></span>+91 9234567890,
+                                9846576373</p>
+                            <br>
+                            <h5>FOLLOW US</h5>
+                            <img src="../images/fbicon.PNG">
+                            <img src="../images/youtubeicon.PNG">
+                            <img src="../images/instaicon.PNG">
+                            <img src="../images/twittericon.PNG">
+                        </div>
+                    </div>
+
+                    <div class="modalbooknowmain">
+                        <div class="modalbooknowbtn">
+                            <button class="modalbooknow">BOOK NOW</button>
+                        </div>
+                        <div class="modalenquirenowbtn">
+                            <button class="modalenquirenow">Enquire Now</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="modal fade" id="loginModal">
+            <div class="modal-dialog ">
+                <div class="modal-content p-5 m-3 modalbox loginmodalbox">
+
+                    <div class="logindetail ">
+
+                        <h3>LOGIN</h3>
+                        <label for="email"></label><br>
+                        <input class="logmail" type="email" id="email" name="email" required placeholder="Email"
+                            title="enter valid email-id">
+                        <br><br>
+                        <label for="password"></label><br>
+                        <input class="pwd" type="password" id="password" name="password" required placeholder="Password"
+                            title="enter password">
+                        <br><br>
+                        <p class="forgotpwd">Forgot password?</p><br>
+
+                        <div class="logg">
+                            <button class="log" id="submit">LOG IN</button>
+                        </div>
+                        <br><br>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+    </main>
+    <footer>
+        <div class="footer-div container-fluid align-items-center">
+            <div class="row">
+
+                <div class="footer-div1 foot1 col-12 col-sm-12 col-lg-2 col-md-6">
+                    <div class="brand">
+                        <img class="logo" src="../images/logo.png">
+                        <p class="brandh1">Tranquil Escape</p>
+                        <p class="brandh2">Resort and Spa</p>
+                    </div>
+                    <div class="locationfooter">
+                        <p>Attukad Waterfalls</p>
+                        <p>Aluva - Munnar Rd</p>
+                        <p>Pallivasal,Munnar - 685565</p>
+                    </div>
+                </div>
+
+                <div class="footer-div1 col-sm-12 col-12 col-lg-2 col-md-6">
+                    <h5>QUICK LINKS</h5>
+                    <ul>
+                        <li><a href="/Hotel Booking/index.html">Home</a></li>
+                        <li><a href="../pages/2roomssuites.html">Rooms & Suites</a></li>
+                        <li><a href="../pages/3packages.html">Packages</a></li>
+                        <li><a href="../pages/4photogallery.html">Gallery</a></li>
+                        <li><a href="../pages/5activities.html">Things to do</a></li>
+                    </ul>
+                </div>
+                <div class="footer-div1 col-sm-12 col-12 col-lg-3 col-md-6 ">
+                    <h5>ROOMS & SUITES</h5>
+                    <ul>
+
+                        <li><a href="../pages/2roomssuites.html">Premier Suite</a></li>
+                        <li><a href="../pages/2roomssuites.html">Family Suite</a></li>
+                        <li><a href="../pages/2roomssuites.html">Honeymoon Suite</a></li>
+                        <li><a href="../pages/2roomssuites.html">Presidential Suite</a></li>
+                    </ul>
+                </div>
+                <div class="footer-div1 col-sm-12 col-12 col-lg-2 col-md-6">
+                    <h5>ABOUT US</h5>
+                    <ul>
+                        <li><a href="../pages/privacypolicy.html">Privacy Policy</a></li>
+                        <li><a class="nav-link link" data-bs-toggle="modal" data-bs-target="#myModal"
+                            href="./assets/pages/contactmodal.html">Contact Us</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-div1 foot1 col-sm-12 col-12 col-lg-3 col-md-6">
+                    <h5>HELP DESK</h5>
+                    <p>tranquilescape@gmail.com</p>
+                    <p>+91 9234567890, 9846576373</p>
+                    <h5>FOLLOW US</h5>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <script src="js/bootstrap.bundle.min.js">
+
+    </script>
+</body>
+
+</html>

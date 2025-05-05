@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hotel, Booking">
+    <meta name="keywords" content="tourism, famous places, nature, resort, booking, lowcost">
+    <link rel='stylesheet' href="../css/style.css">
+    <title>Packages</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        @media (min-width:1024px) {
+            #packagesheroimg {
+                height: 80vh;
+            }
+
+
+            .packagesherodiv {
+                max-width: 100%;
+            }
+
+            .packagesherodiv img {
+                max-width: 100%;
+
+            }
+
+            .package-main h4 {
+                text-align: center;
+                font-size: 25px;
+            }
+
+            .package-main p {
+                text-align: left;
+                font-size: 21px;
+                margin-left: 5%;
+                padding: 1%;
+                font-size: 22px;
+                color: black;
+            }
+
+            .packageh3 {
+                text-align: center;
+                font-size: 28px;
+            }
+
+            .packageh4 {
+                font-size: 28px;
+                color: black;
+
+            }
+
+            .packageh4family {
+                margin-left: auto;
+            }
+
+            .honeymoonpackagemain {
+                margin: 7%;
+            }
+
+            .packagephoto-gallery {
+                margin: 40px 40px;
+            }
+
+            @keyframes fadeIn {
+                0% {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .packageheroimgp1 {
+                position: absolute;
+                top: 300px;
+                left: 120px;
+                padding: 0px 20px;
+                color: rgb(236, 234, 234);
+                font-size: 28px;
+                font-family: "PoppinsItal";
+                font-style: italic;
+                animation: fadeIn 2s 1s ease-in-out forwards;
+            }
+
+            .packagegallery {
+                display: grid;
+                grid-template-columns: repeat(10, 1fr);
+                grid-template-rows: repeat(4, auto);
+                grid-gap: 10px;
+            }
+
+            .packgalleryimg {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .packagegalleryitem1 {
+                grid-column-start: 1;
+                grid-column-end: 6;
+                grid-row-start: 1;
+                grid-row-end: 4;
+            }
+
+            .packagegalleryitem2 {
+                grid-column-start: 6;
+                grid-column-end: 10;
+                grid-row-start: 1;
+                grid-row-end: 2;
+            }
+
+            .packagegalleryitem3 {
+                grid-column-start: 6;
+                grid-column-end: 8;
+                grid-row-start: 3;
+                grid-row-end: 4;
+            }
+
+            .packagegalleryitem4 {
+                grid-column-start: 8;
+                grid-column-end: 10;
+                grid-row-start: 3;
+                grid-row-end: 4;
+            }
+
+
+            .fpackgalleryimg {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .fpackagegallery {
+                display: grid;
+                grid-template-columns: repeat(10, 1fr);
+                grid-template-rows: repeat(auto, auto);
+                grid-gap: 20px;
+                row-gap: 0px;
+                margin-left: 5%;
+            }
+
+            .fpackagegalleryitem1 {
+                grid-column-start: 1;
+                grid-column-end: 5;
+                grid-row-start: 1;
+                grid-row-end: 2;
+            }
+
+            .fpackagegalleryitem2 {
+                grid-column-start: 5;
+                grid-column-end: 10;
+                grid-row-start: 1;
+                grid-row-end: 3;
+            }
+
+            .fpackagegalleryitem3 {
+                grid-column-start: 1;
+                grid-column-end: 5;
+                grid-row-start: 2;
+                grid-row-end: 3;
+            }
+
+            .honeymoonpack {
+                display: flex;
+
+            }
+
+            .viewdetails {
+                margin-left: auto;
+            }
+
+            .viewdetailsbtn {
+                width: 280px;
+                height: 50px;
+                background-color: #5AC807;
+                border: none;
+                font-size: 28px;
+                color: white;
+            }
+
+            .fampack {
+                margin-left: auto;
+            }
+
+            .packreviewbox {
+                position: relative;
+                display: inline-block;
+                overflow: hidden;
+            }
+
+            .packreviewbox img {
+                transition: all linear 0.7s;
+            }
+
+            .packhover-img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+
+
+            }
+
+            .packreviewbox:hover img {
+                opacity: 0;
+            }
+
+            .packreviewbox:hover img.packhover-img {
+                opacity: 1;
+            }
+
+            .fpackreviewbox {
+                position: relative;
+                display: inline-block;
+                overflow: hidden;
+            }
+
+            .fpackreviewbox img {
+                transition: all linear 0.7s;
+            }
+
+            .fpackhover-img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+
+            }
+
+            .fpackhover-img img {
+                width: 300px;
+                height: 500px;
+            }
+
+            .fpackreviewbox:hover img {
+                opacity: 0;
+            }
+
+            .fpackreviewbox:hover img.fpackhover-img {
+                opacity: 1;
+            }
+
+            .modalcontent {
+                display: flex;
+                gap: 10%;
+            }
+
+            .modalbooknowmain {
+                margin-left: 15%;
+                margin-right: auto;
+                display: flex;
+                gap: 15%;
+
+            }
+
+            .modalbooknow {
+                background-color: #5AC807;
+                border: none;
+                width: 180px;
+                height: 60px;
+                color: white;
+                font-size: 22px;
+            }
+
+            .modalenquirenow {
+                background-color: #5AC807;
+                border: none;
+                width: 180px;
+                height: 60px;
+                color: white;
+                font-size: 22px;
+            }
+
+            .conmodalbox {
+                height: 500px;
+                width: 800px;
+                text-align: center;
+            }
+
+            .sublocmodal2 {
+                text-align: left;
+                line-height: 0cap;
+            }
+
+            .modalcontact {
+                text-align: left;
+                color: black;
+
+            }
+
+            .modalcontact p {
+                color: black;
+                font-size: 17px;
+            }
+
+            .loginmodalbox {
+                height: 600px;
+                width: 500px;
+                text-align: center;
+            }
+
+            .logindetail {
+                padding: 20px;
+                justify-content: center;
+                font-size: 25px;
+                justify-items: center;
+            }
+
+            .logmail,
+            .pwd {
+                padding: 15px;
+                width: 250px;
+                height: 50px;
+                border: none;
+                box-shadow: 5px 5px 5px rgb(49, 49, 49);
+
+            }
+
+            .log {
+
+                width: 250px;
+                height: 3rem;
+                border: none;
+                font-size: 22px;
+                color: black;
+                background-color: #5AC807;
+
+            }
+
+            .forgotpwd {
+                color: #5AC807;
+                text-align: right;
+                font-size: 15px;
+                margin-left: 25%;
+            }
+
+            .tinyurl a {
+                text-decoration: none;
+                color: black;
+
+            }
+
+            .breadcrumb-item {
+                color: black;
+                font-size: 22px;
+            }
+
+            .packoverlaymain {
+                position: relative;
+
+            }
+
+            .packoverlay {
+                position: absolute;
+                display: flex;
+                top: 20px;
+                color: white;
+                margin: 3%;
+                gap: 10px;
+            }
+
+            .offf {
+                border: none;
+                background-color: #5AC807;
+                font-size: 18px;
+                width: 70px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-default">
+            <div class="container">
+                <div class="brand">
+                    <img class="logo" src="../images/logo.png">
+                    <p class="brandh1">Tranquil Escape</p>
+                    <p class="brandh2">Resort and Spa</p>
+                </div>
+
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navContent">
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item"><a class="nav-link active link" href="/Hotel Booking/index.html">HOME</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link link" href="../pages/2roomssuites.html">ROOMS &
+                                SUITES</a></li>
+                        <li class="nav-item"><a class="nav-link link" href="../pages/3packages.html">PACKAGES</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link link" href="../pages/4photogallery.html">GALLERY</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link link thingsmenu" href="../pages/5activities.html">THINGS
+                                TO
+                                DO</a>
+                            <ul class="dropdownmenu">
+                                <li class="nav-item"><a class="nav-link link dropa" href="../pages/5activities.html">
+                                        Activities</a>
+                                </li>
+                                <hr class="drophr">
+                                <li class="nav-item"><a class="nav-link link dropa" href="../pages/5.2dining.html">
+                                        Dining</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link link" data-bs-toggle="modal" data-bs-target="#myModal"
+                                href="./assets/pages/contactmodal.html">CONTACT</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link link" data-bs-toggle="modal"
+                                data-bs-target="#loginModal" href="./assets/pages/login.html">LOGIN</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <main>
+        <section id="packagesheroimg">
+            <div class="packagesherodiv">
+                <img src="../images/packageheroimg1.png">
+                <div>
+
+                    <p class="packageheroimgp1">Experience Munnar <br>Like Never Before</p>
+                </div>
+            </div>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item tinyurl"><a href="/Hotel Booking/index.html">Home</a></li>
+                <li class="breadcrumb-item active">Packages</li>
+            </ol>
+        </section>
+        <section id="packagemain">
+            <div class="package-main">
+                <h4>Tranquil Munnar: Your ultimate honeymoon and family retreat</h4>
+                <p>Embark on a journey of romance and relaxation with Tranquil Munnar, your premier destination among
+                    luxury resorts in Munnar. Whether you're celebrating your love or creating cherished family
+                    memories, we offer a range of exquisite honeymoon and family packages tailored to exceed to
+                    expectations.</p>
+                <p>Our commitment to excellence ensure that each packages is thoughtfully curated to suit the diverse
+                    needs and preferences of our guests, ensuring an unforgettable experience in Munnar. From intimate
+                    moments for couples to engaging activites for families, every aspect of your stay is meticulously
+                    designed to delight and inspire.</p>
+            </div>
+        </section>
+
+        <section id="popularpackages">
+            <div class="honeymoonpackagemain">
+                <h3 class="packageh3">OUR POPULAR PACKAGES</h3>
+
+                <div class="honeymoonpack">
+                    <div class="packagesub">
+                        <h4 class="packageh4">Honeymoon Packages</h4>
+                    </div>
+
+                    <div class="viewdetails">
+                        <a href="../pages/honeymoonpackage.html"><button class="viewdetailsbtn">VIEW
+                                DETAILS</button></a>
+                    </div>
+                </div>
+                <div class="packagephoto-gallery">
+                    <div class="packagegallery">
+                        <figure class="packagegalleryitem packagegalleryitem1 packreviewbox">
+                            <img src="../images/ourpackageimg1.png" class="packgalleryimg" alt="Image 1">
+                            <img class="packhover-img" src="../images/honeymoon animated.png">
+                        </figure>
+                        <figure class="packagegalleryitem packagegalleryitem2 packoverlaymain">
+                            <img src="../images/honeymoonimg2.PNG" class="packgalleryimg" alt="Image 2">
+                            <div class="packoverlay">
+                                <p class="nights">3 Nights <br> <span class="days">4 Days</span></p>
+                                <p class="honeyfirstparaa"> ₹50,000 <br>per couple + 18% GST</p>
+                                <button class="offf">10% <br>OFF</button>
+                            </div>
+                        </figure>
+
+
+                        <figure class="packagegalleryitem packagegalleryitem3">
+                            <img src="../images/honeymoonimg3.PNG" class="packgalleryimg" alt="Image 3">
+                        </figure>
+                        <figure class="packagegalleryitem packagegalleryitem4">
+                            <img src="../images/honeymoonimg4.PNG" class="packgalleryimg" alt="Image 4">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <hr>
+            <div class="honeymoonpackagemain">
+                <div class="honeymoonpack">
+                    <div class="viewdetails1">
+                        <a href="../pages/familypackages.html"> <button class="viewdetailsbtn">VIEW DETAILS</button></a>
+                    </div>
+
+                    <div class="packagesub fampack">
+                        <h4 class="packageh4family">Family Packages</h4>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="packagephoto-gallery">
+                <div class="fpackagegallery">
+                    <figure class="fpackagegalleryitem fpackagegalleryitem1 fpackreviewbox">
+                        <img src="../images/coupleshadow.png" class="fpackgalleryimg" alt="Image 1">
+                        <img class="fpackhover-img" src="../images/familyanimatedimg.PNG">
+                        <div class="packoverlay">
+                            <p class="nights">3 Nights <br> <span class="days">4 Days</span></p>
+                            <p class="honeyfirstparaa"> ₹70,000 <br>per couple + 18% GST</p>
+                            <button class="offf">10% <br>OFF</button>
+                        </div>
+
+                    </figure>
+                    <figure class="fpackagegalleryitem fpackagegalleryitem2">
+                        <img src="../images/familyimg2.png" class="fpackgalleryimg" alt="Image 2">
+                    </figure>
+                    <figure class="fpackagegalleryitem fpackagegalleryitem3">
+                        <img src="../images/familyimg3.PNG" class="fpackgalleryimg" alt="Image 3">
+                    </figure>
+
+                </div>
+            </div>
+            </div>
+            <hr>
+            <div class="honeymoonpackagemain">
+
+
+                <div class="honeymoonpack">
+                    <div class="packagesub">
+                        <h4 class="packageh4">Group Packages</h4>
+                    </div>
+
+                    <div class="viewdetails">
+                        <a href="../pages/grouppackages.html"> <button class="viewdetailsbtn">VIEW DETAILS</button></a>
+                    </div>
+                </div>
+                <div class="packagephoto-gallery">
+                    <div class="packagegallery">
+                        <figure class="packagegalleryitem packagegalleryitem1 packreviewbox">
+                            <img src="../images/ourpackageimg3.png" class="packgalleryimg" alt="Image 1">
+                            <img class="packhover-img" src="../images/group  package animated.png">
+                        </figure>
+                        <figure class="packagegalleryitem packagegalleryitem2 packoverlaymain">
+                            <img src="../images/groupimg2.PNG" class="packgalleryimg" alt="Image 2">
+                            <div class="packoverlay">
+                                <p class="nights">3 Nights <br> <span class="days">4 Days</span></p>
+                                <p class="honeyfirstparaa"> ₹90,000 <br>per couple + 18% GST</p>
+                                <button class="offf">10% <br>OFF</button>
+                            </div>
+                        </figure>
+                        <figure class="packagegalleryitem packagegalleryitem3">
+                            <img src="../images/groupimg3.PNG" class="packgalleryimg" alt="Image 3">
+                        </figure>
+                        <figure class="packagegalleryitem packagegalleryitem4">
+                            <img src="../images/groupimg4.PNG" class="packgalleryimg" alt="Image 4">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog ">
+                <div class="modal-content p-5 m-3 modalbox conmodalbox ">
+                    <!-- <h5 class="modal-title">Contact Us</h5>
+                    <input type="text" class="form-control my-2" placeholder="Your Name"> -->
+                    <div class="modalcontent p-5  m-3 ">
+                        <div class="locationmodal">
+                            <div class="sublocmodal">
+                                <img class="logo" src="../images/modallogo.PNG">
+                                <p class="brandh1">Tranquil Escape</p>
+                                <p class="brandh2">Resort and Spa</p>
+                            </div>
+                            <div class="sublocmodal2">
+                                <p><span><img src="../images/locationicon.PNG"></span>Attukad Waterfalls</p>
+                                <p>Aluva - Munnar Rd</p>
+                                <p>Pallivasal,Munnar - 685565</p>
+                            </div>
+
+
+                        </div>
+                        <div class="modalcontact">
+                            <h5>HELP DESK</h5>
+                            <p class="modalmail"><span><img src="../images/lettericon.PNG"></span>
+                                tranquilescape@gmail.com</p>
+                            <p class="mdoalphone"><span><img src="../images/phoneicon.PNG"></span>+91 9234567890,
+                                9846576373</p>
+                            <br>
+                            <h5>FOLLOW US</h5>
+                            <img src="../images/fbicon.PNG">
+                            <img src="../images/youtubeicon.PNG">
+                            <img src="../images/instaicon.PNG">
+                            <img src="../images/twittericon.PNG">
+                        </div>
+                    </div>
+
+                    <div class="modalbooknowmain">
+                        <div class="modalbooknowbtn">
+                            <a href="../pages/bookingfamily.html"> <button class="modalbooknow">BOOK NOW</button></a>
+                        </div>
+                        <div class="modalenquirenowbtn">
+                            <button class="modalenquirenow">Enquire Now</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="modal fade" id="loginModal">
+            <div class="modal-dialog ">
+                <div class="modal-content p-5 m-3 modalbox loginmodalbox">
+
+                    <div class="logindetail ">
+
+                        <h3>LOGIN</h3>
+                        <label for="email"></label><br>
+                        <input class="logmail" type="email" id="email" name="email" required placeholder="Email"
+                            title="enter valid email-id">
+                        <br><br>
+                        <label for="password"></label><br>
+                        <input class="pwd" type="password" id="password" name="password" required placeholder="Password"
+                            title="enter password">
+                        <br><br>
+                        <p class="forgotpwd">Forgot password?</p><br>
+
+                        <div class="logg">
+                            <button class="log" id="submit">LOG IN</button>
+                        </div>
+                        <br><br>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </main>
+    <footer>
+        <div class="footer-div container-fluid align-items-center">
+            <div class="row">
+
+                <div class="footer-div1 foot1 col-12 col-sm-12 col-lg-2 col-md-6">
+                    <div class="brand">
+                        <img class="logo" src="../images/logo.png">
+                        <p class="brandh1">Tranquil Escape</p>
+                        <p class="brandh2">Resort and Spa</p>
+                    </div>
+                    <div class="locationfooter">
+                        <p>Attukad Waterfalls</p>
+                        <p>Aluva - Munnar Rd</p>
+                        <p>Pallivasal,Munnar - 685565</p>
+                    </div>
+                </div>
+
+                <div class="footer-div1 col-sm-12 col-12 col-lg-2 col-md-6">
+                    <h5>QUICK LINKS</h5>
+                    <ul>
+                        <li><a href="/Hotel Booking/index.html">Home</a></li>
+                        <li><a href="../pages/2roomssuites.html">Rooms & Suites</a></li>
+                        <li><a href="../pages/3packages.html">Packages</a></li>
+                        <li><a href="../pages/4photogallery.html">Gallery</a></li>
+                        <li><a href="../pages/5activities.html">Things to do</a></li>
+                    </ul>
+                </div>
+                <div class="footer-div1 col-sm-12 col-12 col-lg-3 col-md-6 ">
+                    <h5>ROOMS & SUITES</h5>
+                    <ul>
+
+                        <li><a href="../pages/2roomssuites.html">Premier Suite</a></li>
+                        <li><a href="../pages/2roomssuites.html">Family Suite</a></li>
+                        <li><a href="../pages/2roomssuites.html">Honeymoon Suite</a></li>
+                        <li><a href="../pages/2roomssuites.html">Presidential Suite</a></li>
+                    </ul>
+                </div>
+                <div class="footer-div1 col-sm-12 col-12 col-lg-2 col-md-6">
+                    <h5>ABOUT US</h5>
+                    <ul>
+                        <li><a href="../pages/privacypolicy.html">Privacy Policy</a></li>
+                        <li><a class="nav-link link" data-bs-toggle="modal" data-bs-target="#myModal"
+                                href="./assets/pages/contactmodal.html">Contact Us</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-div1 foot1 col-sm-12 col-12 col-lg-3 col-md-6">
+                    <h5>HELP DESK</h5>
+                    <p>tranquilescape@gmail.com</p>
+                    <p>+91 9234567890, 9846576373</p>
+                    <h5>FOLLOW US</h5>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <script src="js/bootstrap.bundle.min.js">
+
+    </script>
+</body>
+
+</html>

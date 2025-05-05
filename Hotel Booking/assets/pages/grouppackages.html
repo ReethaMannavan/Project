@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hotel, Booking">
+    <meta name="keywords" content="tourism, famous places, nature, resort, booking, lowcost">
+    <link rel='stylesheet' href="../css/style.css">
+    <title>Hotel - Resort Booking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+         .tinyurl a{
+                text-decoration: none;
+                color:black;
+
+            }
+            .breadcrumb-item{
+                color:black;
+                font-size: 22px;
+            }
+        #packagesheroimg {
+            height: 80vh;
+        }
+
+        .packagesherodiv {
+            max-width: 100%;
+        }
+
+        .packagesherodiv img {
+            max-width: 100%;
+        }
+
+        .heroimgp1 {
+            position: absolute;
+            top: 300px;
+            left: 120px;
+            padding: 0px 20px;
+            color: rgb(236, 234, 234);
+            font-size: 28px;
+            font-weight: bold;
+            font-style: italic;
+            animation: fadeIn 2s 1s ease-in-out forwards;
+        }
+
+        .honeymoon-booking {
+            margin: 5%;
+
+        }
+
+        #honeymoonbooking h4 {
+            text-align: center;
+            color: black;
+        }
+
+        .honeymoon-booking p {
+            color: black;
+            font-size: 25px;
+        }
+
+        #honeymoonpackagebooking h3 {
+            text-align: center;
+        }
+
+        .honeypack {
+            margin: 5%;
+        }
+
+        .honeypack img {
+            border-radius: 20px;
+        }
+
+        .honeypackcol h4 {
+            font-size: 30px;
+            color: black;
+        }
+
+        .honeyfirstpara {
+            color: black;
+            font-size: 25px;
+        }
+
+        .nights {
+            color: black;
+            font-size: 24px;
+        }
+
+        .days {
+            color: black;
+            font-size: 24px;
+        }
+
+        .honey3para {
+            color: black;
+            font-size: 30px;
+
+        }
+
+        .off {
+            background-color: #5AC807;
+            color: white;
+            font-size: 25px;
+            border: none;
+            width: 120px;
+            height: 75px;
+        }
+
+        .details {
+
+            background-color: #5AC807;
+            color: white;
+            font-size: 25px;
+            border: none;
+            width: 250px;
+            height: 75px;
+        }
+
+        .percouple {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            gap: 10%;
+
+        }
+
+        .detailsbtndiv {
+            margin-top: 5%;
+            padding: 3%;
+            text-align: center;
+        }
+
+        .unorderhoney {
+            margin: 5%;
+            padding: 2%;
+            font-size: 20px;
+        }
+
+        .honeybookbtn {
+            background-color: #5AC807;
+            color: white;
+            font-size: 25px;
+            border: none;
+            width: 250px;
+            height: 75px;
+        }
+        .honeybookbutton{
+            padding:3%;
+            justify-content: center;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-default">
+            <div class="container">
+                <div class="brand">
+                    <img class="logo" src="../images/logo.png">
+                    <p class="brandh1">Tranquil Escape</p>
+                    <p class="brandh2">Resort and Spa</p>
+                </div>
+
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navContent">
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item"><a class="nav-link active link" href="/Hotel Booking/index.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link link" href="../pages/2roomssuites.html">ROOMS &
+                                SUITES</a></li>
+                        <li class="nav-item"><a class="nav-link link" href="../pages/3packages.html">PACKAGES</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link link" href="../pages/4photogallery.html">GALLERY</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link link thingsmenu" href="../pages/5activities.html">THINGS
+                                TO
+                                DO</a>
+                            <ul class="dropdownmenu">
+                                <li class="nav-item"><a class="nav-link link dropa" href="../pages/5activities.html">
+                                        Activities</a>
+                                </li>
+                                <hr class="drophr">
+                                <li class="nav-item"><a class="nav-link link dropa" href="../pages/5.2dining.html">
+                                        Dining</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link link" data-bs-toggle="modal" data-bs-target="#myModal"
+                                href="./assets/pages/contactmodal.html">CONTACT</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link link" data-bs-toggle="modal"
+                                data-bs-target="#loginModal" href="./assets/pages/login.html">LOGIN</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+    </header>
+    <main>
+        <section id="packagesheroimg">
+            <div class="packagesherodiv">
+                <img src="../images/packageheroimg1.png">
+                <p class="heroimgp1">Experience Munnar <br> Like never before</p>
+            </div>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item tinyurl"><a href="/Hotel Booking/index.html">Home</a></li>
+                <li class="breadcrumb-item active">Group Packages</li>
+              </ol>
+        </section>
+
+        <section id="honeymoonbooking">
+            <h4>Blanket Munnar: Your ultimate honeymoon and family retreat</h4>
+            <div class="honeymoon-booking">
+
+                <p>Embark on a journey of romance and relaxation with Tranquil Munnar, your premier destination among
+                    luxury resorts in Munnar. Whether you're celebrating your love or creating cherished family
+                    memories, we offer a range of exquisite honeymoon and family packages tailored to exceed to
+                    expectations.</p>
+                <p>Our commitment to excellence ensure that each packages is thoughtfully curated to suit the diverse
+                    needs and preferences of our guests, ensuring an unforgettable experience in Munnar. From intimate
+                    moments for couples to engaging activites for families, every aspect of your stay is meticulously
+                    designed to delight and inspire.</p>
+                <p>As one of the top resorts in munnar for families and couples tranquil munnar invites you to explore
+                    our array of honeymoon pacakges and family resort packages each promising unparallelled luxuries and
+                    comfort amidst the breathtaking beauty of Munnar. </p>
+                <p>Experience the magic of Tranquil munnar and create memories to last a lifetime. Book your package
+                    today and embark on a journey of blissful indulgence. </p>
+            </div>
+        </section>
+
+        <section id="honeymoonpackagebooking">
+            <h3>OUR POPULAR PACKAGES </h3>
+            <div class="container-fluid honeymoon-pack">
+
+                <div class="row honeypack">
+                    <div class="col12 col-sm-12 col-md-6 col-lg-8">
+                        <img src="../images/ourpackageimg3.png">
+                    </div>
+                    <div class="col12 col-sm-12 col-md-6 col-lg-4 honeypackcol">
+                        <h4>Honeymoon Packages</h4>
+                        <p class="honeyfirstpara"> ₹90,000 + 18% GST</p>
+                        <p class="nights"><span><img src="../images/nighticon.PNG"></span>3 Nights <span class="days"><span><img src="../images/dayicon.PNG"></span>4 Days</span></p>
+                        <div class="percouple">
+                            <p class="honey3para">7 People </p>
+                            <button class="off">10% <br>OFF</button>
+                        </div>
+                        <div class="detailsbtndiv">
+                            <button class="details">VIEW DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row unorderhoney">
+                    <div class="col12 col-sm-12 col-md-12 col-lg-12">
+                        <p>We at Blanket Hotel and spa are offering the best honeymoon packages among munnar Resorts for
+                            couples looking for a romantic setting. You can experience a romantic honeymoon at Munnar
+                            with us at Blanket providing you the finest honeymoon experience. You and your loved one
+                            indulge in cultural experiences , romantic dinner and a lot more with our special honeymoon
+                            package.</p>
+                        <ul>
+                            <li>Leave behind the hustle and bustle of city stay while you enjoy a hill station / tea
+                                plantation enroute to our exo friendly resorts in Munnar.</li>
+                            <li>Traditional welcome on arrival</li>
+                            <li>Accommodation in spacious, well appointed Blanket honeymoon pavillion</li>
+                            <li>Rates are inclusive of room, buffet breakfast, buffet dinner for a couple Occupancy</li>
+                            <li>Complimentary use of Wi-Fi in the room</li>
+                            <li>Dine under the starry sky (once during the stay) With a chef's special dinner with
+                                Romantic atmosphere.</li>
+                            <li>A romantic mood theme set up in your room with a special Honeymoon Cake, Fruit Basket,
+                                and homemade chocolate and bed decoratiion once during the stay.</li>
+                            <li>Enjoy a 25 minutes tension free "Massage " followed by a consultation with our in-house
+                                ayurvedha doctor.</li>
+                            <li>Explore the Munnar beauty with two full days local sight seeing like Tea Museum,
+                                Eravikulam national park, Mattupatty Dam, Eco point, Chinnar wildlife sanctuary and
+                                Marayoor.</li>
+                            <li>Enjoy with the evening Traditional cultural / instrumental musical programs.</li>
+                            <li>All day complimetary replenishment of Tea Coffee amenities in the room</li>
+                            <li>Free use of recreational facilities like fitness center, indoor games, swimming pool.
+                            </li>
+                        </ul>
+                        <p>Special Inclusions</p>
+                        <ul>
+                            <li>Cochin Airport / Railway station Pick up and drop by Air conditioned cab.</li>
+                        </ul>
+                        <p>Terms & Conditions</p>
+                        <ul>
+                            <li>The rates mentioned are applicable for two people for 3 Nights and 4 Days. </li>
+                            <li>Package extendable on pro - rate basis</li>
+                            <li>Package is valid from 1st March 2023 to 31st May 2024 except the period between 20th
+                                December 2023 to 10th January 2024.</li>
+                            <li>Reservation will be guranteed only after recieving the email / Fax.</li>
+                            <li>Confirmation on definite basis only on 50% Advance Payment</li>
+                            <li>Check out time is 12:00 HRS and check-in time is 14:00 HRS. Early check-in and late
+                                check-out on subject to availability and it may be chargeable basis. </li>
+                            <li>it is mandatory to present, address with valid government identification for Indian
+                                Citizen and all other Nationalities guests to be presented valid Passport and Visa at
+                                the time of Check-In.</li>
+                            <li>Guests are requested to carry Nylon Swimming costume to access Swimming Pool</li>
+                            <li>All governement taxes are excluded</li>
+                        </ul>
+                        <p>Cancellation / No - Show Policy</p>
+                        <ul>
+                            <li>In case of No Show or cancellation of a guaranteed reservation, the hotel reserves the
+                                right to levy retention charge for the entire stay .</li>
+                            <li>Cancellation policy: 50% retention charges for cancellation done within 30 days and full
+                                retention for cancellation within 15 days prior to arrival.</li>
+                        </ul>
+                    </div>
+                    <div class="honeybookbutton">
+                        <a href="../pages/bookinggroup.html"><button class="honeybookbtn">BOOK NOW</button></a>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="footer-div container-fluid align-items-center">
+            <div class="row">
+
+                <div class="footer-div1 foot1 col-12 col-sm-12 col-lg-2 col-md-6">
+                    <div class="brand">
+                        <img class="logo" src="../images/logo.png">
+                        <p class="brandh1">Tranquil Escape</p>
+                        <p class="brandh2">Resort and Spa</p>
+                    </div>
+                    <div class="locationfooter">
+                        <p>Attukad Waterfalls</p>
+                        <p>Aluva - Munnar Rd</p>
+                        <p>Pallivasal,Munnar - 685565</p>
+                    </div>
+                </div>
+
+                <div class="footer-div1 col-sm-12 col-12 col-lg-2 col-md-6">
+                    <h5>QUICK LINKS</h5>
+                    <ul>
+                        <li><a href="/Hotel Booking/index.html">Home</a></li>
+                        <li><a href="../pages/2roomssuites.html">Rooms & Suites</a></li>
+                        <li><a href="../pages/3packages.html">Packages</a></li>
+                        <li><a href="../pages/4photogallery.html">Gallery</a></li>
+                        <li><a href="../pages/5activities.html">Things to do</a></li>
+                    </ul>
+                </div>
+                <div class="footer-div1 col-sm-12 col-12 col-lg-3 col-md-6 ">
+                    <h5>ROOMS & SUITES</h5>
+                    <ul>
+
+                        <li><a href="../pages/2roomssuites.html">Premier Suite</a></li>
+                        <li><a href="../pages/2roomssuites.html">Family Suite</a></li>
+                        <li><a href="../pages/2roomssuites.html">Honeymoon Suite</a></li>
+                        <li><a href="../pages/2roomssuites.html">Presidential Suite</a></li>
+                    </ul>
+                </div>
+                <div class="footer-div1 col-sm-12 col-12 col-lg-2 col-md-6">
+                    <h5>ABOUT US</h5>
+                    <ul>
+                        <li><a href="../pages/privacypolicy.html">Privacy Policy</a></li>
+                        <li><a class="nav-link link" data-bs-toggle="modal" data-bs-target="#myModal"
+                            href="./assets/pages/contactmodal.html">Contact Us</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-div1 foot1 col-sm-12 col-12 col-lg-3 col-md-6">
+                    <h5>HELP DESK</h5>
+                    <p>tranquilescape@gmail.com</p>
+                    <p>+91 9234567890, 9846576373</p>
+                    <h5>FOLLOW US</h5>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <script src="js/bootstrap.bundle.min.js">
+
+    </script>
+</body>
+
+</html>

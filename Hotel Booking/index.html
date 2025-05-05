@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hotel, Booking">
+    <meta name="keywords" content="tourism, famous places, nature, resort, booking, lowcost">
+    <link rel='stylesheet' href="./assets/css/style.css">
+    <title>Hotel - Resort Booking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        @media (min-width:1024px) {
+            * {
+                margin: 0%;
+                padding: 0%;
+                box-sizing: border-box;
+                font-family: 'Poppins';
+
+            }
+
+            ul li ul.dropdownmenu li {
+                display: block;
+
+            }
+
+            ul li ul.dropdownmenu {
+
+                background-color: #D0FFB7;
+                position: absolute;
+                z-index: 5;
+                display: none;
+                padding-left: 0;
+                width: 180px;
+                text-align: center;
+            }
+
+            ul li ul.dropdownmenu a {
+                color: black;
+                font-size: 20px;
+                font-weight: bold;
+                text-decoration: none;
+                list-style: none;
+
+            }
+
+
+
+            ul li:hover ul.dropdownmenu {
+                display: block;
+            }
+
+            .drophr {
+                color: black;
+            }
+
+
+            #hero-img {
+                height: 90vh;
+            }
+
+
+
+            .heroimg img {
+                width: 100%;
+                height: 80vh;
+            }
+
+
+
+            @keyframes fadeIn {
+                0% {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .heroimgp1 {
+                position: absolute;
+                top: 300px;
+                left: 120px;
+                padding: 0px 20px;
+                color: rgb(236, 234, 234);
+                font-size: 28px;
+                font-family: "PoppinsItal";
+                font-style: italic;
+                animation: fadeIn 2s 1s ease-in-out forwards;
+            }
+
+            .heroimgp2 {
+                position: absolute;
+                top: 400px;
+                left: 120px;
+                padding: 0px 20px;
+                color: rgb(236, 234, 234);
+                font-size: 20px;
+                font-family: "PoppinsItal";
+                font-style: italic;
+                animation: fadeIn 2s 1s ease-in-out forwards;
+            }
+
+            .welcomediv {
+                margin: 5%;
+                padding: 1%;
+                gap: inherit;
+
+            }
+
+            .welcomeh3 {
+                font-size: 25px;
+                text-align: left;
+            }
+
+            .welcomep {
+                font-size: 18px;
+                text-align: left;
+            }
+
+
+
+            .postmain {
+                margin: 0;
+                padding: 0;
+
+
+            }
+
+            .post {
+                position: relative;
+                width: 500px;
+                height: 450px;
+                cursor: pointer;
+            }
+
+            .post:hover .post-slide {
+                width: 500px;
+
+            }
+
+            .post img {
+                display: block;
+                width: 500px;
+                height: 450px;
+            }
+
+            .post-slide {
+
+                position: absolute;
+                width: 0px;
+                height: 450px;
+                top: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                transition: 0.7s ease;
+            }
+
+            .postmain1 {
+                margin: 0;
+                padding: 0;
+
+
+            }
+
+            .post1 {
+                position: relative;
+                width: 550px;
+                height: 450px;
+                cursor: pointer;
+            }
+
+            .post1:hover .post-slide1 {
+                width: 550px;
+
+            }
+
+            .post1 img {
+                display: block;
+                width: 550px;
+                height: 450px;
+            }
+
+            .post-slide1 {
+
+                position: absolute;
+                width: 0px;
+                height: 450px;
+                top: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                transition: 0.7s ease;
+            }
+
+            .roomdivision {
+                margin-left: auto;
+                margin-right: auto;
+                border: 2px solid rgb(92, 92, 92);
+                width: 750px;
+                height: 120px;
+                border-radius: 20px;
+                align-content: center;
+                background-color: #D0FFB7;
+
+            }
+
+            .roomsuitesh5 {
+                text-align: center;
+            }
+
+            .premiericon {
+                margin-left: 10%;
+            }
+
+            .homeprem {
+                color: #05AC37;
+                font-size: 30px;
+            }
+
+            .roomsuitesp {
+                text-align: center;
+            }
+
+            .allrooms {
+                margin-top: 2%;
+                display: flex;
+            }
+
+            .roomdiv1 {
+
+                margin-left: 7%;
+                margin-right: auto;
+
+            }
+
+            .roomdiv1 a {
+                margin-top: 30px;
+                font-size: 30px;
+                text-align: left;
+                text-decoration: none;
+                color: black;
+            }
+
+            .roomdiv1:nth-child(1) {
+                color: #05AC37;
+            }
+
+            .verticaldiv {
+                margin-top: 30px;
+                height: 80px;
+                width: 2px;
+                background-color: rgb(95, 93, 93);
+            }
+
+            .roomsubdiv1 {
+
+                margin-left: auto;
+                margin-right: auto;
+                padding: 5%;
+
+            }
+
+            .roomsubdivision img {
+                height: 450px;
+                width: 550px;
+                border-radius: 20px;
+            }
+
+            .roomsubdivp {
+                font-size: 20px;
+            }
+
+            .knowmorehome {
+                text-decoration: none;
+                color: #05AC37;
+                font-size: 23px;
+            }
+
+            #munnar-treasure {
+                height: 80vh;
+            }
+
+            .munnarhomeimg {
+                height: 80vh;
+                background-image: url('./assets/images/munnarplantation.jpg');
+                background-size: cover;
+            }
+
+
+            @keyframes fadeInn {
+                0% {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .munnarhomeimage {
+                margin-left: 5%;
+                padding: 0px 20px;
+                color: black;
+                font-size: 20px;
+                animation: fadeInn 2s 1s ease-in-out forwards;
+            }
+
+            .munnartreasub {
+                border-left: 1px solid black;
+                padding-left: 3%;
+            }
+
+            #home-packages {
+                margin: 5%;
+            }
+
+            .homepackages p {
+                font-size: 22px;
+                padding-top: 20px;
+            }
+
+            .exploredining {
+                height: 80vh;
+                background: url('./assets/images/homediningimg.jpg');
+                background-size: cover;
+            }
+
+            .exploredining p,
+            .exploredining a {
+                margin-left: 5%;
+                padding: 20px 20px;
+                color: white;
+                font-size: 20px;
+                animation: fadeInn 2s 1s ease-in-out forwards;
+
+            }
+
+            .exploredining p {
+                font-style: italic;
+
+            }
+
+            .exploredining a {
+                text-decoration: none;
+                font-size: 30px;
+                font-weight: bold;
+            }
+
+            #guest-reviews {
+                margin: 5%;
+                height: 50vh;
+            }
+
+            .guestreviews img {
+                margin-top: 20px;
+                border-radius: 20px;
+                width: 380px;
+                height: 250px;
+
+            }
+
+
+            .guestreviews {
+                display: flex;
+            }
+
+            .reviewbox {
+                position: relative;
+                display: inline-block;
+                overflow: hidden;
+            }
+
+            .reviewbox img {
+                transition: all linear 0.7s;
+            }
+
+            .hover-img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+
+            }
+
+            .reviewbox:hover img {
+                opacity: 0;
+            }
+
+            .reviewbox:hover img.hover-img {
+                opacity: 1;
+            }
+
+            .modalcontent {
+                display: flex;
+                gap: 10%;
+            }
+
+            .modalbooknowmain {
+                margin-left: 15%;
+                margin-right: auto;
+                display: flex;
+                gap: 15%;
+
+            }
+
+            .modalbooknow {
+                background-color: #5AC807;
+                border: none;
+                width: 180px;
+                height: 60px;
+                color: white;
+                font-size: 22px;
+            }
+
+            .modalenquirenow {
+                background-color: #5AC807;
+                border: none;
+                width: 180px;
+                height: 60px;
+                color: white;
+                font-size: 22px;
+            }
+
+            .conmodalbox {
+                height: 500px;
+                width: 800px;
+                text-align: center;
+            }
+
+            .sublocmodal2 {
+                text-align: left;
+                line-height: 0cap;
+            }
+
+            .modalcontact {
+                text-align: left;
+                color: black;
+
+            }
+
+            .modalcontact p {
+                color: black;
+                font-size: 17px;
+            }
+
+            .modalbody {
+                background-color: black;
+            }
+
+            .loginmodalbox {
+                height: 600px;
+                width: 500px;
+                text-align: center;
+            }
+
+            .logindetail {
+                padding: 20px;
+                justify-content: center;
+                font-size: 25px;
+                justify-items: center;
+            }
+
+            .logmail,
+            .pwd {
+                padding: 15px;
+                width: 250px;
+                height: 50px;
+                border: none;
+                box-shadow: 5px 5px 5px rgb(49, 49, 49);
+
+            }
+
+            .log {
+
+                width: 250px;
+                height: 3rem;
+                border: none;
+                font-size: 22px;
+                color: black;
+                background-color: #5AC807;
+
+            }
+
+            .forgotpwd {
+                color: #5AC807;
+                text-align: right;
+                font-size: 15px;
+                margin-left: 25%;
+            }
+
+            .error_msg1 {
+                color: red;
+                font-size: 15px;
+            }
+
+            .error_msg2 {
+                color: red;
+                font-size: 15px;
+            }
+
+            .logsuccess {
+                text-decoration: none;
+                list-style: none;
+            }
+
+            .popupsuccess {
+                text-align: center;
+                font-size: 25px;
+                color: green;
+            }
+            .success { color: green; display: none; }
+            .error_msg1{ color: red; display: none; }
+            .error_msg2{ color: red; display: none; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <header>
+        <nav class="navbar navbar-expand-md navigation">
+            <div class="container">
+                <div class="brand">
+                    <img class="logo" src="./assets/images/logo.png">
+                    <p class="brandh1">Tranquil Escape</p>
+                    <p class="brandh2">Resort and Spa</p>
+
+                    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navContent">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+
+                <div class="collapse navbar-collapse" id="navContent">
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item"><a class="nav-link active link" href="./index.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link link" href="./assets/pages/2roomssuites.html">ROOMS &
+                                SUITES</a></li>
+                        <li class="nav-item"><a class="nav-link link" href="./assets/pages/3packages.html">PACKAGES</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link link"
+                                href="./assets/pages/4photogallery.html">GALLERY</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link link thingsmenu"
+                                href="./assets/pages/5activities.html">THINGS TO
+                                DO</a>
+                            <ul class="dropdownmenu">
+                                <li class="nav-item"><a class="nav-link link dropa"
+                                        href="./assets/pages/5activities.html">
+                                        Activities</a>
+                                </li>
+                                <hr class="drophr">
+                                <li class="nav-item"><a class="nav-link link dropa"
+                                        href="./assets/pages/5.2dining.html">
+                                        Dining</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link link" data-bs-toggle="modal" data-bs-target="#myModal"
+                                href="./assets/pages/contactmodal.html">CONTACT</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link link" data-bs-toggle="modal"
+                                data-bs-target="#loginModal" href="./assets/pages/login.html">LOGIN</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header> -->
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-default">
+            <div class="container">
+                <div class="brand">
+                    <img class="logo" src="./assets/images/logo.png">
+                    <p class="brandh1">Tranquil Escape</p>
+                    <p class="brandh2">Resort and Spa</p>
+                </div>
+
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navContent">
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item"><a class="nav-link active link" href="./index.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link link" href="./assets/pages/2roomssuites.html">ROOMS &
+                                SUITES</a></li>
+                        <li class="nav-item"><a class="nav-link link" href="./assets/pages/3packages.html">PACKAGES</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link link"
+                                href="./assets/pages/4photogallery.html">GALLERY</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link link thingsmenu"
+                                href="./assets/pages/5activities.html">THINGS TO
+                                DO</a>
+                            <ul class="dropdownmenu">
+                                <li class="nav-item"><a class="nav-link link dropa"
+                                        href="./assets/pages/5activities.html">
+                                        Activities</a>
+                                </li>
+                                <hr class="drophr">
+                                <li class="nav-item"><a class="nav-link link dropa"
+                                        href="./assets/pages/5.2dining.html">
+                                        Dining</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link link" data-bs-toggle="modal" data-bs-target="#myModal"
+                                href="./assets/pages/contactmodal.html">CONTACT</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link link" data-bs-toggle="modal"
+                                data-bs-target="#loginModal" href="./assets/pages/login.html">LOGIN</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+
+
+    <main>
+        <section id="hero-img">
+            <div class=" heroimg">
+
+                <img class="heroimage" src="./assets/images/homeheroimg.jpg" alt="heroimg">
+                <p class="heroimgp1">Experience Munnar <br> Like never before</p>
+                <p class="heroimgp2">Best luxury hotel in Munnar</p>
+            </div>
+        </section>
+
+        <section id="welcome">
+            <div class="container-fluid align-items-center ">
+                <div class="row text-center welcomediv">
+                    <div class="col12 col-sm-12 col-md-6 col-lg-6 postmain">
+                        <div class="post">
+                            <img src="./assets/images/homeimg1.JPG">
+                            <div class="post-slide">
+                                <img class="slideimg" src="./assets/images/homeslide1.PNG">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col12 col-sm-12 col-md-6 col-lg-6">
+                        <h3 class="welcomeh3">Welcome to <br> Tranquil Escape Resort & Spa </h3>
+                        <p class="welcomep">Welcome to the official website of Tranquil Escape resort and spa, a luxury
+                            resort in Munnar.
+                            We are one of the top and best 5 star hotels in Munnar. Situated at Pallivasal, near
+                            mystical attukad water falls. This spa resort is soon becoming one of the most sought after
+                            top five star resorts in Munnar for Honeymoon couples. At Tranquil Escape Resort & spa in
+                            Munnar, We believe that luxury is best experienced when it blends with the beauty of the
+                            nature. In this context, we have gone to great lengths to make tranquil one of the best eco
+                            friendly 5 star hotels in Munnar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="home-roomandsuites">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="roomdiv col-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="roomdivision">
+                            <h5 class="roomsuitesh5">ROOMS & SUITES</h5>
+                            <p class="roomsuitesp"> A perfect union of the beauty of nature and opulence of top end
+                                luxury
+                                is <br>what the
+                                accommodation at Blanket can offer the discerning guest in you</p>
+                        </div>
+                    </div>
+                    <div class="allrooms">
+                        <div class="roomdiv1">
+                            <h5 class="homeprem"> PREMIER <br> SUITE</h5>
+                            <img class="premiericon" src="./assets/images/premiericon.PNG">
+                        </div>
+                        <div class="verticaldiv">
+
+                        </div>
+                        <div class="roomdiv1">
+                            <a href="./assets/pages/2roomssuites.html">FAMILY <br> SUITE</a>
+                        </div>
+                        <div class="verticaldiv">
+
+                        </div>
+                        <div class="roomdiv1">
+                            <a href="./assets/pages/2roomssuites.html">HONEYMOON <br>SUITE</a>
+                        </div>
+                        <div class="verticaldiv">
+
+                        </div>
+                        <div class="roomdiv1">
+                            <a href="./assets/pages/2roomssuites.html">PRESIDENTIAL <br>SUITE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="roomsubdiv">
+            <div class="container-fluid roomsubdiv1">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 roomsubdivision postmain1">
+                        <div class="post1">
+                            <img src="./assets/images/homeslideimg1.jpg">
+
+                            <div class="post-slide1">
+                                <img class="slideimg1" src="./assets/images//Premier suite room animated image.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <p class="roomsubdivp">with a view that rivals the most romantic novels, tranquil camelia
+                            with
+                            its big glass window
+                            opening to the scenic valley, offers facilities like 32inch TV, minibar, hair dryer,
+                            iron
+                            box, safe locker, air - conditioning and Wifi. The room with the floor area of 285
+                            square
+                            feet, comes with a cubicle wash room replete with all the basic toiletries. You can
+                            indulge
+                            in the cool breeze that blows from the mountains and sip on a warm beverage with your
+                            loved
+                            one by your side as you take in the ethereal beauty of Munnar and its Mountains.</p>
+                        <a class="knowmorehome" href="./assets/pages/2roomssuites.html">KNOW MORE > </a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section id="munnar-treasure">
+            <div class="munnarhomeimg container-fluid">
+                <div class="row munnarhomeimage">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="munnartrea">
+                            <p>Munnar <br>a Treasure Chest of <br>Experiences</p>
+                        </div>
+                        <div class="verticaldivmunnar">
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-9">
+                        <div class="munnartrea">
+                            <p class="munnartreasub">Tranquil Escape luxury 5 star hotel in Munnar is the epitome of
+                                what a five star
+                                resort
+                                should aspire to be. Nested in the idyllic locales of mystic Attukad, the 5 star
+                                resort
+                                is a perfect escape for honeymoon couples and families alike who are on holidary in
+                                Munnar. With settings that boast of the most comfortable and luxurious holiday
+                                experience. Tranquil is a luxury 5 star hotel that offers guests luxury and beauty
+                                in
+                                abundance. Located in the state of Kerala, along the western ghats, Munnar is a
+                                kaleidoscopic paradise that is home to some of the finest tea plantations in India.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section id="home-packages">
+            <div class="container-fluid homepackages">
+                <h2>OUR PACKAGES</h2>
+                <div class="row">
+                    <div class="col12 col-sm-12 col-md-6 col-lg-4">
+                        <img class="img-fluid" src="./assets/images/ourpackageimg1.png">
+                        <p>Honeymoon Packages</p>
+                        <a class="knowmorehome" href="./assets/pages/honeymoonpackage.html">KNOW MORE ></a>
+                    </div>
+                    <div class="col12 col-sm-12 col-md-6 col-lg-4">
+                        <img class="img-fluid" src="./assets/images/homefamilyimg2.PNG">
+                        <p>Family Packages</p>
+                        <a class="knowmorehome" href="./assets/pages/familypackages.html">KNOW MORE ></a>
+                    </div>
+                    <div class="col12 col-sm-12 col-md-6 col-lg-4">
+                        <img class="img-fluid" src="./assets/images/ourpackageimg3.png">
+                        <p>Group Packages</p>
+                        <a class="knowmorehome" href="./assets/pages/grouppackages.html">KNOW MORE ></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="explore-dining">
+            <div class="exploredining">
+                <p>We provide high class foods in our resort</p>
+                <a class="dininglink" href="./assets/pages/5.2dining.html">Explore dining ></a>
+            </div>
+        </section>
+
+        <section id="guest-reviews">
+            <h4>OUR GUEST REVIEWS</h4>
+            <div class="container-fluid guestreviews">
+                <div class="row">
+                    <div class="col12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="reviewbox">
+                            <img class="reviewimg" src="./assets/images/guest1.JPG">
+                            <img class="hover-img" src="./assets/images/Review 1.png">
+                        </div>
+
+                    </div>
+                    <div class="col12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="reviewbox">
+                            <img class="reviewimg" src="./assets/images/guest2.JPG">
+                            <img class="hover-img" src="./assets/images/Review 2.png">
+                        </div>
+                    </div>
+                    <div class="col12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="reviewbox">
+                            <img class="reviewimg" src="./assets/images/ourpackageimg3.png">
+                            <img class="hover-img" src="./assets/images/Review 3.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog ">
+                <div class="modal-content p-5 m-3 modalbox conmodalbox ">
+                    <!-- <h5 class="modal-title">Contact Us</h5>
+                    <input type="text" class="form-control my-2" placeholder="Your Name"> -->
+                    <div class="modalcontent p-5  m-3 ">
+                        <div class="locationmodal">
+                            <div class="sublocmodal">
+                                <img class="logo" src="./assets/images/modallogo.PNG">
+                                <p class="brandh1">Tranquil Escape</p>
+                                <p class="brandh2">Resort and Spa</p>
+                            </div>
+                            <div class="sublocmodal2">
+                                <p><span><img src="./assets/images/locationicon.PNG"></span>Attukad Waterfalls</p>
+                                <p>Aluva - Munnar Rd</p>
+                                <p>Pallivasal,Munnar - 685565</p>
+                            </div>
+
+
+                        </div>
+                        <div class="modalcontact">
+                            <h5>HELP DESK</h5>
+                            <p class="modalmail"><span><img src="./assets/images/lettericon.PNG"></span>
+                                tranquilescape@gmail.com</p>
+                            <p class="mdoalphone"><span><img src="./assets/images/phoneicon.PNG"></span>+91 9234567890,
+                                9846576373</p>
+                            <br>
+                            <h5>FOLLOW US</h5>
+                            <img src="./assets/images/fbicon.PNG">
+                            <img src="./assets/images/youtubeicon.PNG">
+                            <img src="./assets/images/instaicon.PNG">
+                            <img src="./assets/images/twittericon.PNG">
+                        </div>
+                    </div>
+
+                    <div class="modalbooknowmain">
+                        <div class="modalbooknowbtn">
+                            <a href="./assets/pages/bookingfamily.html"><button class="modalbooknow">BOOK
+                                    NOW</button></a>
+                        </div>
+                        <div class="modalenquirenowbtn">
+                            <button class="modalenquirenow">Enquire Now</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="loginModal">
+            <div class="modal-dialog ">
+                <div class="modal-content p-5 m-3 modalbox loginmodalbox">
+
+                    <form action="" class="login_form" id="login_form">
+                        <div class="logindetail ">
+
+                            <h3>LOGIN</h3>
+                            <label for="email"></label><br>
+                            <input class="logmail email" type="email" id="email" name="email" required
+                                placeholder="Email" title="enter valid email-id">
+
+                            <br>
+                            <div class="error_msg1" id="error_msg1">
+                                Please Enter a Valid email
+                            </div>
+                            <br>
+
+                            <label for="password"></label><br>
+                            <input class="pwd input" type="password" id="password" name="password" required
+                                placeholder="Password" title="enter password">
+                            <br>
+                            <div class="error_msg2" id="error_msg2">
+                                Password must be greater than 6 characters.
+                            </div>
+                            <br>
+                            <p class="forgotpwd">Forgot password?</p><br>
+
+                            <div class="logg">
+
+                                <button type="submit" class="log" id="submit">LOG IN</button>
+                            </div>
+                            <br>
+                            <p class="success" id="successMessage">Login successful!</p>
+                    </form>
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+        <!-- <div class="modal fade" id="successModal">
+            <div class="modal-dialog ">
+                <div class="modal-content p-5 m-3 modalbox successmodalbox">
+                    <img src="./assets/images/loginsuccess.PNG">
+                    <p class="popupsuccess">Login Successful</p>
+                </div>
+            </div>
+
+
+
+        </div> -->
+        
+
+
+
+
+
+    </main>
+    <footer>
+        <div class="footer-div container-fluid align-items-center">
+            <div class="row">
+
+                <div class="footer-div1 foot1 col-12 col-sm-12 col-lg-2 col-md-6">
+                    <div class="brand">
+                        <img class="logo" src="./assets/images/logo.png">
+                        <p class="brandh1">Tranquil Escape</p>
+                        <p class="brandh2">Resort and Spa</p>
+                    </div>
+                    <div class="locationfooter">
+                        <p class="homelocicon"><span><img src="./assets/images/homelocicon.PNG"></span>Attukad
+                            Waterfalls</p>
+                        <p>Aluva - Munnar Rd</p>
+                        <p>Pallivasal,Munnar - 685565</p>
+                    </div>
+                </div>
+
+                <div class="footer-div1 foot1 col-sm-12 col-12 col-lg-2 col-md-6 ">
+                    <h5>QUICK LINKS</h5>
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./assets/pages/2roomssuites.html">Rooms&Suites</a></li>
+                        <li><a href="./assets/pages/3packages.html">Packages</a></li>
+                        <li><a href="./assets/pages/4photogallery.html">Gallery</a></li>
+                        <li><a href="./assets/pages/5activities.html">Things to do</a></li>
+                    </ul>
+                </div>
+                <div class="footer-div1 foot1 col-sm-12 col-12 col-lg-3 col-md-6 ">
+                    <h5>ROOMS & SUITES</h5>
+                    <ul>
+
+                        <li><a href="./assets/pages/2roomssuites.html">Premier Suite</a></li>
+                        <li><a href="./assets/pages/2roomssuites.html">Family Suite</a></li>
+                        <li><a href="./assets/pages/2roomssuites.html">Honeymoon Suite</a></li>
+                        <li><a href="./assets/pages/2roomssuites.html">Presidential Suite</a></li>
+                    </ul>
+                </div>
+                <div class="footer-div1 foot1 col-sm-12 col-12 col-lg-2 col-md-6">
+                    <h5>ABOUT US</h5>
+                    <ul>
+                        <li><a href="./assets/pages/privacypolicy.html">Privacy Policy</a></li>
+                        <li><a class="nav-link link" data-bs-toggle="modal" data-bs-target="#myModal"
+                                href="./assets/pages/contactmodal.html">Contact Us</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-div1 foot1 col-sm-12 col12 col-lg-3 col-md-6">
+                    <h4>HELP DESK</h4>
+                    <p class="homemailicon"><span><img
+                                src="./assets/images/homemailicon.PNG"></span>tranquilescape@gmail.com</p>
+                    <p class="homemailicon"><span><img src="./assets/images/homephoneicon.PNG"></span>+91 9234567890,
+                        9846576373</p>
+                    <h4>FOLLOW US</h4>
+                    <img src="./assets/images/homefbicon.PNG">
+                    <img src="./assets/images/homeyticon.PNG">
+                    <img src="./assets/images/homeinstaicon.PNG">
+                    <img src="./assets/images/hometwittericon.PNG">
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <script src="js/bootstrap.bundle.min.js">
+
+    </script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="organic,farming" />
+    <meta
+      name="keywords"
+      content="nature, organic, food, farming, cultivation, crops"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Organic Farming Website</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+      .contactbody {
+        font-family: "Raleway";
+      }
+      .contact-form {
+        max-width: 500px;
+        background: rgb(221, 213, 213);
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin: auto;
+      }
+
+      .form-group {
+        margin-bottom: 1.2rem;
+      }
+
+     .form-group label {
+        display: block;
+        margin-bottom: 0.4rem;
+      }
+
+      .form-group input,
+       textarea,
+      select {
+        width: 100%;
+        padding: 0.7rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .firstn,
+      .secondn {
+        width: 95%;
+      }
+      .first-last {
+        display: flex;
+        flex-direction: row;
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      .checkbox-group {
+        display: flex;
+        align-items: center;
+      }
+
+      .send {
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 0.8rem 1.2rem;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      /* button:hover {
+        background-color: #0056b3;
+      } */
+
+      .success {
+        color: green;
+        margin-top: 1rem;
+      }
+
+      .error {
+        color: red;
+        font-size: 0.9rem;
+        margin-top: 0.2rem;
+      }
+
+      .phone-row {
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      .phone-row select {
+        width: 35%;
+      }
+
+      .phone-row input {
+        width: 65%;
+      }
+      .privacy {
+        display: flex;
+      }
+      #privacyPolicy {
+        width: 20px;
+        height: 20px;
+        border: none;
+        border-radius: 20px;
+      }
+      .contactus {
+        text-align: center;
+      }
+      .contactus h5 {
+        font-weight: bold;
+      }
+      .contactus h3 {
+        font-size: 42px;
+      }
+      .contactus p {
+        color: rgb(99, 98, 98);
+        font-size: 20px;
+      }
+      
+    </style>
+  </head>
+
+  <body class="contactbody">
+    <div class="contactcontainer">
+      <img src="../images/contactheroimg.png" />
+    </div>
+
+    <header class="soilheader">
+      <nav class="navbar soilnavbar navbar-expand-md navbar-default">
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navContent"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navContent">
+          <ul class="navbar-nav ms-auto">
+           <li class="nav-item"><a class="nav-link active link" href="/OrganicFarming/index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link active link" href="/OrganicFarming/assets/pages/about.html">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link active link" href="/OrganicFarming/assets/pages/cropguide.html">CROP GUIDE</a></li>
+                    <li class="nav-item"><a class="nav-link active link" href="/OrganicFarming/assets/pages/contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="contact-sec">
+        <div class="container-fluid">
+          <div class="row contactrow1">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 contcol">
+              <div class="contactus">
+                <h5>Contact Us</h5>
+                <h3>Get in touch</h3>
+                <p>We'd love to hear from you. Please fill out this form.</p>
+              </div>
+
+              <div class="contact-form" id="formContainer">
+                <form id="contactForm" novalidate>
+                  <div class="form-group">
+                    <div class="first-last">
+                      <div class="first">
+                        <label for="firstName">First Name</label>
+                        <input
+                          type="text"
+                          class="firstn"
+                          id="firstName"
+                          placeholder="Firstname"
+                        />
+                        <div class="error" id="firstNameError"></div>
+                      </div>
+                      <div class="last">
+                        <label for="lastName">Last Name</label>
+                        <input
+                          type="text"
+                          class="secondn"
+                          id="lastName"
+                          placeholder="Lastname"
+                        />
+                        <div class="error" id="lastNameError"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      placeholder="you@company.com"
+                    />
+                    <div class="error" id="emailError"></div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="countryCode">Phone Number</label>
+                    <div class="phone-row">
+                      <select id="countryCode">
+                        <option value="+1">+1 (USA)</option>
+                        <option value="+44">+44 (UK)</option>
+                        <option value="+61">+61 (Australia)</option>
+                        <option value="+91">+91 (India)</option>
+                        <option value="+81">+81 (Japan)</option>
+                        <option value="+49">+49 (Germany)</option>
+                        <option value="+33">+33 (France)</option>
+                      </select>
+                      <input
+                        type="tel"
+                        id="phone"
+                        placeholder="+1(555)000-0000"
+                      />
+                    </div>
+                    <div class="error" id="phoneError"></div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="4"></textarea>
+                    <div class="error" id="messageError"></div>
+                  </div>
+
+                  <div class="form-group checkbox-group">
+                    <div class="privacy">
+                      <input type="checkbox" id="privacyPolicy" />
+                      <label for="privacyPolicy"
+                        >I agree to the privacy policy</label
+                      >
+                    </div>
+                  </div>
+                  <div class="error" id="privacyError"></div>
+
+                  <button type="submit" class="send">Send Message</button>
+                  <div class="success" id="successMsg"></div>
+                </form>
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+              <div class="row contactrow2">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 contcol1">
+                  <img src="/OrganicFarming/assets/images/contactimg1.png" />
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 contcol2">
+                  <img src="/OrganicFarming/assets/images/contactimg2.png" />
+                </div>
+              </div>
+              <br />
+              <div class="row contactrow2">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-12 contcol3">
+                  <img src="/OrganicFarming/assets/images/contactimg3.png" />
+                </div>
+              </div>
+              <br />
+              <div class="row contactrow2">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 contcol4">
+                  <img src="/OrganicFarming/assets/images/contactimg4.png" />
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 contcol5">
+                  <img src="/OrganicFarming/assets/images/contactimg5.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="soilget-in-touch">
+        <div class="container-fluid soilgetintouchcontainer">
+          <div class="row soilgetintouch">
+            <div class="getintouchsubrow">
+              <p>connect</p>
+              <h2>Get in Touch</h2>
+              <p>We're here to assist you with any inquiries.</p>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 getintouchcol">
+              <div class="email">
+                <img
+                  src="/OrganicFarming/assets/images/mailicon.PNG"
+                /><br /><br />
+                <h5>Email</h5>
+                <p>Reach us at</p>
+                <p>greenguide@gmail.com</p>
+              </div>
+              <div class="phone">
+                <img
+                  src="/OrganicFarming/assets/images/phoneicon.PNG"
+                /><br /><br />
+                <h5>Phone</h5>
+                <p>Call us anytime at</p>
+                <p>9874563210</p>
+              </div>
+              <div class="office">
+                <img
+                  src="/OrganicFarming/assets/images/locationicon.PNG"
+                /><br /><br />
+                <h5>Office</h5>
+                <p>123, Chennai, Tamilnadu, INDIA</p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-8 getintouchcol2">
+              <img src="/OrganicFarming/assets/images/getintouch.png" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <br />
+    <footer>
+        <div class="footer-div container-fluid align-items-center">
+             <div class="row">
+
+                <div class="footer-div1 col-12 col-sm-12 col-lg-12 col-md-12">
+                    <div class="footerfirstrow">
+                        <label>Keep Your Green Natural and Fresh</label>
+                        <input type="text" name="text" placeholder="@Email">
+                        <button>Subscribe</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row footer-second-row">
+                <div class="footer-div1 col-sm-12 col-12 col-md-6 col-lg-6">
+                    <div class="footergreenguide">
+                        <h3>THE GREEN GUIDE</h3>
+                        <p>We focus on building healthy soiL protecting biodiversity, and producing fresh, nutrient
+                            rich-food that's good for people and the planet. Whether you're here to learn, shop or
+                            connect with like minded growers, our goal is to inspire a lifestyle that honors the earth.
+                        </p>
+                        <p>We Believe the best things grows from the ground up - naturally. Our farm is rooted in the
+                            principles of organic, eco-friendly agriculture. where every crop is nurtured without
+                            synthetic chemicals, GMO's or harmful practices.</p>
+                    </div>
+                </div>
+                <div class="footer-div1 col-sm-12 col-12 col-md-6 col-lg-3">
+                    <h5>CATEGORY</h5>
+                    <ul>
+                        <li><a href="/OrganicFarming/assets/pages/soilhealth.html">Soil Health</a></li>
+                        <li><a href="/OrganicFarming/assets/pages/pestcontrol.html">Pest control</a></li>
+                        <li><a href="/OrganicFarming/assets/pages/chemicalconseq.html">Chemical Consequences</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-div1 col-sm-12 col-12 col-md-6 col-lg-3">
+                    <h5>CONTACT</h5>
+                    <ul>
+                        <li><a href="/OrganicFarming/assets/pages/about.html">Environmentalists</a></li>
+                        <li><a href="/OrganicFarming/assets/pages/about.html">Local Farmers</a></li>
+                        <li><a href="/OrganicFarming/assets/pages/about.html">Organic Crop Planner</a></li>
+                        <li><a href="/OrganicFarming/assets/pages/about.html">Soil Experts</a></li>
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="/OrganicFarming/assets/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="organic,farming">
+    <meta name="keywords" content="nature, organic, food, farming, cultivation, crops">
+    <link rel='stylesheet' href="./assets/css/style.css">
+    <title>Organic Farming Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        @media (min-width:1024px) {
+        /* .healthy {
+            position: relative;
+            margin-top: 5%;
+            margin-left: 7%;
+            background-color: white;
+            height: 450px;
+            width: 1100px;
+            overflow: visible;
+       
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .box-content {
+            padding: 40px;
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .box-content.fade-out {
+            opacity: 0;
+        } */
+
+        .healthy {
+            position: relative;
+            background-color: white;
+            height: 450px;
+            width: 1200px;
+            margin-top: 5%;
+            margin-left: 7%;
+            padding: 1%;
+            transition: background-color 0.5s ease;
+        }
+
+        .healthy.hovered {
+            position: relative;
+            /* becomes relative only when hovered */
+        }
+
+        .content-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 100px;
+            /* leave space for buttons */
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        .box-content {
+            flex: 1;
+            z-index: 2;
+            color: black;
+            transition: opacity 0.5s ease;
+        }
+
+        .healthy.white-text .box-content {
+            color: white;
+        }
+
+        .image-container {
+            position: absolute;
+            top: 10px;
+            /* adjust as needed */
+            left: 10px;
+            /* adjust as needed */
+            width: 250px;
+            height: 250px;
+            z-index: 2;
+            pointer-events: none;
+            /* so it doesn't block hover */
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            border-radius: 10px;
+        }
+
+        .image-container img.visible {
+            opacity: 1;
+        }
+
+        .healthy-pest-eco-btn {
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+        }
+
+        .healthy-pest-eco-btn button {
+            width: 220px;
+            height: 50px;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .homehealthy {
+            background-color: #2E7D32;
+        }
+
+        .homepest {
+            background-color: #6C584C;
+        }
+
+        .homeeco {
+            background-color: #D9C437;
+        }
+
+        .healthy-pest-eco-btn button:hover {
+            transform: scale(1.1)
+        }
+
+        .healthy.white-text {
+            color: white;
+        }
+
+        .healthy.white-text h3,
+        .healthy.white-text p {
+            color: white;
+        }
+
+        .image-container {
+            width: 180px;
+            height: 150px;
+            margin-top: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            position: absolute;
+            top: 10px;
+            left: 50px;
+        }
+
+        .image-container img.visible {
+            opacity: 1;
+            position: relative;
+        }
+
+        .greenpara {
+            animation: fadeIn 2s 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .homehover:hover {
+            transform: scale(1.3);
+        }
+
+        .homehover img {
+            margin-left: 12%;
+            border: 4px solid white;
+            border-radius: 20px;
+            height: 250px;
+            width: 300px;
+        }
+
+        .homehover p {
+            text-align: center;
+
+        }
+    }
+    </style>
+
+</head>
+
+<body>
+
+
+    <header class="homeheader">
+        <nav class="navbar navbar-expand-md navbar-default">
+            <div class="container">
+                <div class="brand">
+                    <p class="brandp">The Green Guide</p>
+
+                </div>
+
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navContent">
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item"><a class="nav-link active link" href="./index.html">HOME</a></li>
+
+
+                        <li class="nav-item cropmenumain"><a class="nav-link link" href="">CROP
+                                GUIDE</a>
+                            <ul class="dropdownmenu">
+                                <li class="nav-item"><a class="nav-link link dropa"
+                                        href="/OrganicFarming/assets/pages/soilhealth.html"><span class="cropmenu"><img
+                                                src="./assets/images/cropmenu1.png"></span>
+                                        Soil Health</a>
+                                </li>
+
+                                <li class="nav-item"><a class="nav-link link dropa"
+                                        href="/OrganicFarming/assets/pages/pestcontrol.html"><span class="cropmenu"><img
+                                                src="./assets/images/cropmenu2.png"></span>
+                                        Pest control</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link link dropa"
+                                        href="/OrganicFarming/assets/pages/chemicalconseq.html"><span
+                                            class="cropmenu"><img src="./assets/images/cropmenu3.png"></span>
+                                        Chemical Consequences</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link active link"
+                                href="/OrganicFarming/assets/pages/contact.html">CONNECT</a></li>
+                        <li class="nav-item"><a class="nav-link active link"
+                                href="/OrganicFarming/assets/pages/about.html">ABOUT</a></li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section id="bannersec">
+            <div class="container-fluid">
+                <div class="row bannersecrow">
+
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 bannercol1">
+                        <div class="outline">
+                            <div class="outline-text">GROW
+
+                            </div>
+                            <div class="green">
+                                green
+                            </div>
+                        </div>
+                        <div class="outline2">
+                            <div class="outlined-text">GROW</div>
+                            <div class="green">
+                                Clean
+                            </div>
+                        </div>
+
+                        <p class="brandp1">The Green Guide</p>
+                        <div class="greenpara">
+                            <p>Welcome to the Green guide</p>
+                            <p>Your trusted guide to growing naturally.<br>Rooted in sustainability and inspired by
+                                nature,
+                                our platform is dedicated to helping garderners, farmers and green Thumbs of all level
+                                embrace the power of organic farming.</p>
+                            <p>From preparing to healthy soil to harvesting-chemical free crops, we offered step-by-step
+                                guides, eco-friendly tips,and experts insights to help you cultivate with care. Whether
+                                you're growing in your backyard or starting your own organic farm. our resources are
+                                designed to guide you on a journey that's good for the earth - and good for you. </p>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 bannercol2">
+                        <div class="subbannercol">
+                            <div class="subbannercol1">
+                                <img src="../OrganicFarming/assets/images/bannersub1.png">
+                            </div>
+                            <div class="subbannercol2">
+                                <img src="../OrganicFarming/assets/images/bannersub2.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </header>
+
+
+
+    <main>
+        <Section id="healthy-pest-eco">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 healthypest">
+                        <div class="healthy">
+                            <div class="box-content" id="boxContent">
+                                <h3>Your journey to Organic Farming Starts Here</h3>
+                                <p>What is Organic Farming?</p>
+                                <p>Organic farming is a way of growing crops and raising animals that works in harmony
+                                    with
+                                    nature - without using synthetic chemicals, fertilizers or genetically modified
+                                    organisms (GMO's) instead. it focuses on natural methods to keep soil healthy,
+                                    control
+                                    pets, and support bio-diversity.</p>
+
+                            </div>
+                            <div class="image-container" id="imageContainer">
+
+                            </div>
+
+                            <div class="healthy-pest-eco-btn">
+                                <a href="/OrganicFarming/index.html"><button class="homehealthy" data-content="soil"
+                                        data-bg="#2E7D32" data-img="./assets/images/soilimg (2).png">Healthy
+                                        Soil</button></a>
+                                <a href="/OrganicFarming/index.html"><button class="homepest" data-content="pest"
+                                        data-bg="#6C584C" data-img="./assets/images/soilimg (2).png">Pest
+                                        Control</button></a>
+                                <a href="/OrganicFarming/index.html"><button class="homeeco" data-content="eco"
+                                        data-bg="#D9C437" data-img="./assets/images/soilimg (2).png">ECO
+                                        -
+                                        Friendly</button></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+        </Section>
+
+
+        <section id="why-choose-us">
+            <div class="container-fluid">
+                <div class="row chooseusrow">
+
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 chooseuscol1">
+                        <h4>Why Choose Us</h4>
+                        <div class="chooseicon1">
+                            <img src="../OrganicFarming/assets/images/chooseicon1.png">
+                            <p>Easy step by step guidance</p>
+                        </div>
+                        <div class="chooseicon1">
+                            <img src="../OrganicFarming/assets/images/chooseicon2.png">
+                            <p>100% organic and eco-conscious methods</p>
+                        </div>
+                        <div class="chooseicon1">
+                            <img src="../OrganicFarming/assets/images/chooseicon3.png">
+                            <p>Community-driven tips and stories</p>
+                        </div>
+                        <div class="chooseicon1">
+                            <img src="../OrganicFarming/assets/images/chooseicon4.png">
+                            <p>Resources rooted in science and sustainability</p>
+                        </div>
+                        <div class="chooseicon1">
+                            <img src="../OrganicFarming/assets/images/chooseicon5.png">
+                            <p>A deep love for nature and clean living</p>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <img src="/OrganicFarming/assets/images/whychoose1.png">
+                    </div>
+
+
+                    <div class="row chooseusrow2">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 choosecol2">
+                            <img src="/OrganicFarming/assets/images/whychoose2.png">
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-8 choosecol3">
+                            <div class="choosecolsub">
+
+                                <h1>Embrace the Future of Organic Farming</h1>
+                                <p>Discover the transformative power of organic farming and its benefits for both your
+                                    health and the planet. Join us on a journey to sustainable agriculture and thriving
+                                    ecosystems.</p>
+                                <a href=""><button class="learnmore">Learn More</button></a>
+                                <a href=""><button class="getstarted">Get Started</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section id="faq">
+            <div class="faqcontainer">
+                <div class="faqrow">
+                    <div class="faqsubrow">
+                        <h1>FAQ'S</h1>
+                        <p>Discover the answers to your most pressing questions about organic farming practices and
+                            benefits.</p>
+                    </div>
+
+                    <div class="faqcol1">
+                        <h3>What is Organic farming?</h3>
+                        <p>Organic farming is an agricultural method that emphasizes natural process and
+                            sustainability.It avoids synthetic fertilizers and pesticides, focusing instead of crop
+                            rotation, composting and biological pest control. This approach not only nurtures the soil
+                            but also promotes bio diversity.</p>
+
+                    </div>
+                    <div class="faqcol2">
+                        <h3>What are the benefits?</h3>
+                        <p>Organic farming enhances soil health, leading to better crop yields over time. it also
+                            reduces chemical runoff, protecting nearby water sources and ecosystems. Additionally,
+                            organic products are often perceived as healthier and more environmentally friendly by
+                            consumers.</p>
+
+                    </div>
+                    <div class="faqcol1">
+                        <h3>Is it more expensive?</h3>
+                        <p>While organic products can be pricier due to more labor - intensive practices, many consumers
+                            are willing to pay a premium for quality. The long-term environmental benefits and health
+                            advantages can outweight initial costs. Additionally local organic farms often offer
+                            competitive pricing. </p>
+
+                    </div>
+                    <div class="faqcol2">
+                        <h3>How can I start?</h3>
+                        <p>Starting with organic farming requires research and planning. Begin by assessing your land
+                            and choosing suitable crops that thrive in your climate. Consider joining local organic
+                            farming groups for support and resources.</p>
+
+                    </div>
+                    <div class="faqcol1">
+                        <h3>What about Pest Control?</h3>
+                        <p>Organic pest control relies on natural methods such as beneficial insects, crop rotation, and
+                            organic pesticides. These techniques helps manage pests without harming the environment.
+                            Educating yourself on pest identification and management is crucial for success.</p>
+
+                    </div>
+                    <div class="stillq">
+                        <h1>Still have questions?</h1>
+                        <p>We are here to help you with enquiries!</p>
+                        <a href="./assets/pages/contact.html"><button class="homecontactbtn">contact</button></a>
+                    </div>
+                    <img src="./assets/images/faqlayimg1.png" class="layimg1">
+                    <img src="./assets/images/faqlayimg3.png" class="layimg3">
+                    <img src="./assets/images/faqlayimg5.png" class="layimg4">
+                    <img src="./assets/images/faqlayimg6.png" class="layimg5">
+                    <img src="./assets/images/faqlayimg6.png" class="layimg6">
+
+                </div>
+            </div>
+        </section>
+
+
+        <section id="discover">
+            <div class="container-fluid">
+                <div class="row discoverrow1">
+                    <div class="discoversub">
+                        <h1>Discover the Service We provide <br> and Benefits</h1>
+                        <p>Organic farming enhances soil health and promotes biodiversity By utilizing natural <br>
+                            methods.
+                            Farmers can produce healthier crops while protecting the environment.</p>
+                            <img src="./assets/images/discoverlay1.png" class="discoverlayimg1">
+                    <img src="./assets/images/discoverlay2.png" class="discoverlayimg2">
+                    </div>
+                    
+                </div>
+
+                <div class="row discoverrow2">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 homehover">
+                        <img src="/OrganicFarming/assets/images/discover1.png">
+                        <p class="homecroprotate">Effective Soil Management <br> Techniques</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 homehover">
+                        <img src="/OrganicFarming/assets/images/discover2.png">
+                        <p class="homecroprotate">Natural Pest Control <br>Strategies</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 homehover">
+                        <img src="/OrganicFarming/assets/images/discover3.png">
+                        <p class="homecroprotate">The Importance of Crop <br>Rotation</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="get-in-touch">
+            <div class="container-fluid getintouchcontainer">
+                <div class="row getintouch">
+                    <div class="getintouchsubrow">
+                        <p>connect</p>
+                        <h2>Get in Touch</h2>
+                        <p>We're here to assist you with any inquiries.</p>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 getintouchcol">
+                        <div class="email">
+                            <img src="../OrganicFarming/assets/images/mailicon.PNG"><br><br>
+                            <h5>Email</h5>
+                            <p>Reach us at</p>
+                            <p>greenguide@gmail.com</p>
+                        </div>
+                        <div class="phone">
+                            <img src="../OrganicFarming/assets/images/phoneicon.PNG"><br><br>
+                            <h5>Phone</h5>
+                            <p>Call us anytime at</p>
+                            <p>9874563210</p>
+                        </div>
+                        <div class="office">
+                            <img src="../OrganicFarming/assets/images/locationicon.PNG"><br><br>
+                            <h5>Office</h5>
+                            <p>123, Chennai, Tamilnadu, INDIA</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-8 getintouchcol2">
+                        <img src="/OrganicFarming/assets/images/getintouch.png">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="empower">
+            <div class="container-fluid">
+                <div class="row empowerrow">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 empowercol1">
+                        <p>Empowering sustainable agriculture through knowledge , Innovation and Community engagement.
+                        </p>
+                        <a href="./assets/pages/about.html"><button class="empowerlearnmore">Learn More</button></a>
+
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 empowercol2">
+                        <p>At our Core, we believe in the power of organic farming to transform lives and landscapes.
+                            Our mission is to provide comprehensive resources that inspires and educates farmer and
+                            enthusiasts alike. With a rich history in organic farming movement, we are dedicated to
+                            promoting sustainable practices that nourish both the earth and its people. </p>
+                        <a href="./assets/pages/about.html"><button class="empowergetstarted">Get Started</button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <br>
+    <footer>
+        <div class="footer-div container-fluid align-items-center">
+            <div class="row footerrow">
+
+                <div class="footer-div1 col-12 col-sm-12 col-lg-12 col-md-12">
+                    <div class="footerfirstrow">
+                        <label>Keep Your Green Natural and Fresh</label>
+                        <input type="text" name="text" placeholder="@Email">
+                        <button>Subscribe</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="row footer-second-row">
+                <div class="footer-div1 col-sm-12 col-12 col-md-6 col-lg-6">
+                    <div class="footergreenguide">
+                        <h3>THE GREEN GUIDE</h3>
+                        <p>We focus on building healthy soiL protecting biodiversity, and producing fresh, nutrient
+                            rich-food that's good for people and the planet. Whether you're here to learn, shop or
+                            connect with like minded growers, our goal is to inspire a lifestyle that honors the earth.
+                        </p>
+                        <p>We Believe the best things grows from the ground up - naturally. Our farm is rooted in the
+                            principles of organic, eco-friendly agriculture. where every crop is nurtured without
+                            synthetic chemicals, GMO's or harmful practices.</p>
+                    </div>
+                </div>
+                <div class="footer-div1 col-sm-12 col-12 col-md-6 col-lg-3">
+                    <h5>CATEGORY</h5>
+                    <ul>
+                        <li><a href="/OrganicFarming/assets/pages/soilhealth.html">Soil Health</a></li>
+                        <li><a href="/OrganicFarming/assets/pages/pestcontrol.html">Pest control</a></li>
+                        <li><a href="/OrganicFarming/assets/pages/chemicalconseq.html">Chemical Consequences</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-div1 col-sm-12 col-12 col-md-6 col-lg-3">
+                    <h5>CONTACT</h5>
+                    <ul>
+                        <li><a href="/OrganicFarming/assets/pages/about.html">Environmentalists</a></li>
+                        <li><a href="/OrganicFarming/assets/pages/about.html">Local Farmers</a></li>
+                        <li><a href="/OrganicFarming/assets/pages/about.html">Organic Crop Planner</a></li>
+                        <li><a href="/OrganicFarming/assets/pages/about.html">Soil Experts</a></li>
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <script src="js/bootstrap.bundle.min.js">
+
+    </script>
+    <script src="./assets/js/button.js"></script>
+</body>
+
+</html>

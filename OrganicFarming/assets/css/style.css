@@ -1,0 +1,3629 @@
+@media (min-width:1024px) {
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+    * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+        font-family: "Raleway";
+
+    }
+
+    .homeheader {
+        background-image: url('/OrganicFarming/assets/images/heroimage.png');
+        height: 150vh;
+
+
+    }
+
+
+
+    .brandp {
+        font-size: 25px;
+        color: white;
+        font-weight: bold;
+        background-color: hsla(0, 0%, 0%, 0.4);
+
+    }
+
+    .brandp1 {
+        font-size: 25px;
+        color: white;
+        font-weight: bold;
+        background-color: hsla(0, 7%, 68%, 0.6);
+        width: 220px;
+
+    }
+
+    nav * {
+
+        align-content: center;
+        justify-content: center;
+    }
+
+
+    .navbar ul li a {
+        font-size: 20px;
+        color: white;
+        margin: 20px 40px;
+        display: inline-block;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 3px solid transparent;
+        text-decoration: none;
+        list-style: none;
+
+    }
+
+    .navbar ul li a:hover {
+        color: white;
+        border: 1px solid rgb(131, 131, 131);
+        border-radius: 15px;
+        background-color: rgb(182, 182, 182);
+        text-align: center;
+    }
+
+    .navbar {
+        display: flex;
+    }
+
+
+
+
+    ul li ul.dropdownmenu {
+
+        position: absolute;
+        z-index: 5;
+        display: none;
+        color: white;
+        padding-left: 0;
+        width: 180px;
+        text-align: center;
+    }
+
+    ul li ul.dropdownmenu a {
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: none;
+
+    }
+
+
+
+    ul li:hover ul.dropdownmenu {
+        display: flex;
+    }
+
+    .dropdownmenu li{
+        list-style-type: none;
+    }
+
+    .outline-text {
+        font-size: 100px;
+        font-weight: bold;
+        color: transparent;
+        -webkit-text-stroke: 2px white;
+        /* White outline */
+        text-transform: uppercase;
+        font-family: "Raleway";
+        transform: translateX(-100%);
+        animation: slideIn 1s ease-out forwards;
+
+    }
+
+    .outlined-text {
+        font-size: 100px;
+        font-weight: bold;
+        color: white;
+        -webkit-text-stroke: 2px green;
+        text-transform: uppercase;
+        transform: translateX(-100%);
+        animation: slideIn 1s ease-out forwards;
+
+    }
+
+    .subbannercol1 {
+        transform: translateX(-100%);
+        animation: slideIn 1s ease-out forwards;
+    }
+
+    .subbannercol2 {
+        right: -100%;
+        transform: translateX(-100%);
+        animation: slideIn 1s ease-out forwards;
+    }
+
+    @keyframes slideIn {
+        to {
+            transform: translateX(0);
+        }
+    }
+
+
+    .outline {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+
+    .outline2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+    .green {
+        color: white;
+        font-size: 35px;
+        font-family: "Raleway";
+    }
+
+
+    .cropmenu img {
+        height: 100px;
+        width: 160px;
+
+    }
+
+    .homecroprotate {
+        font-size: 24px;
+        text-align: justify;
+        color: black;
+        margin-top: 5%;
+        font-weight: bold;
+        font-family: "Raleway";
+
+    }
+
+    #bannersec {
+        margin: 3%;
+        padding: 3%;
+        margin-top: 10%;
+
+    }
+
+    .bannersecrow {
+
+        display: flex;
+
+    }
+
+    .bannercol1 {
+        color: white;
+
+    }
+
+    .bannercol1 p {
+        line-height: normal;
+        text-align: left;
+    }
+
+    .subbannercol {
+        width: 550px;
+        height: 650px;
+        background-color: hsla(0, 0%, 0%, 0.4);
+        display: flex;
+        flex-direction: column;
+        gap: 5%;
+
+    }
+
+    .subbannercol1 {
+        margin-top: 5%;
+        padding-left: 22%;
+
+    }
+
+    .subbannercol1 img {
+        border: 4px solid white;
+    }
+
+    .subbannercol2 {
+        margin-top: 5%;
+        padding-left: 7%;
+
+    }
+
+    .subbannercol2 img {
+        border: 4px solid white;
+    }
+
+    #healthy-pest-eco {
+        margin-top: 5%;
+        background-color: rgb(240, 232, 232);
+        height: 100vh;
+        text-align: center;
+    }
+
+    .healthy {
+        margin-top: 5%;
+        margin-left: 7%;
+        background-color: white;
+        height: 450px;
+        width: 1100px;
+    }
+
+    .healthy h3 {
+        margin: 1%;
+        padding: 5%;
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    .healthy p {
+        font-size: 18px;
+    }
+
+    .healthy p:nth-child(2) {
+        font-weight: bold;
+    }
+
+    .healthy-pest-eco-btn {
+        display: flex;
+        flex-direction: row;
+        margin-top: 11%;
+        justify-content: space-evenly;
+    }
+
+    .homehealthy {
+
+        background-color: #2E7D32;
+        color: white;
+        width: 220px;
+        height: 50px;
+        border: none;
+        border-radius: 10px;
+        font-size: 18px;
+    }
+
+    .homepest {
+        background-color: #6C584C;
+        color: white;
+        width: 220px;
+        height: 50px;
+        border: none;
+        border-radius: 10px;
+        font-size: 18px;
+    }
+
+    .homeeco {
+        background-color: #D9C437;
+        color: white;
+        width: 220px;
+        height: 50px;
+        border: none;
+        border-radius: 10px;
+        font-size: 18px;
+    }
+
+    .chooseusrow {
+        padding: 7%;
+    }
+
+    .chooseuscol1 h4 {
+        padding-left: 10%;
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 5%;
+    }
+
+    .chooseuscol1 p {
+        font-size: 21px;
+        color: rgb(75, 73, 73);
+    }
+
+    .chooseicon1 {
+        display: flex;
+        gap: 5%;
+        padding: 1%;
+    }
+
+    .chooseusrow2 {
+        padding: 7%;
+    }
+
+    .choosecol3 h1 {
+        font-size: 52px;
+        font-weight: bold;
+    }
+
+    .choosecol3 p {
+        font-size: 18px;
+    }
+
+    .choosecolsub {
+        margin-left: 5%;
+        padding-left: 40%;
+        padding-top: 20%;
+    }
+
+    .learnmore {
+        color: white;
+        background-color: black;
+        border: none;
+        width: 120px;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    .getstarted {
+        color: black;
+        background-color: white;
+        border: 1px solid black;
+        width: 120px;
+        height: 50px;
+        font-size: 18px;
+    }
+
+
+    #faq {
+        background-color: rgb(240, 232, 232);
+        height: 230vh;
+
+    }
+
+    .faqcontainer {
+        padding: 5%;
+        margin-left: 3%;
+        margin-right: 3%;
+        background-color: #8BC34A;
+        position: relative;
+    }
+
+    .layimg1 {
+        top: 120px;
+        left: 450px;
+        position: absolute;
+    }
+
+    .layimg2 {
+        top: 100px;
+        position: absolute;
+        right: 0px;
+    }
+
+    .layimg3 {
+        top: 380px;
+        left: 5px;
+        position: absolute;
+    }
+
+    .layimg4 {
+        top: 1000px;
+        position: absolute;
+        right: 0px;
+    }
+
+    .layimg5 {
+        top: 1200px;
+        position: absolute;
+        left: 200px;
+    }
+
+    .layimg6 {
+        top: 550px;
+        position: absolute;
+        left: 600px;
+    }
+
+    .faqsubrow h1 {
+        font-size: 38px;
+        text-align: center;
+        color: white;
+
+    }
+
+    .faqsubrow p {
+        font-size: 20px;
+        text-align: center;
+        color: rgb(240, 238, 238);
+
+    }
+
+    .faqrow {
+
+        height: 200vh;
+
+    }
+
+    .faqcol1 {
+        border: 2px solid white;
+        border-radius: 10px;
+        width: 800px;
+        padding: 2%;
+        background-color: #7eb93a;
+        margin-left: 1%;
+        margin-bottom: 3%;
+
+    }
+
+    .faqcol1 h3 {
+        font-weight: bold;
+    }
+
+    .faqcol1 p {
+        font-size: 18px;
+        line-height: normal;
+        color: rgb(214, 214, 214);
+    }
+
+    .faqcol2 {
+        border: 2px solid white;
+        border-radius: 10px;
+        width: 800px;
+        padding: 2%;
+        background-color: #7eb93a;
+        margin-left: 30%;
+        margin-bottom: 3%;
+    }
+
+    .faqcol2 h3 {
+        font-weight: bold;
+    }
+
+    .faqcol2 p {
+        font-size: 18px;
+        line-height: normal;
+        color: rgb(214, 214, 214);
+    }
+
+    .stillq {
+        color: white;
+        text-align: center;
+    }
+
+    .stillq p {
+        font-size: 20px;
+    }
+
+    .homecontactbtn {
+        width: 150px;
+        height: 50px;
+        border: 1px solid rgb(228, 228, 228);
+        color: rgb(214, 214, 214);
+        background-color: #8BC34A;
+        font-size: 20px;
+    }
+
+    #discover {
+        background-color: rgb(221, 213, 213);
+        height: 130vh;
+    }
+
+    .discoversub h1 {
+        text-align: center;
+        font-weight: bold;
+        font-size: 48px;
+    }
+
+    .discoversub p {
+        font-size: 20px;
+        text-align: center;
+        margin: 5%
+    }
+
+    .discoverrow1 {
+
+        position: relative;
+    }
+
+    .discoverlayimg1 {
+        position: absolute;
+        top: 80px;
+        left: 50px;
+
+    }
+
+    .discoverlayimg2 {
+        position: absolute;
+        top: 40px;
+        right: 0px;
+
+    }
+
+    .discoverrow2 {
+        margin: 5%;
+        padding: 5%;
+    }
+
+
+
+
+    #get-in-touch {
+        margin: 5%;
+        padding: 5%;
+    }
+
+    .getintouchsubrow {
+        margin-bottom: 5%;
+    }
+
+    .getintouchsubrow p:nth-child(1) {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .getintouchsubrow h2 {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .getintouchsubrow p:nth-child(3) {
+        font-size: 20px;
+
+    }
+
+    .getintouchcol h5 {
+        color: green;
+        font-size: 22px;
+    }
+
+    .getintouchcol2 img {
+        margin-left: 9%;
+    }
+
+    .email,
+    .phone,
+    .office {
+        padding-bottom: 7%;
+    }
+
+    .email p:last-child {
+        text-decoration: underline;
+        font-size: 18px;
+
+    }
+
+    .email p:nth-child(5) {
+        font-size: 20px;
+    }
+
+    .phone p:nth-child(5) {
+        font-size: 20px;
+    }
+
+    .office p:nth-child(5) {
+        font-size: 20px;
+    }
+
+    .phone p:last-child {
+        text-decoration: underline;
+        font-size: 18px;
+    }
+
+    .empowercol1 {
+        background-color: rgb(182, 181, 181);
+
+    }
+
+    .empowercol1 p {
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        padding: 7%;
+        line-height: normal;
+    }
+
+    .empowercol2 {
+        background-color: rgb(83, 80, 80);
+    }
+
+    .empowercol2 p {
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: normal;
+        padding: 7%;
+        margin: 5%;
+    }
+
+    .empowergetstarted {
+        color: rgb(204, 200, 200);
+        background-color: rgb(83, 80, 80);
+        border: 1px solid white;
+        width: 120px;
+        height: 50px;
+        font-size: 18px;
+        margin-left: 10%;
+    }
+
+    .empowerlearnmore {
+        color: white;
+        background-color: black;
+        border: none;
+        width: 120px;
+        height: 50px;
+        font-size: 18px;
+        margin-left: 60%;
+        margin-bottom: 5%;
+    }
+
+
+
+
+
+    /* -----------------------soil Health---------------------- */
+
+
+    .soilcontainer img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    nav * {
+
+        align-content: center;
+        justify-content: center;
+    }
+
+    .soilnavbar {
+        background-color: black;
+        width: 800px;
+        border-radius: 15px;
+        height: 80px;
+        margin-left: 20%;
+        margin-top: 3%;
+    }
+
+    .soilnavbar ul li a {
+        font-size: 20px;
+        color: white;
+        margin: 20px 40px;
+        display: inline-block;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 3px solid transparent;
+        text-decoration: none;
+        list-style: none;
+
+    }
+
+    .soilnavbar ul li a:hover {
+        color: white;
+        border: 1px solid rgb(131, 131, 131);
+        border-radius: 15px;
+        background-color: rgb(182, 182, 182);
+        text-align: center;
+
+    }
+
+    .soilnavbar {
+        display: flex;
+    }
+
+    .soilbody {
+        background-color: rgb(221, 213, 213);
+    }
+
+    #soilbannersec {
+        margin: 3%;
+        padding: 1%;
+    }
+
+    .soilbannersecrow {
+
+        display: flex;
+        flex-direction: row;
+
+
+
+    }
+
+    .soilbannercol1 {
+        color: white;
+    }
+
+    .soilbannercol1 p {
+        line-height: normal;
+        text-align: left;
+    }
+
+    .soilsubbannercol {
+        width: 500px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: 5%;
+
+    }
+
+    .soilsubbannercol1 {
+        padding-left: 7%;
+
+    }
+
+    .soilsubbannercol1 img {
+        border: 4px solid white;
+        width: 250px;
+        height: 250px;
+    }
+
+    .soilsubbannercol2 img {
+        border: 4px solid white;
+        width: 250px;
+        height: 250px;
+    }
+
+    .soilsubbannercol2 {
+        padding-left: 58%;
+    }
+
+    .soilsubbannercol2 img {
+        border: 4px solid white;
+    }
+
+    #soil-health {
+        max-width: 100%;
+
+    }
+
+    .soilhealth-sub {
+        margin: 3%;
+        padding: 5%;
+    }
+
+    .soilhealth-sub h1 {
+        font-size: 48px;
+        text-align: center;
+        margin-bottom: 5%;
+        font-weight: bold;
+    }
+
+    .soilhealth-sub p {
+        font-size: 28px;
+        line-height: normal;
+        font-weight: bold;
+    }
+
+    .soilrow {
+        padding: 2%;
+        max-width: 100%;
+        margin-bottom: 7%;
+    }
+
+    .soilcol1 img {
+        width: 630px;
+        margin-left: 3%;
+    }
+
+    .soilcol2 h3 {
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 5%;
+    }
+
+    .soilcol2 p {
+        font-size: 18px;
+        padding: 2%;
+        line-height: normal;
+    }
+
+
+    #soilget-in-touch {
+        background-color: white;
+    }
+
+    .soilgetintouch {
+        margin-left: 7%;
+        padding: 5%;
+    }
+
+    /* ------------Contact------------------- */
+
+    .contactbody {
+        background-color: rgb(221, 213, 213);
+    }
+
+    .contactcontainer img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .contactrow1 {
+        margin: 7%;
+        padding: 7%;
+    }
+
+    .contcol1 img {
+        width: 280px;
+    }
+
+
+    .contcol2 img {
+        width: 280px;
+        height: 270px;
+    }
+
+    .contcol3 img {
+        width: 570px;
+    }
+
+    .contcol4 img {
+        width: 280px;
+        height: 270px;
+    }
+
+    .contcol5 img {
+        width: 280px;
+    }
+
+
+
+    /* --------------about---------------- */
+
+    .aboutcontainer img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    #about {
+        background-color: rgb(255, 255, 255);
+    }
+
+    .aboutgreen {
+        margin: 5%;
+        padding: 5%;
+
+    }
+
+    .aboutgreen1 h1 {
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .aboutgreen1 p {
+        font-size: 20px;
+        color: rgb(90, 90, 90);
+        text-align: center;
+        margin-bottom: 7%;
+    }
+
+    .aboutgreen2 h5 {
+        font-weight: bold;
+        margin-bottom: 3%;
+    }
+
+    .aboutgreen2 p {
+        line-height: 1.2;
+        color: black;
+        font-weight: bold;
+    }
+
+    .aboutgreen3 p {
+        line-height: 1.2;
+        color: black;
+        font-weight: bold;
+    }
+
+    .aboutgreen4 p {
+        line-height: 1.2;
+        color: black;
+        font-weight: bold;
+    }
+
+    #award {
+        background-color: black;
+    }
+
+    .awardrow {
+        margin: 9%;
+        padding: 3%;
+    }
+
+    .awardrow h1 {
+        color: #EBCF16;
+        text-align: center;
+        font-size: 52px;
+    }
+
+    .awardrow p {
+        color: white;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .staraward {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5%;
+    }
+
+    .staraward img {
+        width: 50px;
+        height: 40px;
+    }
+
+    .awardmain {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        column-gap: 50px;
+    }
+
+    .thirdimg img {
+        border: 2px solid white;
+        border-radius: 10px;
+    }
+
+    .ourteam1 {
+        margin: 5%;
+        padding: 5%;
+    }
+
+    .ourteam1 p:nth-child(1) {
+        font-weight: bold;
+    }
+
+    .ourteam1 h1 {
+        font-size: 42px;
+        font-weight: bold;
+    }
+
+    .ourteam1 p:nth-child(3) {
+        font-size: 20px;
+        margin-bottom: 3%;
+    }
+
+    .team1 img {
+        margin-bottom: 5%;
+    }
+
+    .team1 h5 {
+        font-weight: bold;
+    }
+
+    .team1 p:nth-child(4) {
+        font-size: 17px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    footer {
+        background-color: black;
+        color: white;
+        height: 95vh;
+
+    }
+
+    .footerfirstrow {
+        height: 100px;
+        width: 1000px;
+        margin-top: 5%;
+        margin-left: 15%;
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 10%;
+        box-shadow: -5px -5px 30px 5px rgb(100, 247, 81),
+            5px 5px 30px 5px blue,
+            5px 5px 30px 5px rgb(226, 87, 141),
+            5px 5px 30px 5px rgb(241, 255, 48);
+
+        /* box-shadow: 0 0 20px 4px #00ff88, 
+                  0 0 30px 10px #ff00ff,
+                  0 0 40px 14px #ffff00; */
+
+        border-radius: 20px;
+    }
+
+    .footerfirstrow button {
+        color: white;
+        background-color: rgb(175, 175, 175);
+        font-size: 20px;
+        height: 40px;
+        width: 150px;
+        margin-top: 3%;
+    }
+
+    .footerfirstrow input {
+        width: 200px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .footerfirstrow label {
+        font-size: 28px;
+        font-weight: bold;
+        margin-right: 3%;
+    }
+
+    .footer-second-row p {
+        line-height: normal;
+    }
+
+    .footer-second-row {
+        margin: 5%;
+        padding: 5%;
+
+
+    }
+
+    .footerrow {
+        margin-bottom: 5%;
+    }
+
+
+    .footer-div1 ul li {
+        transition: all .2s ease-in-out;
+        list-style: none;
+        padding: 5%;
+    }
+
+    .footer-div1 ul li a {
+        text-decoration: none;
+        color: white;
+
+
+    }
+
+    .footer-div1 ul li:hover {
+        transform: scale(1.3);
+
+    }
+
+    .footer-div1 h5 {
+        margin-bottom: 7%;
+        margin-left: 15%;
+    }
+
+    .footer-div1 h3 {
+        margin-bottom: 7%;
+    }
+
+
+
+}
+
+
+@media (max-width:767px) {
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+    * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+        font-family: "Raleway";
+        max-width: 100%;
+
+    }
+    
+
+    .homeheader {
+        background-image: url('/OrganicFarming/assets/images/heroimage.png');
+     background-repeat: no-repeat;
+        height: auto;
+    }
+    .brand{
+        text-align: center;
+      margin-left: 15%;
+    }
+
+    .brandp {
+        font-size: 18px;
+        color: white;
+        font-weight: bold;
+        background-color: hsla(0, 0%, 0%, 0.4);
+        text-align: center;
+
+    }
+
+    .brandp1 {
+        font-size: 15px;
+        color: white;
+        font-weight: bold;
+        background-color: hsla(0, 7%, 68%, 0.6);
+        width: 220px;
+
+    }
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+
+
+    }
+
+    .navbar-toggler {
+        color: white;
+
+    }
+
+  
+    .navbar{
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+    }
+
+
+    .navbar ul li a {
+        font-size: 15px;
+        color: white;
+        display: inline-block;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 3px solid transparent;
+        text-decoration: none;
+        list-style: none;
+
+    }
+
+    .navbar ul li a:hover {
+        color: white;
+        border: 1px solid rgb(131, 131, 131);
+        border-radius: 15px;
+        background-color: rgb(182, 182, 182);
+        text-align: center;
+    }
+
+    .navbar {
+        display: flex;
+    }
+
+
+
+
+    ul li ul.dropdownmenu {
+
+        position: absolute;
+        z-index: 5;
+        display: none;
+        color: white;
+        padding-left: 0;
+        width: 100px;
+        text-align: center;
+    }
+
+    ul li ul.dropdownmenu a {
+        color: black;
+        font-size: 10px;
+        font-weight: bold;
+        text-decoration: none;
+
+    }
+
+
+
+   
+     .dropdownmenu li{
+        list-style-type: none;
+    }
+   
+    ul li:hover ul.dropdownmenu {
+    display: none;
+}
+.dropdownmenu:hover {
+    display: flex;
+    flex-direction: row;
+}
+    .outline-text {
+        font-size: 40px;
+        font-weight: bold;
+        color: transparent;
+        -webkit-text-stroke: 2px white;
+        /* White outline */
+        text-transform: uppercase;
+        font-family: "Raleway";
+        transform: translateX(-100%);
+        animation: slideIn 1s ease-out forwards;
+
+    }
+
+    .outlined-text {
+        font-size: 40px;
+        font-weight: bold;
+        color: white;
+        -webkit-text-stroke: 2px green;
+        text-transform: uppercase;
+        transform: translateX(-100%);
+        animation: slideIn 1s ease-out forwards;
+
+    }
+
+    .subbannercol1 {
+        transform: translateX(-100%);
+        animation: slideIn 1s ease-out forwards;
+    }
+
+    .subbannercol2 {
+        right: -100%;
+        transform: translateX(-100%);
+        animation: slideIn 1s ease-out forwards;
+    }
+
+    @keyframes slideIn {
+        to {
+            transform: translateX(0);
+        }
+    }
+
+
+    .outline {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+
+    .outline2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+    .green {
+        color: white;
+        font-size: 25px;
+        font-family: "Raleway";
+    }
+
+.dropdownmenu{
+    max-width: 100%;;
+}
+
+    .cropmenu img {
+        height: 50px;
+        width: 50px;
+
+    }
+
+    .homecroprotate {
+        font-size: 18px;
+        text-align: justify;
+        color: black;
+        margin-top: 5%;
+        font-weight: bold;
+        font-family: "Raleway";
+
+    }
+
+    #bannersec {
+        max-width: 100%;
+       height:auto;
+     
+    }
+
+    .bannersecrow {
+
+        display: flex;
+
+    }
+
+    .bannercol1 {
+        color: white;
+
+    }
+
+    .bannercol1 p {
+        line-height: normal;
+        text-align: left;
+    }
+
+    .subbannercol {
+        width: 100%;
+        height: auto;
+        background-color: hsla(0, 0%, 0%, 0.4);
+        display: flex;
+        flex-direction: column;
+        gap: 5%;
+
+    }
+
+    .subbannercol1 {
+        margin-top: 1%;
+       
+
+    }
+
+    .subbannercol1 img {
+        border: 4px solid white;
+        width:100%;
+        height:auto
+    }
+
+    .subbannercol2 {
+        max-width: 100%;
+        height:auto;
+        margin-top: 5%;
+        padding-left: 7%;
+
+    }
+
+    .subbannercol2 img {
+        border: 4px solid white;
+          width:100%;
+        height:auto
+    }
+
+    #healthy-pest-eco {
+        margin-top: 5%;
+        background-color: rgb(240, 232, 232);
+        max-width: 100%;
+        height: 130vh;
+        text-align: center;
+    }
+
+    .healthy {
+        margin-top: 5%;
+        margin-left: 7%;
+        background-color: white;
+        height: 450px;
+        width: 1100px;
+    }
+
+    .healthy h3 {
+        margin: 1%;
+        padding: 5%;
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    .healthy p {
+        font-size: 18px;
+    }
+
+    .healthy p:nth-child(2) {
+        font-weight: bold;
+    }
+
+    .healthy-pest-eco-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .homehealthy {
+
+        background-color: #2E7D32;
+        color: white;
+        width: 50px;
+        height: 20px;
+        border: none;
+        border-radius: 10px;
+        font-size: 15px;
+    }
+
+    .homepest {
+        background-color: #6C584C;
+        color: white;
+        width: 50px;
+        height: 20px;
+        border: none;
+        border-radius: 10px;
+        font-size: 15px;
+    }
+
+    .homeeco {
+        background-color: #D9C437;
+        color: white;
+        width: 50px;
+        height: 20px;
+        border: none;
+        border-radius: 10px;
+        font-size: 15px;
+    }
+#why-choose-us{
+    max-width: 100%;
+}
+    .chooseusrow {
+        max-width: 100%;
+        padding: 3%;
+    }
+
+    .chooseuscol1 h4 {
+        padding-left: 5%;
+        font-size: 15px;
+        font-weight: bold;
+        margin-bottom: 5%;
+    }
+
+    .chooseuscol1 p {
+        font-size: 21px;
+        color: rgb(75, 73, 73);
+    }
+
+    .chooseicon1 {
+        display: flex;
+        gap: 5%;
+        padding: 1%;
+    }
+
+    .chooseusrow2 {
+        padding: 7%;
+    }
+
+    .choosecol3 h1 {
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    .choosecol3 p {
+        font-size: 18px;
+    }
+
+    .choosecolsub {
+        margin-left: 2%;
+        padding-left: 20%;
+        padding-top: 10%;
+    }
+
+    .learnmore {
+        color: white;
+        background-color: black;
+        border: none;
+        width: 120px;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    .getstarted {
+        color: black;
+        background-color: white;
+        border: 1px solid black;
+        width: 120px;
+        height: 50px;
+        font-size: 18px;
+    }
+
+
+    #faq {
+        background-color: rgb(240, 232, 232);
+        max-width: 100%;
+        height: auto;
+
+    }
+
+    .faqcontainer {
+        max-width: 100%;
+        padding: 2%;
+        margin-left: 1%;
+        margin-right: 1%;
+        background-color: #8BC34A;
+        position: relative;
+    }
+
+    .layimg1 {
+        top: 120px;
+        left: 150px;
+        position: absolute;
+    }
+
+    .layimg2 {
+        top: 100px;
+        position: absolute;
+       
+    }
+
+    .layimg3 {
+        top: 380px;
+        left: 5px;
+        position: absolute;
+    }
+
+    .layimg4 {
+        top: 1000px;
+        position: absolute;
+        right: 0px;
+    }
+
+    .layimg5 {
+        top: 1200px;
+        position: absolute;
+        left: 100px;
+    }
+
+    .layimg6 {
+        top: 550px;
+        position: absolute;
+        left: 100px;
+    }
+
+    .faqsubrow h1 {
+        font-size: 38px;
+        text-align: center;
+        color: white;
+
+    }
+
+    .faqsubrow p {
+        font-size: 20px;
+        text-align: center;
+        color: rgb(240, 238, 238);
+
+    }
+
+    .faqrow {
+max-width: 100%;
+        height: auto;
+
+    }
+
+    .faqcol1 {
+        border: 2px solid white;
+        border-radius: 10px;
+        width: 800px;
+        padding: 2%;
+        background-color: #7eb93a;
+        margin-left: 1%;
+        margin-bottom: 3%;
+
+    }
+
+    .faqcol1 h3 {
+        font-weight: bold;
+    }
+
+    .faqcol1 p {
+        font-size: 18px;
+        line-height: normal;
+        color: rgb(214, 214, 214);
+    }
+
+    .faqcol2 {
+        border: 2px solid white;
+        border-radius: 10px;
+        width: 100%;
+        padding: 2%;
+        background-color: #7eb93a;
+        margin-bottom: 3%;
+    }
+
+    .faqcol2 h3 {
+        font-weight: bold;
+    }
+
+    .faqcol2 p {
+        font-size: 18px;
+        line-height: normal;
+        color: rgb(214, 214, 214);
+    }
+
+    .stillq {
+        color: white;
+        text-align: center;
+    }
+
+    .stillq p {
+        font-size: 20px;
+    }
+
+    .homecontactbtn {
+        width: 150px;
+        height: 50px;
+        border: 1px solid rgb(228, 228, 228);
+        color: rgb(214, 214, 214);
+        background-color: #8BC34A;
+        font-size: 20px;
+    }
+
+    #discover {
+        background-color: rgb(221, 213, 213);
+        max-width: 100%;
+        height:auto;
+    }
+
+    .discoversub h1 {
+        text-align: center;
+        font-weight: bold;
+        font-size: 22px;
+    }
+
+    .discoversub p {
+        font-size: 18px;
+        text-align: center;
+        margin: 5%
+    }
+
+    .discoverrow1 {
+
+        position: relative;
+    }
+
+    .discoverlayimg1 {
+        position: absolute;
+        top: 40px;
+        left: 20px;
+
+    }
+
+    .discoverlayimg2 {
+        position: absolute;
+        top: 20px;
+        right: 0px;
+
+    }
+
+    .discoverrow2 {
+        margin: 5%;
+        padding: 5%;
+    }
+
+
+
+    #get-in-touch {
+        max-width: 100%;
+        height:auto;
+        margin: 5%;
+        padding: 5%;
+    }
+
+    .getintouchsubrow {
+        margin-bottom: 5%;
+    }
+
+    .getintouchsubrow p:nth-child(1) {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .getintouchsubrow h2 {
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .getintouchsubrow p:nth-child(3) {
+        font-size: 20px;
+
+    }
+
+    .getintouchcol h5 {
+        color: green;
+        font-size: 22px;
+    }
+
+    .getintouchcol2 img {
+        margin-left: 9%;
+    }
+
+    .email,
+    .phone,
+    .office {
+        padding-bottom: 3%;
+    }
+
+    .email p:last-child {
+        text-decoration: underline;
+        font-size: 18px;
+
+    }
+
+    .email p:nth-child(5) {
+        font-size: 20px;
+    }
+
+    .phone p:nth-child(5) {
+        font-size: 20px;
+    }
+
+    .office p:nth-child(5) {
+        font-size: 20px;
+    }
+
+    .phone p:last-child {
+        text-decoration: underline;
+        font-size: 18px;
+    }
+
+    #empower{
+        max-width: 100%;
+        height: auto;
+    }
+    .empowercol1 {
+        background-color: rgb(182, 181, 181);
+
+    }
+
+    .empowercol1 p {
+        color: white;
+        font-size: 25px;
+        font-weight: bold;
+        padding: 7%;
+        line-height: normal;
+    }
+
+    .empowercol2 {
+        background-color: rgb(83, 80, 80);
+    }
+
+    .empowercol2 p {
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: normal;
+        padding: 7%;
+        margin: 5%;
+    }
+
+    .empowergetstarted {
+        color: rgb(204, 200, 200);
+        background-color: rgb(83, 80, 80);
+        border: 1px solid white;
+        width: 120px;
+        height: 50px;
+        font-size: 18px;
+        margin-left: 30%;
+         margin-bottom: 5%;
+    }
+
+    .empowerlearnmore {
+        color: white;
+        background-color: black;
+        border: none;
+        width: 120px;
+        height: 50px;
+        font-size: 18px;
+        margin-left: 30%;
+        margin-bottom: 5%;
+    }
+ .healthy {
+            position: relative;
+            background-color: white;
+            height: 450px;
+           max-width: 100%;
+            margin-top: 5%;
+            margin-left: 7%;
+            padding: 1%;
+            transition: background-color 0.5s ease;
+        }
+
+        .healthy.hovered {
+            position: relative;
+            /* becomes relative only when hovered */
+        }
+
+        .content-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 100px;
+            /* leave space for buttons */
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        .box-content {
+            flex: 1;
+            z-index: 2;
+            color: black;
+            transition: opacity 0.5s ease;
+        }
+
+        .healthy.white-text .box-content {
+            color: white;
+        }
+
+        .image-container {
+            position: absolute;
+            top: 10px;
+            /* adjust as needed */
+            left: 10px;
+            /* adjust as needed */
+            width: 250px;
+            height: 250px;
+            z-index: 2;
+            pointer-events: none;
+            /* so it doesn't block hover */
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            border-radius: 10px;
+        }
+
+        .image-container img.visible {
+            opacity: 1;
+        }
+
+        .healthy-pest-eco-btn {
+            position: absolute;
+         top: 480px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+        }
+
+        .healthy-pest-eco-btn button {
+            width: 220px;
+            height: 50px;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .homehealthy {
+            background-color: #2E7D32;
+        }
+
+        .homepest {
+            background-color: #6C584C;
+        }
+
+        .homeeco {
+            background-color: #D9C437;
+        }
+
+        .healthy-pest-eco-btn button:hover {
+            transform: scale(1.1)
+        }
+
+        .healthy.white-text {
+            color: white;
+        }
+
+        .healthy.white-text h3,
+        .healthy.white-text p {
+            color: white;
+        }
+
+        .image-container {
+            width: 180px;
+            height: 150px;
+            margin-top: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            position: absolute;
+            top: 10px;
+            left: 50px;
+        }
+
+        .image-container img.visible {
+            opacity: 1;
+            position: relative;
+        }
+
+        .greenpara {
+            animation: fadeIn 2s 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .homehover:hover {
+            transform: scale(1.1);
+        }
+
+        .homehover img {
+            margin-left: 12%;
+            border: 4px solid white;
+            border-radius: 20px;
+            height: 180px;
+           max-width: 100%;
+        }
+
+        .homehover p {
+            text-align: center;
+
+        }
+
+
+
+
+    /* -----------------------soil Health---------------------- */
+
+
+    .soilcontainer img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    nav * {
+
+        align-content: center;
+        justify-content: center;
+    }
+
+    .soilnavbar {
+        background-color: black;
+       max-width: 100%;
+        border-radius: 15px;
+        height: auto;
+        margin-left: 10%;
+        margin-top: 3%;
+    }
+
+    .soilnavbar ul li a {
+        font-size: 20px;
+        color: white;
+        display: inline-block;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 3px solid transparent;
+        text-decoration: none;
+        list-style: none;
+
+    }
+
+    .soilnavbar ul li a:hover {
+        color: white;
+        border: 1px solid rgb(131, 131, 131);
+        border-radius: 15px;
+        background-color: rgb(182, 182, 182);
+        text-align: center;
+
+    }
+
+    .soilnavbar {
+        display: flex;
+    }
+
+    .soilbody {
+        background-color: rgb(221, 213, 213);
+    }
+
+    #soilbannersec {
+        max-width: 100%;
+        height: auto;
+        margin: 3%;
+        padding: 1%;
+    }
+
+    .soilbannersecrow {
+
+        display: flex;
+        flex-direction: row;
+
+
+
+    }
+
+    .soilbannercol1 {
+        color: white;
+        margin-bottom: 5%;
+    }
+
+    .soilbannercol1 p {
+        line-height: normal;
+        text-align: left;
+    }
+
+    .soilsubbannercol {
+        width: 500px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: 5%;
+
+    }
+
+    .soilsubbannercol1 {
+        padding-left: 7%;
+
+    }
+
+    .soilsubbannercol1 img {
+        border: 4px solid white;
+        width: 250px;
+        height: 250px;
+    }
+
+    .soilsubbannercol2 img {
+        border: 4px solid white;
+        width: 250px;
+        height: 250px;
+    }
+
+    .soilsubbannercol2 {
+        padding-left: 58%;
+    }
+
+    .soilsubbannercol2 img {
+        border: 4px solid white;
+    }
+
+    #soil-health {
+        max-width: 100%;
+
+    }
+
+    .soilhealth-sub {
+        margin: 3%;
+        padding: 5%;
+    }
+
+    .soilhealth-sub h1 {
+        font-size: 25px;
+        text-align: center;
+        margin-bottom: 5%;
+        font-weight: bold;
+    }
+
+    .soilhealth-sub p {
+        font-size: 20px;
+        line-height: normal;
+        font-weight: bold;
+    }
+
+    .soilrow {
+        padding: 2%;
+        max-width: 100%;
+        margin-bottom: 7%;
+    }
+
+    .soilcol1 img {
+        width: 630px;
+        margin-left: 3%;
+    }
+
+    .soilcol2 h3 {
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 5%;
+    }
+
+    .soilcol2 p {
+        font-size: 18px;
+        padding: 2%;
+        line-height: normal;
+    }
+
+
+    #soilget-in-touch {
+        background-color: white;
+    }
+
+    .soilgetintouch {
+        margin-left: 7%;
+        padding: 5%;
+    }
+
+    /* ------------Contact------------------- */
+
+    .contactbody {
+        background-color: rgb(221, 213, 213);
+    }
+
+    .contactcontainer img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .contactrow1 {
+        margin: 7%;
+        padding: 7%;
+    }
+
+    .contcol1 img {
+        width: 280px;
+    }
+
+
+    .contcol2 img {
+        width: 280px;
+        height: 270px;
+    }
+
+    .contcol3 img {
+        width: 570px;
+    }
+
+    .contcol4 img {
+        width: 280px;
+        height: 270px;
+    }
+
+    .contcol5 img {
+        width: 280px;
+    }
+
+
+
+    /* --------------about---------------- */
+
+    .aboutcontainer img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    #about {
+        background-color: rgb(255, 255, 255);
+    }
+
+    .aboutgreen {
+        margin: 5%;
+        padding: 5%;
+
+    }
+
+    .aboutgreen1 h1 {
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .aboutgreen1 p {
+        font-size: 20px;
+        color: rgb(90, 90, 90);
+        text-align: center;
+        margin-bottom: 7%;
+    }
+
+    .aboutgreen2 h5 {
+        font-weight: bold;
+        margin-bottom: 3%;
+    }
+
+    .aboutgreen2 p {
+        line-height: 1.2;
+        color: black;
+        font-weight: bold;
+    }
+
+    .aboutgreen3 p {
+        line-height: 1.2;
+        color: black;
+        font-weight: bold;
+    }
+
+    .aboutgreen4 p {
+        line-height: 1.2;
+        color: black;
+        font-weight: bold;
+    }
+
+    #award {
+        max-width: 100%;
+        background-color: black;
+    }
+
+    .awardrow {
+        margin: 9%;
+        padding: 3%;
+    }
+
+    .awardrow h1 {
+        color: #EBCF16;
+        text-align: center;
+        font-size: 52px;
+    }
+
+    .awardrow p {
+        color: white;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .staraward {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5%;
+    }
+
+    .staraward img {
+        width: 50px;
+        height: 40px;
+    }
+
+    .awardmain {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        column-gap: 50px;
+    }
+
+    .thirdimg img {
+        border: 2px solid white;
+        border-radius: 10px;
+    }
+
+    .ourteam1 {
+        margin: 5%;
+        padding: 5%;
+    }
+
+    .ourteam1 p:nth-child(1) {
+        font-weight: bold;
+    }
+
+    .ourteam1 h1 {
+        font-size: 42px;
+        font-weight: bold;
+    }
+
+    .ourteam1 p:nth-child(3) {
+        font-size: 20px;
+        margin-bottom: 3%;
+    }
+
+    .team1 img {
+        margin-bottom: 5%;
+    }
+
+    .team1 h5 {
+        font-weight: bold;
+    }
+
+    .team1 p:nth-child(4) {
+        font-size: 17px;
+    }
+
+
+/* ----------------crop-guide------------------ */
+
+#cropguide{
+    max-width: 100%;
+}
+ .cropbody {
+    max-width: 100%;
+        background-color: rgb(221, 213, 213);
+        font-family: "Raleway";
+      }
+      .wrapper {
+        position: relative;
+        background: #2e7d32;
+        overflow: hidden;
+        cursor: pointer;
+        margin-left: 17%;
+        margin-top: 5%;
+      }
+
+      .center-text {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        font-weight: bold;
+        z-index: 1;
+        transition: opacity 0.4s ease-in;
+      }
+
+      .left,
+      .right {
+        padding: 3%;
+        position: absolute;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background: #2e7d32;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        transition: transform 0.6s ease, opacity 0.6s ease;
+        z-index: 2;
+        opacity: 0;
+      }
+      .pestleft,
+      .pestright {
+        padding: 3%;
+        position: absolute;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background: #72482f;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        transition: transform 0.6s ease, opacity 0.6s ease;
+        z-index: 2;
+        opacity: 0;
+      }
+
+      .chemicalleft,
+      .chemicalright {
+        padding: 3%;
+        position: absolute;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background: #f16f6e;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        transition: transform 0.6s ease, opacity 0.6s ease;
+        z-index: 2;
+        opacity: 0;
+      }
+
+      .left {
+        left: 0;
+        transform: translateX(100%);
+      }
+
+      .right {
+        left: 0;
+        transform: translateX(0);
+      }
+
+      .wrapper:hover .center-text {
+        opacity: 0;
+      }
+
+      .wrapper:hover .left {
+        transform: translateX(0); /* slide into left */
+        opacity: 1;
+      }
+
+      .wrapper:hover .right {
+        transform: translateX(100%); /* move to right half */
+        opacity: 1;
+      }
+      .soilwrap {
+        max-width: 100%;
+        height: 420px;
+        border-radius: 20px;
+      }
+      .pestwrap {
+        max-width: 100%;
+        height: 420px;
+        border-radius: 20px;
+        background-color: #72482f;
+      }
+      .chemicalwrap {
+        max-width: 100%;
+        height: 420px;
+        border-radius: 20px;
+        background-color: #f16f6e;
+      }
+      .leftpara {
+        padding: 3%;
+      }
+      .leftpara h4 {
+        text-align: center;
+        margin-bottom: 10%;
+      }
+      .leftpara a {
+        text-decoration: none;
+        color: white;
+        margin-top: 10%;
+      }
+      .right img {
+        height: 400px;
+        width: 400px;
+      }
+
+
+
+
+
+
+
+
+
+    footer {
+        background-color: black;
+        color: white;
+        max-width: 100%;
+        height: auto;
+
+    }
+
+    .footerfirstrow {
+        height: 100px;
+       max-width: 100%;
+        margin-top: 5%;
+        margin-left: 15%;
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 10%;
+        box-shadow: -5px -5px 30px 5px rgb(100, 247, 81),
+            5px 5px 30px 5px blue,
+            5px 5px 30px 5px rgb(226, 87, 141),
+            5px 5px 30px 5px rgb(241, 255, 48);
+
+        /* box-shadow: 0 0 20px 4px #00ff88, 
+                  0 0 30px 10px #ff00ff,
+                  0 0 40px 14px #ffff00; */
+
+        border-radius: 20px;
+    }
+
+    .footerfirstrow button {
+        color: white;
+        background-color: rgb(175, 175, 175);
+        font-size: 14px;
+        height: 25px;
+        width: 80px;
+        margin-top: 3%;
+    }
+
+    .footerfirstrow input {
+        width:100px;
+        height: 20px;
+        font-size: 14px;
+    }
+
+    .footerfirstrow label {
+        font-size: 18px;
+        font-weight: bold;
+        margin-right: 3%;
+    }
+
+    .footer-second-row p {
+        line-height: normal;
+    }
+
+    .footer-second-row {
+        margin: 5%;
+        padding: 5%;
+
+
+    }
+
+    .footerrow {
+        margin-bottom: 5%;
+    }
+
+
+    .footer-div1 ul li {
+        transition: all .2s ease-in-out;
+        list-style: none;
+        padding: 5%;
+    }
+
+    .footer-div1 ul li a {
+        text-decoration: none;
+        color: white;
+
+
+    }
+
+    .footer-div1 ul li:hover {
+        transform: scale(1.3);
+
+    }
+
+    .footer-div1 h5 {
+        margin-bottom: 7%;
+        margin-left: 15%;
+    }
+
+    .footer-div1 h3 {
+        margin-bottom: 7%;
+    }
+}
+
+
+@media(min-width:768px) and (max-width:1023px) {
+
+
+ @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+    * {
+        max-width: 100%;
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+        font-family: "Raleway";
+
+    }
+
+    .homeheader {
+        background-image: url('/OrganicFarming/assets/images/heroimage.png');
+        height: auto;
+
+
+    }
+
+
+
+    .brandp {
+        font-size: 25px;
+        color: white;
+        font-weight: bold;
+        background-color: hsla(0, 0%, 0%, 0.4);
+
+    }
+
+    .brandp1 {
+        font-size: 25px;
+        color: white;
+        font-weight: bold;
+        background-color: hsla(0, 7%, 68%, 0.6);
+        width: 220px;
+
+    }
+
+    nav * {
+
+        align-content: center;
+        justify-content: center;
+    }
+
+
+    .navbar ul li a {
+        font-size: 20px;
+        color: white;
+        margin: 20px 40px;
+        display: inline-block;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 3px solid transparent;
+        text-decoration: none;
+        list-style: none;
+
+    }
+
+    .navbar ul li a:hover {
+        color: white;
+        border: 1px solid rgb(131, 131, 131);
+        border-radius: 15px;
+        background-color: rgb(182, 182, 182);
+        text-align: center;
+    }
+
+    .navbar {
+        display: flex;
+    }
+
+
+
+
+    ul li ul.dropdownmenu {
+
+        position: absolute;
+        z-index: 5;
+        display: none;
+        color: white;
+        padding-left: 0;
+        width: 180px;
+        text-align: center;
+    }
+
+    ul li ul.dropdownmenu a {
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: none;
+
+    }
+
+
+
+    ul li:hover ul.dropdownmenu {
+        display: flex;
+    }
+
+    .dropdownmenu li{
+        list-style-type: none;
+    }
+
+    .outline-text {
+        font-size: 100px;
+        font-weight: bold;
+        color: transparent;
+        -webkit-text-stroke: 2px white;
+        /* White outline */
+        text-transform: uppercase;
+        font-family: "Raleway";
+        transform: translateX(-100%);
+        animation: slideIn 1s ease-out forwards;
+
+    }
+
+    .outlined-text {
+        font-size: 100px;
+        font-weight: bold;
+        color: white;
+        -webkit-text-stroke: 2px green;
+        text-transform: uppercase;
+        transform: translateX(-100%);
+        animation: slideIn 1s ease-out forwards;
+
+    }
+
+    .subbannercol1 {
+        transform: translateX(-100%);
+        animation: slideIn 1s ease-out forwards;
+    }
+
+    .subbannercol2 {
+        right: -100%;
+        transform: translateX(-100%);
+        animation: slideIn 1s ease-out forwards;
+    }
+
+    @keyframes slideIn {
+        to {
+            transform: translateX(0);
+        }
+    }
+
+
+    .outline {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+
+    .outline2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+    .green {
+        color: white;
+        font-size: 35px;
+        font-family: "Raleway";
+    }
+
+
+    .cropmenu img {
+        height: 100px;
+        width: 160px;
+
+    }
+
+    .homecroprotate {
+        font-size: 24px;
+        text-align: justify;
+        color: black;
+        margin-top: 5%;
+        font-weight: bold;
+        font-family: "Raleway";
+
+    }
+
+    #bannersec {
+        max-width: 100%;
+        margin: 3%;
+        padding: 3%;
+        margin-top: 10%;
+
+    }
+
+    .bannersecrow {
+
+        display: flex;
+
+    }
+
+    .bannercol1 {
+        color: white;
+
+    }
+
+    .bannercol1 p {
+        line-height: normal;
+        text-align: left;
+    }
+
+    .subbannercol {
+        width: 550px;
+        height: 650px;
+        background-color: hsla(0, 0%, 0%, 0.4);
+        display: flex;
+        flex-direction: column;
+        gap: 5%;
+
+    }
+
+    .subbannercol1 {
+        margin-top: 5%;
+        padding-left: 22%;
+
+    }
+
+    .subbannercol1 img {
+        border: 4px solid white;
+    }
+
+    .subbannercol2 {
+        margin-top: 5%;
+        padding-left: 7%;
+
+    }
+
+    .subbannercol2 img {
+        border: 4px solid white;
+    }
+
+    #healthy-pest-eco {
+        max-width: 100%;
+        margin-top: 5%;
+        background-color: rgb(240, 232, 232);
+        height: auto;
+        text-align: center;
+    }
+
+    .healthy {
+        margin-top: 5%;
+        margin-left: 3%;
+        background-color: white;
+        height: 450px;
+        width: 1100px;
+    }
+
+    .healthy h3 {
+        margin: 1%;
+        padding: 5%;
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    .healthy p {
+        font-size: 18px;
+    }
+
+    .healthy p:nth-child(2) {
+        font-weight: bold;
+    }
+
+    .healthy-pest-eco-btn {
+        display: flex;
+        flex-direction: row;
+        margin-top: 11%;
+        justify-content: space-evenly;
+    }
+
+    .homehealthy {
+
+        background-color: #2E7D32;
+        color: white;
+        width: 220px;
+        height: 50px;
+        border: none;
+        border-radius: 10px;
+        font-size: 18px;
+    }
+
+    .homepest {
+        background-color: #6C584C;
+        color: white;
+        width: 220px;
+        height: 50px;
+        border: none;
+        border-radius: 10px;
+        font-size: 18px;
+    }
+
+    .homeeco {
+        background-color: #D9C437;
+        color: white;
+        width: 220px;
+        height: 50px;
+        border: none;
+        border-radius: 10px;
+        font-size: 18px;
+    }
+    #why-choose-us{
+    max-width: 100%;
+}
+
+    .chooseusrow {
+        padding: 7%;
+    }
+
+    .chooseuscol1 h4 {
+        padding-left: 10%;
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 5%;
+    }
+
+    .chooseuscol1 p {
+        font-size: 21px;
+        color: rgb(75, 73, 73);
+    }
+
+    .chooseicon1 {
+        display: flex;
+        gap: 5%;
+        padding: 1%;
+    }
+
+    .chooseusrow2 {
+        padding: 5%;
+    }
+
+    .choosecol3 h1 {
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    .choosecol3 p {
+        font-size: 18px;
+    }
+
+    .choosecolsub {
+        margin-left: 5%;
+        padding-left: 40%;
+        padding-top: 20%;
+    }
+
+    .learnmore {
+        color: white;
+        background-color: black;
+        border: none;
+        width: 120px;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    .getstarted {
+        color: black;
+        background-color: white;
+        border: 1px solid black;
+        width: 120px;
+        height: 50px;
+        font-size: 18px;
+    }
+
+
+    #faq {
+        background-color: rgb(240, 232, 232);
+        max-width: 100%;
+        height: 230vh;
+
+    }
+
+    .faqcontainer {
+        padding: 5%;
+        margin-left: 3%;
+        margin-right: 3%;
+        background-color: #8BC34A;
+        position: relative;
+    }
+
+    .layimg1 {
+        top: 120px;
+        left: 250px;
+        position: absolute;
+    }
+
+    .layimg2 {
+        top: 100px;
+        position: absolute;
+        right: 0px;
+    }
+
+    .layimg3 {
+        top: 380px;
+        left: 5px;
+        position: absolute;
+    }
+
+    .layimg4 {
+        top: 1000px;
+        position: absolute;
+        right: 0px;
+    }
+
+    .layimg5 {
+        top: 1200px;
+        position: absolute;
+        left: 200px;
+    }
+
+    .layimg6 {
+        top: 550px;
+        position: absolute;
+        left: 400px;
+    }
+
+    .faqsubrow h1 {
+        font-size: 38px;
+        text-align: center;
+        color: white;
+
+    }
+
+    .faqsubrow p {
+        font-size: 20px;
+        text-align: center;
+        color: rgb(240, 238, 238);
+
+    }
+
+    .faqrow {
+
+        height: 200vh;
+
+    }
+
+    .faqcol1 {
+        border: 2px solid white;
+        border-radius: 10px;
+       max-width: 100%;
+        padding: 2%;
+        background-color: #7eb93a;
+        margin-left: 1%;
+        margin-bottom: 3%;
+
+    }
+
+    .faqcol1 h3 {
+        font-weight: bold;
+    }
+
+    .faqcol1 p {
+        font-size: 18px;
+        line-height: normal;
+        color: rgb(214, 214, 214);
+    }
+
+    .faqcol2 {
+        border: 2px solid white;
+        border-radius: 10px;
+       max-width: 100%;
+        padding: 2%;
+        background-color: #7eb93a;
+        margin-left: 10%;
+        margin-bottom: 3%;
+    }
+
+    .faqcol2 h3 {
+        font-weight: bold;
+    }
+
+    .faqcol2 p {
+        font-size: 18px;
+        line-height: normal;
+        color: rgb(214, 214, 214);
+    }
+
+    .stillq {
+        color: white;
+        text-align: center;
+    }
+
+    .stillq p {
+        font-size: 20px;
+    }
+
+    .homecontactbtn {
+        width: 150px;
+        height: 50px;
+        border: 1px solid rgb(228, 228, 228);
+        color: rgb(214, 214, 214);
+        background-color: #8BC34A;
+        font-size: 20px;
+    }
+
+    #discover {
+        background-color: rgb(221, 213, 213);
+        max-width: 100%;
+        height: auto;
+    }
+
+    .discoversub h1 {
+        text-align: center;
+        font-weight: bold;
+        font-size: 48px;
+    }
+
+    .discoversub p {
+        font-size: 20px;
+        text-align: center;
+        margin: 5%
+    }
+
+    .discoverrow1 {
+
+        position: relative;
+    }
+
+    .discoverlayimg1 {
+        position: absolute;
+        top: 80px;
+        left: 50px;
+
+    }
+
+    .discoverlayimg2 {
+        position: absolute;
+        top: 40px;
+        right: 0px;
+
+    }
+
+    .discoverrow2 {
+        margin: 5%;
+        padding: 5%;
+    }
+
+
+
+
+    #get-in-touch {
+        max-width: 100%;
+        height: auto;
+        margin: 5%;
+        padding: 3%;
+    }
+
+    .getintouchsubrow {
+        margin-bottom: 5%;
+    }
+
+    .getintouchsubrow p:nth-child(1) {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .getintouchsubrow h2 {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .getintouchsubrow p:nth-child(3) {
+        font-size: 20px;
+
+    }
+
+    .getintouchcol h5 {
+        color: green;
+        font-size: 22px;
+    }
+
+    .getintouchcol2 img {
+        margin-left: 9%;
+    }
+
+    .email,
+    .phone,
+    .office {
+        padding-bottom: 7%;
+    }
+
+    .email p:last-child {
+        text-decoration: underline;
+        font-size: 18px;
+
+    }
+
+    .email p:nth-child(5) {
+        font-size: 20px;
+    }
+
+    .phone p:nth-child(5) {
+        font-size: 20px;
+    }
+
+    .office p:nth-child(5) {
+        font-size: 20px;
+    }
+
+    .phone p:last-child {
+        text-decoration: underline;
+        font-size: 18px;
+    }
+  #empower{
+        max-width: 100%;
+        height: auto;
+    }
+    .empowercol1 {
+        background-color: rgb(182, 181, 181);
+
+    }
+
+    .empowercol1 p {
+        color: white;
+        font-size: 28px;
+        font-weight: bold;
+        padding: 5%;
+        line-height: normal;
+    }
+
+    .empowercol2 {
+        background-color: rgb(83, 80, 80);
+    }
+
+    .empowercol2 p {
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: normal;
+        padding: 5%;
+        margin: 5%;
+    }
+
+    .empowergetstarted {
+        color: rgb(204, 200, 200);
+        background-color: rgb(83, 80, 80);
+        border: 1px solid white;
+        width: 120px;
+        height: 50px;
+        font-size: 18px;
+        margin-left: 10%;
+    }
+
+    .empowerlearnmore {
+        color: white;
+        background-color: black;
+        border: none;
+        width: 120px;
+        height: 50px;
+        font-size: 18px;
+        margin-left: 60%;
+        margin-bottom: 5%;
+    }
+
+
+
+
+
+    /* -----------------------soil Health---------------------- */
+
+
+    .soilcontainer img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    nav * {
+
+        align-content: center;
+        justify-content: center;
+    }
+
+    .soilnavbar {
+        background-color: black;
+        width: 800px;
+        border-radius: 15px;
+        height: 80px;
+        margin-left: 20%;
+        margin-top: 3%;
+    }
+
+    .soilnavbar ul li a {
+        font-size: 20px;
+        color: white;
+        margin: 20px 40px;
+        display: inline-block;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 3px solid transparent;
+        text-decoration: none;
+        list-style: none;
+
+    }
+
+    .soilnavbar ul li a:hover {
+        color: white;
+        border: 1px solid rgb(131, 131, 131);
+        border-radius: 15px;
+        background-color: rgb(182, 182, 182);
+        text-align: center;
+
+    }
+
+    .soilnavbar {
+        display: flex;
+    }
+
+    .soilbody {
+        background-color: rgb(221, 213, 213);
+    }
+
+    #soilbannersec {
+        margin: 3%;
+        padding: 1%;
+    }
+
+    .soilbannersecrow {
+
+        display: flex;
+        flex-direction: row;
+
+
+
+    }
+
+    .soilbannercol1 {
+        color: white;
+    }
+
+    .soilbannercol1 p {
+        line-height: normal;
+        text-align: left;
+    }
+
+    .soilsubbannercol {
+        width: 500px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: 5%;
+
+    }
+
+    .soilsubbannercol1 {
+        padding-left: 7%;
+
+    }
+
+    .soilsubbannercol1 img {
+        border: 4px solid white;
+        width: 250px;
+        height: 250px;
+    }
+
+    .soilsubbannercol2 img {
+        border: 4px solid white;
+        width: 250px;
+        height: 250px;
+    }
+
+    .soilsubbannercol2 {
+        padding-left: 58%;
+    }
+
+    .soilsubbannercol2 img {
+        border: 4px solid white;
+    }
+
+    #soil-health {
+        max-width: 100%;
+
+    }
+
+    .soilhealth-sub {
+        margin: 3%;
+        padding: 5%;
+    }
+
+    .soilhealth-sub h1 {
+        font-size: 48px;
+        text-align: center;
+        margin-bottom: 5%;
+        font-weight: bold;
+    }
+
+    .soilhealth-sub p {
+        font-size: 28px;
+        line-height: normal;
+        font-weight: bold;
+    }
+
+    .soilrow {
+        padding: 2%;
+        max-width: 100%;
+        margin-bottom: 7%;
+    }
+
+    .soilcol1 img {
+        width: 630px;
+        margin-left: 3%;
+    }
+
+    .soilcol2 h3 {
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 5%;
+    }
+
+    .soilcol2 p {
+        font-size: 18px;
+        padding: 2%;
+        line-height: normal;
+    }
+
+
+    #soilget-in-touch {
+        background-color: white;
+    }
+
+    .soilgetintouch {
+        margin-left: 7%;
+        padding: 5%;
+    }
+
+    /* ------------Contact------------------- */
+
+    .contactbody {
+        background-color: rgb(221, 213, 213);
+    }
+
+    .contactcontainer img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .contactrow1 {
+        margin: 7%;
+        padding: 7%;
+    }
+
+    .contcol1 img {
+        width: 280px;
+    }
+
+
+    .contcol2 img {
+        width: 280px;
+        height: 270px;
+    }
+
+    .contcol3 img {
+        width: 570px;
+    }
+
+    .contcol4 img {
+        width: 280px;
+        height: 270px;
+    }
+
+    .contcol5 img {
+        width: 280px;
+    }
+
+
+
+    /* --------------about---------------- */
+
+    .aboutcontainer img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    #about {
+        background-color: rgb(255, 255, 255);
+    }
+
+    .aboutgreen {
+        margin: 5%;
+        padding: 5%;
+
+    }
+
+    .aboutgreen1 h1 {
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .aboutgreen1 p {
+        font-size: 20px;
+        color: rgb(90, 90, 90);
+        text-align: center;
+        margin-bottom: 7%;
+    }
+
+    .aboutgreen2 h5 {
+        font-weight: bold;
+        margin-bottom: 3%;
+    }
+
+    .aboutgreen2 p {
+        line-height: 1.2;
+        color: black;
+        font-weight: bold;
+    }
+
+    .aboutgreen3 p {
+        line-height: 1.2;
+        color: black;
+        font-weight: bold;
+    }
+
+    .aboutgreen4 p {
+        line-height: 1.2;
+        color: black;
+        font-weight: bold;
+    }
+
+    #award {
+        background-color: black;
+    }
+
+    .awardrow {
+        margin: 9%;
+        padding: 3%;
+    }
+
+    .awardrow h1 {
+        color: #EBCF16;
+        text-align: center;
+        font-size: 52px;
+    }
+
+    .awardrow p {
+        color: white;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .staraward {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5%;
+    }
+
+    .staraward img {
+        width: 50px;
+        height: 40px;
+    }
+
+    .awardmain {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        column-gap: 50px;
+    }
+
+    .thirdimg img {
+        border: 2px solid white;
+        border-radius: 10px;
+    }
+
+    .ourteam1 {
+        margin: 5%;
+        padding: 5%;
+    }
+
+    .ourteam1 p:nth-child(1) {
+        font-weight: bold;
+    }
+
+    .ourteam1 h1 {
+        font-size: 42px;
+        font-weight: bold;
+    }
+
+    .ourteam1 p:nth-child(3) {
+        font-size: 20px;
+        margin-bottom: 3%;
+    }
+
+    .team1 img {
+        margin-bottom: 5%;
+    }
+
+    .team1 h5 {
+        font-weight: bold;
+    }
+
+    .team1 p:nth-child(4) {
+        font-size: 17px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    footer {
+        background-color: black;
+        color: white;
+        max-width: 100%;
+        height: auto;
+
+    }
+
+    .footerfirstrow {
+        height: auto;
+       max-width: 100%;
+        margin-top: 5%;
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 10%;
+        box-shadow: -5px -5px 30px 5px rgb(100, 247, 81),
+            5px 5px 30px 5px blue,
+            5px 5px 30px 5px rgb(226, 87, 141),
+            5px 5px 30px 5px rgb(241, 255, 48);
+
+        /* box-shadow: 0 0 20px 4px #00ff88, 
+                  0 0 30px 10px #ff00ff,
+                  0 0 40px 14px #ffff00; */
+
+        border-radius: 20px;
+    }
+
+    .footerfirstrow button {
+        color: white;
+        background-color: rgb(175, 175, 175);
+        font-size: 20px;
+        height: 40px;
+        width: 150px;
+        margin-top: 3%;
+    }
+
+    .footerfirstrow input {
+        width: 200px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .footerfirstrow label {
+        font-size: 28px;
+        font-weight: bold;
+        margin-right: 3%;
+    }
+
+    .footer-second-row p {
+        line-height: normal;
+    }
+
+    .footer-second-row {
+        margin: 5%;
+        padding: 5%;
+
+
+    }
+
+    .footerrow {
+        margin-bottom: 5%;
+    }
+
+
+    .footer-div1 ul li {
+        transition: all .2s ease-in-out;
+        list-style: none;
+        padding: 5%;
+    }
+
+    .footer-div1 ul li a {
+        text-decoration: none;
+        color: white;
+
+
+    }
+
+    .footer-div1 ul li:hover {
+        transform: scale(1.3);
+
+    }
+
+    .footer-div1 h5 {
+        margin-bottom: 7%;
+        margin-left: 15%;
+    }
+
+    .footer-div1 h3 {
+        margin-bottom: 7%;
+    }
+
+
+
+
+}
+

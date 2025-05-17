@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="organic,farming" />
+    <meta
+      name="keywords"
+      content="nature, organic, food, farming, cultivation, crops"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Organic Farming Website</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <style>
+      @media (min-width:1024px) {
+      @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+      .cropbody {
+        background-color: rgb(221, 213, 213);
+        font-family: "Raleway";
+      }
+      .wrapper {
+        position: relative;
+        background: #2e7d32;
+        overflow: hidden;
+        cursor: pointer;
+        margin-left: 17%;
+        margin-top: 5%;
+      }
+
+      .center-text {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        font-weight: bold;
+        z-index: 1;
+        transition: opacity 0.4s ease-in;
+      }
+
+      .left,
+      .right {
+        padding: 3%;
+        position: absolute;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background: #2e7d32;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        transition: transform 0.6s ease, opacity 0.6s ease;
+        z-index: 2;
+        opacity: 0;
+      }
+      .pestleft,
+      .pestright {
+        padding: 3%;
+        position: absolute;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background: #72482f;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        transition: transform 0.6s ease, opacity 0.6s ease;
+        z-index: 2;
+        opacity: 0;
+      }
+
+      .chemicalleft,
+      .chemicalright {
+        padding: 3%;
+        position: absolute;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background: #f16f6e;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        transition: transform 0.6s ease, opacity 0.6s ease;
+        z-index: 2;
+        opacity: 0;
+      }
+
+      .left {
+        left: 0;
+        transform: translateX(100%);
+      }
+
+      .right {
+        left: 0;
+        transform: translateX(0);
+      }
+
+      .wrapper:hover .center-text {
+        opacity: 0;
+      }
+
+      .wrapper:hover .left {
+        transform: translateX(0); /* slide into left */
+        opacity: 1;
+      }
+
+      .wrapper:hover .right {
+        transform: translateX(100%); /* move to right half */
+        opacity: 1;
+      }
+      .soilwrap {
+        width: 850px;
+        height: 420px;
+        border-radius: 20px;
+      }
+      .pestwrap {
+        width: 850px;
+        height: 420px;
+        border-radius: 20px;
+        background-color: #72482f;
+      }
+      .chemicalwrap {
+        width: 850px;
+        height: 420px;
+        border-radius: 20px;
+        background-color: #f16f6e;
+      }
+      .leftpara {
+        padding: 3%;
+      }
+      .leftpara h4 {
+        text-align: center;
+        margin-bottom: 10%;
+      }
+      .leftpara a {
+        text-decoration: none;
+        color: white;
+        margin-top: 10%;
+      }
+      .right img {
+        height: 400px;
+        width: 400px;
+      }
+    }
+    </style>
+  </head>
+
+  <body class="cropbody">
+    <div class="aboutcontainer">
+      <img src="../images/aboutheroimg.png" />
+    </div>
+
+    <header class="soilheader">
+      <nav class="navbar soilnavbar navbar-expand-md navbar-default">
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navContent"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navContent">
+          <ul class="navbar-nav ms-auto">
+           <li class="nav-item"><a class="nav-link active link" href="/OrganicFarming/index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link active link" href="/OrganicFarming/assets/pages/about.html">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link active link" href="/OrganicFarming/assets/pages/cropguide.html">CROP GUIDE</a></li>
+                    <li class="nav-item"><a class="nav-link active link" href="/OrganicFarming/assets/pages/contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="cropguide">
+        <div class="wrapper soilwrap">
+          <div class="center-text">
+            <p>SOIL HEALTH GUIDANCE</p>
+          </div>
+          <div class="left">
+            <div class="leftpara">
+              <h4>SOIL HEALTH GUIDANCE</h4>
+              <p>
+                Healthy soil is the soul of every thriving organic farm. In this
+                guide,you will uncover the secrets beneath your feet - how to
+                build fertile, living soil that breathes life into every seed.
+              </p>
+              <a
+                href="/OrganicFarming/assets/pages/soilhealth.html"
+                class="press"
+                >PRESS FOR GUIDE</a
+              >
+            </div>
+          </div>
+          <div class="right">
+            <img src="/OrganicFarming/assets/images/bannersub2.png" />
+          </div>
+        </div>
+        <div class="wrapper pestwrap">
+          <div class="center-text">
+            <p>PEST CONTROL GUIDANCE</p>
+          </div>
+          <div class="left pestleft">
+            <div class="leftpara">
+              <h4>PEST CONTROL GUIDANCE</h4>
+              <p>
+                Protect Your Plants, Naturally say good bye to chemicals and
+                hello to balance. Our pest control guide teaches you how to
+                manage unwanted visitors in the garden using safe, organic
+                methods that protect your crops - and the planet.
+              </p>
+              <a
+                href="/OrganicFarming/assets/pages/pestcontrol.html"
+                class="press"
+                >PRESS FOR GUIDE</a
+              >
+            </div>
+          </div>
+          <div class="right pestright">
+            <img src="/OrganicFarming/assets/images/pestcontrolcrop.png" />
+          </div>
+        </div>
+        <div class="wrapper chemicalwrap">
+          <div class="center-text">
+            <p>CHEMICAL CONSEQUENCES</p>
+          </div>
+          <div class="left chemicalleft">
+            <div class="leftpara">
+              <h4>CHEMICAL CONSEQUENCES</h4>
+              <p>
+                Short-term Gains, Long-term Harm while chemical fertilizers and
+                pesticides may promise quick fixes, they come at a steep cost.
+                These synthetic solutions can degrade soil health, pollute water
+                sources, harm pollinators, and leave residues on the food we
+                eat.
+              </p>
+              <a
+                href="/OrganicFarming/assets/pages/chemicalconseq.html"
+                class="press"
+                >PRESS FOR GUIDE</a
+              >
+            </div>
+          </div>
+          <div class="right chemicalright">
+            <img src="/OrganicFarming/assets/images/chemicalconseqcrop.png" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <br />
+    <footer>
+      <div class="footer-div container-fluid align-items-center">
+        <div class="row">
+          <div class="footer-div1 col-12 col-sm-12 col-lg-12 col-md-12">
+            <div class="footerfirstrow">
+              <label>Keep Your Green Natural and Fresh</label>
+              <input type="text" name="text" placeholder="@Email" />
+              <button>Subscribe</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row footer-second-row">
+          <div class="footer-div1 col-sm-12 col-12 col-md-6 col-lg-6">
+            <div class="footergreenguide">
+              <h3>THE GREEN GUIDE</h3>
+              <p>
+                We focus on building healthy soiL protecting biodiversity, and
+                producing fresh, nutrient rich-food that's good for people and
+                the planet. Whether you're here to learn, shop or connect with
+                like minded growers, our goal is to inspire a lifestyle that
+                honors the earth.
+              </p>
+              <p>
+                We Believe the best things grows from the ground up - naturally.
+                Our farm is rooted in the principles of organic, eco-friendly
+                agriculture. where every crop is nurtured without synthetic
+                chemicals, GMO's or harmful practices.
+              </p>
+            </div>
+          </div>
+          <div class="footer-div1 col-sm-12 col-12 col-md-6 col-lg-3">
+            <h5>CATEGORY</h5>
+           <ul>
+                        <li><a href="/OrganicFarming/assets/pages/soilhealth.html">Soil Health</a></li>
+                        <li><a href="/OrganicFarming/assets/pages/pestcontrol.html">Pest control</a></li>
+                        <li><a href="/OrganicFarming/assets/pages/chemicalconseq.html">Chemical Consequences</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-div1 col-sm-12 col-12 col-md-6 col-lg-3">
+                    <h5>CONTACT</h5>
+                    <ul>
+                        <li><a href="/OrganicFarming/assets/pages/about.html">Environmentalists</a></li>
+                        <li><a href="/OrganicFarming/assets/pages/about.html">Local Farmers</a></li>
+                        <li><a href="/OrganicFarming/assets/pages/about.html">Organic Crop Planner</a></li>
+                        <li><a href="/OrganicFarming/assets/pages/about.html">Soil Experts</a></li>
+
+                    </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

@@ -80,14 +80,14 @@ form.addEventListener("submit", function (e) {
   
   document.getElementById('formContainer').innerHTML = `
   <div style="text-align: center;">
-    <img src="/assets/images/thankyou.png" alt="Thank You" style="max-width: 100%; border-radius: 10px;" />
+    <img src="../images/thankyou.png" alt="Thank You" style="max-width: 100%; border-radius: 10px;" />
     <br/>
     <br/>
     <p>Your Message received</p>
     <h4>WE WILL REACH YOU SOON</h4>
    <br/>
     <br/>
-     <a href="/assets/pages/cropguide.html">
+     <a href="../pages/cropguide.html">
       <button style="
         background-color:black;
         color: white;

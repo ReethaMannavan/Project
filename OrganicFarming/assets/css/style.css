@@ -9,11 +9,15 @@
 
     }
 
-    .homeheader {
-        background-image: url('/OrganicFarming/assets/images/heroimage.png');
-        height: 150vh;
-
-
+   
+    .herolay{
+        max-width: 100%;
+        position: absolute;
+        z-index: -1;
+    }
+    .homeheader{
+        position: relative;
+        z-index: 5;
     }
 
 
@@ -159,6 +163,8 @@
         color: white;
         font-size: 35px;
         font-family: "Raleway";
+        position: absolute;
+        left:600px;
     }
 
 
@@ -203,7 +209,7 @@
 
     .subbannercol {
         width: 550px;
-        height: 650px;
+        height: 600px;
         background-color: hsla(0, 0%, 0%, 0.4);
         display: flex;
         flex-direction: column;
@@ -1098,10 +1104,13 @@
         max-width: 100%;
 
     }
+    .herolay{
+        display: none;
+    }
     
 
     .homeheader {
-        background-image: url('/OrganicFarming/assets/images/heroimage.png');
+        background-image: url('../images/heroimage.png');
      background-repeat: no-repeat;
         height: auto;
     }
@@ -1264,6 +1273,7 @@
 
 
     .green {
+      
         color: white;
         font-size: 25px;
         font-family: "Raleway";
@@ -2687,6 +2697,7 @@ max-width: 100%;
         color: white;
         font-size: 35px;
         font-family: "Raleway";
+         animation: fadeIn 2s 1s ease-in-out forwards;
     }
 
 

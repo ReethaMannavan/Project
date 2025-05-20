@@ -61,14 +61,13 @@
 
     .navbar ul li a:hover {
         color: white;
-        border: 1px solid rgb(131, 131, 131);
         border-radius: 15px;
-        background-color: rgb(182, 182, 182);
         text-align: center;
     }
 
     .navbar {
         display: flex;
+        background-color: black;
     }
 
 
@@ -855,6 +854,12 @@
     .contcol5 img {
         width: 280px;
     }
+    .first-last{
+        gap:10%;
+    }
+    .privacy{
+    gap:10%;
+}
 
 
 
@@ -1110,8 +1115,7 @@
     
 
     .homeheader {
-        background-image: url('../images/heroimage.png');
-     background-repeat: no-repeat;
+   
         height: auto;
     }
     .brand{
@@ -1153,6 +1157,7 @@
         align-items: center;
         color: white;
         text-align: center;
+        background-color: black;
     }
 
 
@@ -1170,9 +1175,6 @@
 
     .navbar ul li a:hover {
         color: white;
-        border: 1px solid rgb(131, 131, 131);
-        border-radius: 15px;
-        background-color: rgb(182, 182, 182);
         text-align: center;
     }
 
@@ -1209,13 +1211,8 @@
         list-style-type: none;
     }
    
-    ul li:hover ul.dropdownmenu {
-    display: none;
-}
-.dropdownmenu:hover {
-    display: flex;
-    flex-direction: row;
-}
+  
+
     .outline-text {
         font-size: 40px;
         font-weight: bold;
@@ -1288,7 +1285,13 @@
         width: 50px;
 
     }
+  
 
+    ul li:hover ul.dropdownmenu {
+        display: flex;
+        
+    }
+    
     .homecroprotate {
         font-size: 18px;
         text-align: justify;
@@ -1300,6 +1303,8 @@
     }
 
     #bannersec {
+             background-image: url('../images/heroimage.png');
+     background-repeat: no-repeat;
         max-width: 100%;
        height:auto;
      
@@ -1449,6 +1454,10 @@
         gap: 5%;
         padding: 1%;
     }
+    .chooseicon1 img{
+        width:70px;
+        height:50px;
+    }
 
     .chooseusrow2 {
         padding: 7%;
@@ -1476,6 +1485,7 @@
         width: 120px;
         height: 50px;
         font-size: 18px;
+        margin-bottom: 5%;
     }
 
     .getstarted {
@@ -2135,27 +2145,58 @@ max-width: 100%;
 
     .contcol1 img {
         width: 280px;
+        margin-bottom: 5%;
     }
 
 
     .contcol2 img {
         width: 280px;
         height: 270px;
+         margin-bottom: 5%;
     }
 
     .contcol3 img {
         width: 570px;
+         margin-bottom: 5%;
     }
 
     .contcol4 img {
         width: 280px;
         height: 270px;
+        margin-bottom: 5%;
     }
 
     .contcol5 img {
         width: 280px;
     }
 
+    .first-last{
+        display: flex;
+        flex-direction: column;
+        column-gap: 5%;
+
+    }
+    .phone-row{
+        
+    display: flex;
+    flex-direction: column;
+
+    }
+    #countryCode{
+        width:70px;
+    }
+option{
+  
+font-size: 15px;
+
+}
+#phone{
+width:350px;
+font-size: 15px;
+}
+.privacy{
+    gap:10%;
+}
 
 
     /* --------------about---------------- */
@@ -2303,7 +2344,7 @@ max-width: 100%;
         background: #2e7d32;
         overflow: hidden;
         cursor: pointer;
-        margin-left: 17%;
+        margin-left: 5%;
         margin-top: 5%;
       }
 
@@ -2319,6 +2360,7 @@ max-width: 100%;
         font-weight: bold;
         z-index: 1;
         transition: opacity 0.4s ease-in;
+        text-align: center;
       }
 
       .left,
@@ -2399,36 +2441,42 @@ max-width: 100%;
       }
       .soilwrap {
         max-width: 100%;
-        height: 420px;
+        height: 380px;
         border-radius: 20px;
       }
       .pestwrap {
         max-width: 100%;
-        height: 420px;
+        height: 380px;
         border-radius: 20px;
         background-color: #72482f;
       }
       .chemicalwrap {
         max-width: 100%;
-        height: 420px;
+        height: 380px;
         border-radius: 20px;
         background-color: #f16f6e;
       }
       .leftpara {
-        padding: 3%;
+        padding: 1%;
       }
       .leftpara h4 {
         text-align: center;
-        margin-bottom: 10%;
+        margin-bottom: 3%;
+        font-size: 16px;
+      }
+      .leftpara p{
+        line-height: normal;
+        font-size: 16px;
       }
       .leftpara a {
         text-decoration: none;
         color: white;
         margin-top: 10%;
+        font-size: 15px;
       }
       .right img {
-        height: 400px;
-        width: 400px;
+        height: 300px;
+        width: 200px;
       }
 
 

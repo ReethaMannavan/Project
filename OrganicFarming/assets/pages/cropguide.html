@@ -9,7 +9,8 @@
       content="nature, organic, food, farming, cultivation, crops"
     />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Crop Guide</title>
+    <title>Crop Guide - Organic Farming Website</title>
+        <link rel="icon" href="../images/whychoose2.png" type="image/png">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -162,29 +163,62 @@
   </head>
 
   <body class="cropbody">
-    <div class="aboutcontainer">
-      <img src="../images/aboutheroimg.png" />
-    </div>
+   
 
     <header class="soilheader">
-      <nav class="navbar soilnavbar navbar-expand-md navbar-default">
-        <button
-          class="navbar-toggler"
-          data-bs-toggle="collapse"
-          data-bs-target="#navContent"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    
+       <nav class="navbar navbar-expand-md navbar-default">
+            <div class="container">
+                <div class="brand">
+                    <p class="brandp">The Green Guide</p>
 
-        <div class="collapse navbar-collapse" id="navContent">
-          <ul class="navbar-nav ms-auto">
-           <li class="nav-item"><a class="nav-link active link" href="./index.html">HOME</a></li>
-                    <li class="nav-item"><a class="nav-link active link" href="./about.html">ABOUT</a></li>
-                    <li class="nav-item"><a class="nav-link active link" href="./cropguide.html">CROP GUIDE</a></li>
-                    <li class="nav-item"><a class="nav-link active link" href="./contact.html">CONTACT</a></li>
-          </ul>
-        </div>
-      </nav>
+                </div>
+
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navContent">
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item"><a class="nav-link active link" href="./index.html">HOME</a></li>
+
+
+                        <li class="nav-item cropmenumain"><a class="nav-link link" href="./cropguide.html">CROP
+                                GUIDE</a>
+                            <ul class="dropdownmenu">
+                                <li class="nav-item"><a class="nav-link link dropa"
+                                        href="./soilhealth.html"><span class="cropmenu"><img
+                                                src="../images/cropmenu1.png"></span>
+                                        Soil Health</a>
+                                </li>
+
+                                <li class="nav-item"><a class="nav-link link dropa"
+                                        href="./pestcontrol.html"><span class="cropmenu"><img
+                                                src="../images/cropmenu2.png"></span>
+                                        Pest control</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link link dropa"
+                                        href="./chemicalconseq.html"><span
+                                            class="cropmenu"><img src="../images/cropmenu3.png"></span>
+                                        Chemical Consequences</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link active link"
+                                href="./contact.html">CONTACT</a></li>
+                        <li class="nav-item"><a class="nav-link active link"
+                                href="./about.html">ABOUT</a></li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+         <div class="aboutcontainer">
+      <img src="../images/aboutheroimg.png" />
+    </div>
     </header>
 
     <main>
@@ -271,7 +305,7 @@
           <div class="footer-div1 col-12 col-sm-12 col-lg-12 col-md-12">
             <div class="footerfirstrow">
               <label>Keep Your Green Natural and Fresh</label>
-              <input type="text" name="text" placeholder="@Email" />
+              <input type="text" name="text" placeholder="@email" />
               <button>Subscribe</button>
             </div>
           </div>

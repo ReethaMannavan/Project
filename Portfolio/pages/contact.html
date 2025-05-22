@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="organic,farming">
+    <meta name="keywords" content="nature, organic, food, farming, cultivation, crops">
+    <link rel='stylesheet' href="../assets/css/style.css">
+    <title>Contact - Reetha's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="icon" href="../assets/images/profile2.jpeg" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        .polished-brand {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #00bcd4, #f579bf);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.8px;
+  position: relative;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+        .navbar {
+            background-color: #424242;
+            padding: 0.8rem 1rem;
+        }
+
+        .navbar-brand {
+            color: #fff !important;
+            font-weight: bold;
+        }
+
+        .navbar ul li a {
+            font-size: 21px;
+
+        }
+
+        .nav-link {
+            color: #fff !important;
+            padding: 0.5rem 1rem;
+            margin: 0 0.3rem;
+            font-weight: 500;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+
+        .nav-link:hover {
+            background: linear-gradient(90deg, #f0f, #f0f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+
+        }
+
+
+        .nav-link.active {
+            background: linear-gradient(90deg, rgb(10, 165, 165), rgb(0, 195, 255));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .navbar-nav .nav-item {
+            margin-right: 1rem;
+        }
+
+        .navbar-nav .nav-item:last-child {
+            margin-right: 0;
+        }
+
+        .navbar-nav .nav-item {
+            margin-right: 2rem;
+        }
+
+
+        /* ---------------Contact--------------- */
+
+        #contact {
+            max-width: 100%;
+            height: 130vh;
+        }
+
+        .contactbody {
+            background-color: #202020;
+            color: #fff;
+            min-height: 100vh;
+            padding: 2rem 0;
+              font-family: "Segoe UI", sans-serif;
+        }
+
+        .contact-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding-top: 100px;
+        }
+
+        .contacthead,
+        .getin {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #ff69b4;
+            text-shadow: 0 0 4px rgba(255, 105, 180, 0.5);
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 5px #ff69b4;
+            }
+
+            100% {
+                text-shadow: 0 0 15px #ff69b4;
+            }
+        }
+
+
+        .contact-details h3 {
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #ff69b4;
+            padding-bottom: 0.5rem;
+        }
+
+        .contact-details p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        #contact-form {
+            margin-bottom: 5%;
+        }
+
+        .contact-container {
+            padding-top: 70px;
+            margin-top: 3%;
+        }
+
+        .contacthead {
+            margin-bottom: 5%;
+        }
+
+        form .form-control {
+            background-color: #464545;
+            border: 1.5px solid #444;
+            color: #eee;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: none;
+            font-size: 1rem;
+        }
+
+
+        form .form-control::placeholder {
+            color: #777;
+            opacity: 1;
+        }
+
+
+        form .form-control:hover,
+        form .form-control:focus {
+            background-color: #1a1a1a;
+            border-color: #ff69b4;
+            box-shadow: 0 0 8px rgba(255, 105, 180, 0.6);
+            color: #fff;
+            outline: none;
+        }
+
+
+        form textarea.form-control {
+            resize: vertical;
+        }
+
+        .btn-submit {
+            background-color: #121212;
+            color: #ff69b4;
+            border: 2px solid #ff69b4;
+            font-weight: 700;
+            letter-spacing: 1px;
+            padding: 0.6rem 1.5rem;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-submit:hover,
+        .btn-submit:focus {
+            background-color: #ff69b4;
+            color: #121212;
+            box-shadow: 0 0 12px rgba(255, 105, 180, 0.8);
+            outline: none;
+        }
+
+        .getinmail a {
+            color: #d4428b;
+
+        }
+
+        .getinphone {
+            color: #d4428b;
+        }
+
+        .location {
+            margin-top: 15%;
+        }
+
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+           height:100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #contact {
+            flex: 1;
+        }
+
+        footer {
+            background-color: #353434;
+            color: #ff69b4;
+            padding: 1rem 0;
+            text-align: center;
+            
+        }
+
+        footer a {
+
+            background: linear-gradient(45deg, #d4428b 25%, #ff66b3 50%, #ff69b4 75%);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+
+            margin: 0 1rem;
+            font-size: 1.6rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+
+
+        footer a:hover {
+
+            background: linear-gradient(90deg, rgb(10, 165, 165), rgb(0, 195, 255));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+
+</head>
+
+<body class="contactbody">
+
+
+    <header>
+
+         <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand polished-brand" href="#">Reetha's Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Education.html">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./skills.html">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    </header>
+
+
+
+
+
+
+    <main>
+
+        <section id="contact">
+
+            <div class="contact-container">
+                <div class="row g-5">
+
+                    <div class="col-md-6" id="form-section">
+                        <h2 class="contacthead">Contact Me</h2>
+                        <form id="contactForm" novalidate>
+
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name *</label>
+                                <input type="text" class="form-control" id="name" required
+                                    placeholder="Enter Your Name" />
+                                <div class="invalid-feedback">Please enter your name.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" class="form-control" id="email" required
+                                    placeholder="Enter Your Mail id" />
+                                <div class="invalid-feedback">Please enter a valid email address.</div>
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone Number *</label>
+                                <input type="tel" class="form-control" id="phone" pattern="^\+?\d{7,15}$"
+                                    placeholder="Enter Your Phone Number" required />
+                                <div class="invalid-feedback">Please enter a valid phone number.</div>
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea class="form-control" id="message" rows="4" required
+                                    placeholder="Type a message"></textarea>
+                                <div class="invalid-feedback">Please enter your message.</div>
+                            </div>
+
+                            <div class="d-flex justify-content-center">
+                                <button type="submit" class="btn btn-submit">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+
+
+                    <div class="col-md-6" id="thank-you" style="display: none; text-align: center;">
+                        <img src="../assets/images/thanks.jpg" alt="Thank You"
+                            style="max-width: 200px; margin-top: 2rem;" />
+                        <h4 class="text-light mt-3">Thanks for your message!</h4>
+                    </div>
+
+
+                    <div class="col-md-6 contact-details">
+                        <h3 class="getin">Get In Touch</h3>
+                        <p class="location"><strong>Location:</strong> Doha, Qatar</p>
+                        <p class="getinmail"><strong>Email:</strong> <a
+                                href="mailto:nisha.reetha30@gmail.com">nisha.reetha30@gmail.com</a></p>
+                        <p><strong>Phone:</strong> <span class="getinphone">+974 30104826</span></p>
+
+
+                        <div class="map-responsive mt-4">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.361931663691!2d51.53104171501046!3d25.28544778384779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45c3db9bffcc05%3A0x2b5ac9af8af8db0!2sDoha%2C%20Qatar!5e0!3m2!1sen!2sus!4v1684662512345!5m2!1sen!2sus"
+                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                                title="Qatar Location Map"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+
+
+
+    </main>
+ <footer class="text-white text-center">
+      <div class="container">
+        <div class="mb-3">
+          <a href="https://www.instagram.com/nisha_reetha/" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://x.com/nishaneetha" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://www.facebook.com/NishaReetha/" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/reetha-meganathan-88681a32/" target="_blank" class="linkedin">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+        <p class="mb-0">&copy; 2025 Reetha's Portfolio. All rights reserved.</p>
+      </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <script src="js/bootstrap.bundle.min.js">
+
+    </script>
+    <script src="../assets/js/script1.js"></script>
+
+
+</body>
+
+</html>

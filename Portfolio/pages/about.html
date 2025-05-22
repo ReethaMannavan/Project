@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="organic,farming" />
+    <meta
+      name="keywords"
+      content="nature, organic, food, farming, cultivation, crops"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <title>About - Reetha's Portfolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+     <link rel="icon" href="../assets/images/profile2.jpeg" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+
+      @media (min-width:1024px) {
+      .polished-brand {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #00bcd4, #f579bf);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.8px;
+  position: relative;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+      .navbar {
+        background-color: #424242;
+        padding: 0.8rem 1rem;
+      }
+
+      .navbar-brand {
+        color: #fff !important;
+        font-weight: bold;
+      }
+
+      .navbar ul li a {
+        font-size: 21px;
+      }
+
+      .nav-link {
+        color: #fff !important;
+        padding: 0.5rem 1rem;
+        margin: 0 0.3rem;
+        font-weight: 500;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+      }
+
+      .nav-link:hover {
+        background: linear-gradient(90deg, #f0f, #f0f);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .nav-link.active {
+        background: linear-gradient(90deg, rgb(10, 165, 165), rgb(0, 195, 255));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .navbar-nav .nav-item {
+        margin-right: 1rem;
+      }
+
+      .navbar-nav .nav-item:last-child {
+        margin-right: 0;
+      }
+
+      .navbar-nav .nav-item {
+        margin-right: 2rem;
+      }
+
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      #about {
+        margin-top: 5%;
+        flex: 1;
+        height: 100vh;
+      background-color: #353434;
+      }
+
+      .aboutbody {
+        background-color: #121212;
+        color: #ffffff;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      .about-section {
+      padding: 60px 15px;
+    }
+
+ .about-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ff69b4;
+  text-shadow: 0 0 4px rgba(255, 105, 180, 0.5);
+}
+
+    @keyframes glow {
+      0% {
+        text-shadow: 0 0 5px #ff69b4;
+      }
+      100% {
+        text-shadow: 0 0 15px #ff69b4;
+      }
+    }
+
+    .about-description {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 105, 180, 0.1);
+    }
+
+    .skills-section {
+      margin-top: 30px;
+    }
+
+    .skills-section h4 {
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .skill-badge {
+      margin: 5px 10px 10px 0;
+      padding: 10px 20px;
+      background-color: #1f1f1f;
+      border: 1px solid #ff69b4;
+      color: #ff69b4;
+      border-radius: 50px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .skill-badge:hover {
+      background: linear-gradient(to right, #ff69b4, #ff85a2);
+      color: #000;
+      border-color: transparent;
+    }
+
+ .about-img {
+  width: 380px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ff69b4;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: pulseBorder 2.5s infinite ease-in-out;
+}
+
+.about-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 105, 180, 0.6);
+}
+
+@keyframes pulseBorder {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.4);
+  }
+}
+
+
+  
+    @media (max-width: 768px) {
+      .about-title {
+        font-size: 2rem;
+      }
+
+      .about-img {
+        margin-top: 30px;
+      }
+    }
+
+     
+      footer {
+        background-color: #222121;
+        color: #ff69b4;
+        padding: 1rem 0;
+        text-align: center;
+      }
+
+      footer a {
+        background: linear-gradient(
+          45deg,
+          #d4428b 25%,
+          #ff66b3 50%,
+          #ff69b4 75%
+        );
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+
+        margin: 0 1rem;
+        font-size: 1.6rem;
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        background: linear-gradient(90deg, rgb(10, 165, 165), rgb(0, 195, 255));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+    }
+    </style>
+  </head>
+
+  <body class="aboutbody">
+    <header>
+       <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand polished-brand" href="#">Reetha's Portfolio</a>
+        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+
+            <li class="nav-item">
+              <a class="nav-link active" href="./about.html">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Education.html">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./skills.html">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    </header>
+
+    <main>
+      <section id="about">
+        <div class="container about-section">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <h1 class="about-title">Hi, I'm Reetha</h1>
+              <h2 class="developer">A Python Full Stack Developer</h2>
+              <p class="about-description">
+                 Passionate full stack web developer with a
+                strong foundation in front-end and database technologies. I
+                enjoy turning ideas into interactive, user-friendly web
+                experiences. I'm constantly learning and love building sleek,
+                responsive designs with clean code.
+              </p>
+
+              <div class="skills-section">
+                <h4 class="mb-3 myskill">My Skills</h4>
+                <div class="d-flex flex-wrap justify-content-start">
+                  <span class="skill-badge">HTML</span>
+                  <span class="skill-badge">CSS</span>
+                  <span class="skill-badge">JavaScript</span>
+                  <span class="skill-badge">Bootstrap</span>
+                  <span class="skill-badge">SQL</span>
+                  <span class="skill-badge">Oracle</span>
+                  <span class="skill-badge">MySQL</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 text-center">
+              <img src="../assets/images/profile2.jpeg" alt="My Photo" class="about-img" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="text-white text-center">
+      <div class="container">
+        <div class="mb-3">
+          <a href="https://www.instagram.com/nisha_reetha/" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://x.com/nishaneetha" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://www.facebook.com/NishaReetha/" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/reetha-meganathan-88681a32/" target="_blank" class="linkedin">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+        <p class="mb-0">&copy; 2025 Reetha's Portfolio. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/script1.js"></script>
+  </body>
+</html>

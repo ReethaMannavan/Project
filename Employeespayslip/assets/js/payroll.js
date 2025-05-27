@@ -6,7 +6,7 @@ const totalSalary = document.getElementById('totalSalary');
  const deductionsInput = document.getElementById("deductions");
 
 
-// Update total salary dynamically
+
 function updateTotalSalary() {
   const basicVal = parseFloat(basic.value) || 0;
   const addVal = parseFloat(additions.value) || 0;
@@ -17,6 +17,7 @@ function updateTotalSalary() {
 
 basic.addEventListener('input', updateTotalSalary);
 additions.addEventListener('input', updateTotalSalary);
+deductionsInput.addEventListener('input', updateTotalSalary);
 
 form.addEventListener('submit', function (e) {
   e.preventDefault();
@@ -35,10 +36,10 @@ form.addEventListener('submit', function (e) {
     totalSalary: parseFloat(totalSalary.value)
   };
 
-  // Store data to localStorage
+ 
   localStorage.setItem('payrollData', JSON.stringify(payrollData));
 
-  // Redirect to payslip
+  
   window.location.href = 'payslip.html';
 });
 
@@ -48,7 +49,7 @@ form.addEventListener('submit', function (e) {
 form.addEventListener('submit', function (e) {
   e.preventDefault();
 
-  // Validate numbers
+  
   const basicSalary = parseFloat(basic.value);
   const addVal = parseFloat(additions.value);
   const deductionVal = parseFloat(document.getElementById('deductions').value);
@@ -58,7 +59,7 @@ form.addEventListener('submit', function (e) {
     return;
   }
 
-  // Save and go to payslip
+ 
   const payrollData = {
     empName: document.getElementById('empName').value.trim(),
     empRole: document.getElementById('empRole').value.trim(),

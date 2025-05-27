@@ -30,7 +30,7 @@
       transition: all 0.3s;
     }
 
- 
+
     .sidebar a {
       color: white;
       text-decoration: none;
@@ -198,86 +198,89 @@
       background-color: #fabc8a;
     }
 
-    @media (max-width: 767px) {
+    /* @media (max-width: 767px) {
       .content {
         margin-left: 1%;
       }
 
-       .sidebar {
-    position: fixed;
-    top: 56px; 
-    left: 0;
-    width: 220px;
-    height: 100vh;
-    background-color: #343a40;
-    z-index: 1050;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
-    display: block !important; 
-  }
+      .sidebar {
+        position: fixed;
+        top: 56px;
+        left: 0;
+        width: 220px;
+        height: 100vh;
+        background-color: #343a40;
+        z-index: 1050;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        display: block !important;
+      }
 
-  .sidebar.active {
-    transform: translateX(0);
-  }
+      .sidebar.active {
+        transform: translateX(0);
+      }
 
-  .horbar {
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: flex-start !important;
-    gap: 1rem;
-  }
+      .horbar {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start !important;
+        gap: 1rem;
+      }
 
-  .search-wrapper {
-    width: 100%;
-  }
+      .search-wrapper {
+        width: 100%;
+      }
 
-  .employeecorner {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    gap: 0.5rem;
-  }
+      .employeecorner {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 0.5rem;
+      }
 
-  .employeeimg img {
-    max-width: 50px;
-    height: auto;
-  }
+      .employeeimg img {
+        max-width: 50px;
+        height: auto;
+      }
 
-  .calendar-container {
-    max-width: 100%;
-    margin-top: 1rem;
-  }
+      .calendar-container {
+        max-width: 100%;
+        margin-top: 1rem;
+      }
 
-  .upcomingmeet {
-    margin-top: 2rem;
-  }
+      .upcomingmeet {
+        margin-top: 2rem;
+      }
 
-  #calendarDays > div {
-    min-width: 14.2%; /* 7 days in a week */
-    padding: 0.5rem 0;
-    font-size: 0.8rem;
-  }
+      #calendarDays>div {
+        min-width: 14.2%;
+       
+        padding: 0.5rem 0;
+        font-size: 0.8rem;
+      }
 
-  .profile-img {
-    width: 40px;
-    height: 40px;
-  }
+      .profile-img {
+        width: 40px;
+        height: 40px;
+      }
 
-  h2, h4 {
-    font-size: 1.2rem;
-  }
+      h2,
+      h4 {
+        font-size: 1.2rem;
+      }
 
-  .first-container, .secondcontainer {
-    padding: 1rem;
-  }
-}
+      .first-container,
+      .secondcontainer {
+        padding: 1rem;
+      }
+    } */
 
-    
-    
 
- 
 
-  
+
+
+
+
 
 
     .content {
@@ -286,7 +289,9 @@
       transition: margin-left 0.3s;
     }
 
-    .overviewside,.overviewside2, .overviewside3 {
+    .overviewside,
+    .overviewside2,
+    .overviewside3 {
       display: flex;
     }
 
@@ -297,13 +302,142 @@
       margin-top: 3%;
     }
 
-    .payrollimg{
-      width:25px;
+    .payrollimg {
+      width: 25px;
       height: 25px;
-        padding-left: 5%;
+      padding-left: 5%;
       margin-top: 4%;
 
     }
+
+
+#sidebarClose {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  z-index: 1001;
+  filter: invert(1);
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+#sidebarClose:hover {
+  opacity: 1;
+}
+
+
+.sidebar.active ~ nav .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+
+
+
+
+    @media (max-width: 767px) {
+
+      .sidebar {
+        width: 280px;
+        height: 100vh;
+        position: fixed;
+        left: -280px;
+        transition: all 0.3s;
+        z-index: 1000;
+        background-color: #455a64;
+        color: white;
+
+
+      }
+
+      .sidebar.active {
+        left: 0;
+      }
+
+      .content {
+        margin-left: 0;
+        transition: all 0.3s;
+      }
+
+      .top-bar {
+        flex-direction: column;
+        gap: 1rem !important;
+        align-items: flex-start !important;
+      }
+
+      .search-wrapper {
+        width: 100%;
+        order: 2;
+      }
+
+      .d-flex.gap-5 {
+        gap: 1rem !important;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      
+      .employeeimg img {
+        width: 30px;
+        height: auto;
+      }
+
+      .profile-img {
+        width: 40px;
+        height: 40px;
+      }
+
+       .firstrow .d-flex {
+    flex-wrap: wrap;
+  }
+      .secondrow .d-flex {
+   flex-wrap: wrap;
+  }
+
+  .secondrow .col-md-6 {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+    background-color: #fabc8a;
+  }
+
+  
+ 
+  
+  .employeecorner {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+ 
+  .calendar-container {
+    margin-bottom: 2rem;
+    padding: 3%;
+  }
+  .calendercol{
+    padding: 2%;
+  }
+ .flex-fill{
+  font-size: 9px;
+  font-weight: bold;
+ }
+
+  
+  .Upcomingevents {
+    margin-top: 0 !important;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin-bottom: 10%;
+ 
+  }
+   .secondrow > .d-flex {
+    gap: 2rem !important;
+  }
+}
+
+  
+    
   </style>
 </head>
 
@@ -319,6 +453,8 @@
     </nav>
 
     <div class="sidebar " id="sidebarMenu">
+
+       <button class="btn btn-close btn-close-white d-md-none" id="sidebarClose"></button>
 
       <div class="overviewside">
         <img src="../assets/images/Overview.png"><a href="../pages/overviewfinal.html" class="active">Overview</a>
@@ -412,7 +548,7 @@
           <div class="row secondrow">
             <div class="d-flex justify-content-between align-items-center">
 
-              <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+              <div class="col-12 col-sm-12 col-md-6 col-lg-6 calendercol">
                 <h2 class="calclass">Calender</h2>
                 <div class="calendar-container text-center">
                   <div
@@ -444,7 +580,7 @@
 
 
 
-              <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+              <div class="col-12 col-sm-12 col-md-6 col-lg-6 eventcol">
 
                 <div class="mt-4 Upcomingevents">
                   <h5 class="upcomingmeet">Upcoming Meetings</h5>

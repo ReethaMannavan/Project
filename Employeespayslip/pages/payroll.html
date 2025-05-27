@@ -61,11 +61,7 @@
             transition: margin-left 0.3s;
         }
 
-        @media (max-width: 767px) {
-            .content {
-                margin-left: 0;
-            }
-        }
+
 
         .submitcancel {
             padding-top: 5%;
@@ -138,6 +134,47 @@
             margin-top: 4%;
 
         }
+
+        #sidebarClose {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            z-index: 1001;
+            filter: invert(1);
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        #sidebarClose:hover {
+            opacity: 1;
+        }
+
+
+        .sidebar.active~nav .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+
+        @media (max-width: 767px) {
+            .content {
+                margin-left: 0;
+            }
+            .payrolldet{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                
+            }
+          .cancelBtn{
+            margin-bottom: 5%;
+          }
+          .formcontainer{
+            height: auto;
+          }
+          .submitBtn, .cancelBtn{
+            font-size: 15px;
+          }
+        }
     </style>
 
 </head>
@@ -154,7 +191,7 @@
         </nav>
 
         <div class="sidebar" id="sidebarMenu">
-
+            <button class="btn btn-close btn-close-white d-md-none" id="sidebarClose"></button>
             <div class="overviewside">
                 <img src="../assets/images/Overview.png"><a href="../pages/overviewfinal.html">Overview</a>
             </div>
@@ -244,6 +281,7 @@
 
     </script>
     <script src="../assets/js/payroll.js"></script>
+    <script src="../assets/js/script.js"></script>
 </body>
 
 </html>

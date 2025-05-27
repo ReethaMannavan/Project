@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="payslip,employees">
+    <meta name="keywords" content="login,payslip,payroll">
+    <link rel='stylesheet' href="../assets/css/style.css">
+    <title>payslip - Employee's PaySlip</title>
+    <link rel="icon" href="../assets/images/Profile.png" type="image/png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        .sidebar {
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 2rem;
+            background-color: #455a64;
+            color: white;
+            width: 210px;
+            transition: all 0.3s;
+            
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+        }
+
+        .sidebar a.active {
+            color: #f8cc14;
+        }
+
+        .sidebar a:hover {
+            color: #f8cc14;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                position: absolute;
+                left: -250px;
+            }
+
+            .sidebar.active {
+                left: 0;
+            }
+        }
+
+        .content {
+            padding: 20px;
+            margin-left: 250px;
+            transition: margin-left 0.3s;
+        }
+
+        @media (max-width: 767px) {
+            .content {
+                margin-left: 0;
+            }
+        }
+
+        #empInfo div {
+            font-size: 1.5rem;
+        }
+
+        .payslipdet {
+            margin-bottom: 5%;
+            text-align: center;
+        }
+
+        .payslipdetcontainer {
+            padding-top: 5%;
+            background-color: #fdd3b1;
+            height: 110vh;
+            padding-left: 2%;
+
+        }
+
+        .firstcontainer {
+            margin-bottom: 7%;
+
+        }
+
+        .salarydet {
+            height: 100px;
+            text-align: center;
+
+
+        }
+
+        .tableheader {
+            background-color: #f8cc14;
+        }
+
+        .tablebody {
+            background-color: #f3d86c;
+
+        }
+
+
+        .totalearnings {
+            text-align: right;
+            font-size: 28px;
+            margin-bottom: 3%;
+        }
+
+        #payslipContainer {
+            page-break-inside: avoid;
+            padding-bottom: 100px;
+
+        }
+
+        table {
+            border: 2px solid rgb(119, 118, 118);
+        }
+
+        th,
+        td {
+            border: 2px solid rgb(77, 75, 75);
+        }
+
+      
+        td {
+            padding: 12px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        table,
+        tr,
+        td,
+        th {
+            page-break-inside: avoid !important;
+        }
+
+        .totalEarnings {
+            page-break-inside: avoid;
+        }
+
+        #savebtn {
+            color: white;
+            background-color: #f8cc14;
+            height: 35px;
+            width: 80px;
+            border: none;
+            border-radius: 5px;
+            font-size: 22px;
+
+        }
+
+        .saveanddownload {
+            margin-left: 35%;
+
+        }
+
+        .saveanddownload a {
+            color: white;
+            text-decoration: none;
+
+        }
+
+
+        #downloadBtn {
+            color: white;
+            background-color: #455a64;
+            height: 35px;
+            border: none;
+            border-radius: 5px;
+            font-size: 22px;
+            width: 180px;
+        }
+         @media (max-width: 767px) {
+            .sidebar {
+                position: absolute;
+                left: -250px;
+            }
+
+            .sidebar.active {
+                left: 0;
+            }
+        }
+
+        .content {
+            padding: 20px;
+            margin-left: 250px;
+            transition: margin-left 0.3s;
+        }
+        .overviewside,.overviewside2, .overviewside3 {
+      display: flex;
+    }
+
+    .overviewside img {
+      width: 30px;
+      height: 30px;
+      padding-left: 5%;
+      margin-top: 3%;
+    }
+
+    .payrollimg{
+      width:25px;
+      height: 25px;
+        padding-left: 5%;
+      margin-top: 4%;
+
+    }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-dark d-md-none">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" id="sidebarToggle">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <span class="navbar-brand">Employee Payroll</span>
+            </div>
+        </nav>
+
+        <div class="sidebar" id="sidebarMenu">
+         
+             <div class="overviewside">
+        <img src="../assets/images/Overview.png"><a href="../pages/overviewfinal.html">Overview</a>
+      </div>
+      <div class="overviewside2">
+        <img class="payrollimg" src="../assets/images/Payroll.png">
+        <a href="../pages/payroll.html">Payroll</a>
+      </div>
+      <div class="overviewside3">
+        <img class="payrollimg" src="../assets/images/Payroll.png">
+        <a href="../pages/payslip.html"  class="active">Payslip</a>
+      </div>
+        </div>
+    </header>
+
+    </header>
+
+
+    <div class="content">
+        <main>
+            <h3 class="payslipdet">Payslip Details</h3>
+            <div class="container mt-4 payslipdetcontainer">
+
+                <div id="payslipContainer">
+
+                    <div class="container mb-4" id="empInfo">
+                        <div class="firstcontainer">
+                            <div class="row mb-2 firstrow">
+                                <div class="col-md-6"><strong>Employee:</strong> <span id="empNameInfo"></span></div>
+                                <div class="col-md-6"><strong>Date:</strong> <span id="dateInfo"></span></div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-md-6"><strong>Employee ID:</strong> <span id="empIdInfo"></span></div>
+                                <div class="col-md-6"><strong>Month:</strong> <span id="monthInfo"></span></div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-md-6"><strong>Role:</strong> <span id="empRoleInfo"></span></div>
+                            </div>
+                        </div>
+
+
+
+                        <table class="table table-bordered mt-4 text-center">
+                            <thead class="tableheader">
+                                <tr>
+                                    <th colspan="2">Employee Details</th>
+                                    <th colspan="2">Earnings</th>
+                                    <th rowspan="2">Additions</th>
+                                    <th rowspan="2">Deductions</th>
+                                </tr>
+                                <tr>
+                                    <th>Employee ID</th>
+                                    <th>Employee Name</th>
+                                    <th>Basic Salary</th>
+                                    <th>Total Salary</th>
+                                </tr>
+                            </thead>
+                            <tbody class="tablebody">
+                                <tr class="salarydet">
+                                    <td id="empIdShow"></td>
+                                    <td id="empNameShow"></td>
+                                    <td><span id="basicSalaryShow"></span></td>
+                                    <td><span id="totalSalaryShow"></span></td>
+                                    <td><span id="additionsShow"></span></td>
+                                    <td><span id="deductionsShow"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2 class="totalearnings">Total Earnings: ₹<span id="finalEarnings"></span></h2><br><br>
+                        <div class="saveanddownload">
+                            <button class="mt-4" id="savebtn"><a href="../pages/overview.html">Save</a></button>
+                            <button class="mt-3" id="downloadBtn">Download PDF</button>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </main>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <script src="js/bootstrap.bundle.min.js">
+
+    </script>
+    <script src="../assets/js/payslip.js"></script>
+    <script src="../assets/js/payslippdf.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</body>
+
+</html>

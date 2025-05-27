@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="payslip,employees" />
+  <meta name="keywords" content="login,payslip,payroll" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <title>Overview - Employee's PaySlip</title>
+  <link rel="icon" href="../assets/images/Profile.png" type="image/png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      overflow-x: hidden;
+    }
+
+    .sidebar {
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding-top: 2rem;
+      background-color: #455a64;
+      color: white;
+      width: 210px;
+      transition: all 0.3s;
+    }
+
+ 
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      display: block;
+    }
+
+    .sidebar a.active {
+      color: #f8cc14;
+    }
+
+    .sidebar a:hover {
+      color: #f8cc14;
+    }
+
+
+
+    .search-wrapper {
+      position: relative;
+      max-width: 300px;
+    }
+
+    .search-wrapper input {
+      padding-right: 2.5rem;
+    }
+
+    .search-wrapper .fa-search {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #f8cc14;
+      pointer-events: none;
+    }
+
+    .notification-icon {
+      position: relative;
+      font-size: 1.3rem;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    .notification-icon .badge {
+      position: absolute;
+      top: -6px;
+      right: -6px;
+      font-size: 0.6rem;
+      background-color: red;
+      color: white;
+      padding: 3px 6px;
+      border-radius: 50%;
+    }
+
+    .profile-img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    .top-bar {
+      background-color: #fdd3b1;
+      padding: 10px 20px;
+    }
+
+    .employeeimg {
+      height: 50px;
+      width: 50px;
+      border: 2px solid #455a64;
+      background-color: #455a64;
+      border-radius: 50%;
+      align-content: center;
+      padding-left: 3%;
+      margin-top: 5%;
+      margin-left: 3%;
+
+    }
+
+    .employeecorner img {
+
+      height: 30px;
+      width: 30px;
+
+
+    }
+
+    .employeecorner {
+      background-color: #f8cc14;
+      height: 90px;
+      padding: 3%;
+      border-radius: 10px;
+
+    }
+
+    .employeecorner h4 {
+      padding-left: 3%;
+      margin: 5%;
+    }
+
+    .firstrow {
+      padding-top: 3%;
+      margin-bottom: 5%;
+    }
+
+    #overview2 {
+
+      background-color: #fdd3b1;
+      height: 100vh;
+    }
+
+    .calendar-container {
+      max-width: 450px;
+      margin: auto;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #calendarDays>div {
+      width: 14.28%;
+      padding: 10px 0;
+      border: 1px solid #eee;
+    }
+
+    #calendarDays>div.today {
+      background-color: #f8cc14;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .calendar-header select {
+      min-width: 130px;
+    }
+
+    #prevMonth,
+    #nextMonth {
+      border: 1px solid #f0c93f;
+      border-radius: 20px;
+    }
+
+    .Upcomingevents {
+      background-color: #fabc8a;
+      padding: 3%;
+      overflow: auto;
+      height: 300px;
+      width: 480px;
+    }
+
+    .calclass {
+      padding-left: 6%;
+      margin-bottom: 5%;
+      font-size: 30px;
+    }
+
+    .upcomingmeet {
+      padding-left: 3%;
+    }
+
+    .list-group-item {
+      border: 1px solid rgb(105, 104, 104);
+      margin-bottom: 3%;
+      background-color: #fabc8a;
+    }
+
+    @media (max-width: 767px) {
+      .content {
+        margin-left: 1%;
+      }
+
+       .sidebar {
+    position: fixed;
+    top: 56px; 
+    left: 0;
+    width: 220px;
+    height: 100vh;
+    background-color: #343a40;
+    z-index: 1050;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    display: block !important; 
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .horbar {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start !important;
+    gap: 1rem;
+  }
+
+  .search-wrapper {
+    width: 100%;
+  }
+
+  .employeecorner {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .employeeimg img {
+    max-width: 50px;
+    height: auto;
+  }
+
+  .calendar-container {
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+
+  .upcomingmeet {
+    margin-top: 2rem;
+  }
+
+  #calendarDays > div {
+    min-width: 14.2%; /* 7 days in a week */
+    padding: 0.5rem 0;
+    font-size: 0.8rem;
+  }
+
+  .profile-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  h2, h4 {
+    font-size: 1.2rem;
+  }
+
+  .first-container, .secondcontainer {
+    padding: 1rem;
+  }
+}
+
+    
+    
+
+ 
+
+  
+
+
+    .content {
+      padding: 20px;
+      margin-left: 220px;
+      transition: margin-left 0.3s;
+    }
+
+    .overviewside,.overviewside2, .overviewside3 {
+      display: flex;
+    }
+
+    .overviewside img {
+      width: 30px;
+      height: 30px;
+      padding-left: 5%;
+      margin-top: 3%;
+    }
+
+    .payrollimg{
+      width:25px;
+      height: 25px;
+        padding-left: 5%;
+      margin-top: 4%;
+
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-dark bg-dark d-md-none">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" id="sidebarToggle">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <span class="navbar-brand">Employee Payroll</span>
+      </div>
+    </nav>
+
+    <div class="sidebar " id="sidebarMenu">
+
+      <div class="overviewside">
+        <img src="../assets/images/Overview.png"><a href="../pages/overviewfinal.html" class="active">Overview</a>
+      </div>
+      <div class="overviewside2">
+        <img class="payrollimg" src="../assets/images/Payroll.png">
+        <a href="../pages/payroll.html">Payroll</a>
+      </div>
+      <div class="overviewside3">
+        <img class="payrollimg" src="../assets/images/Payroll.png">
+        <a href="../pages/payslip.html">Payslip</a>
+      </div>
+
+    </div>
+  </header>
+
+  <div class="content">
+    <main>
+      <section id="overviewfirst">
+        <div class="conatiner-fluid first-container">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 ms-sm-auto">
+              <div class="horbar">
+                <div class="d-flex justify-content-between align-items-center top-bar">
+                  <h2 class="mb-0 fs-4">Good Morning!!!</h2>
+
+                  <div class="d-flex align-items-center gap-5">
+                    <div class="search-wrapper">
+                      <input type="text" class="form-control" placeholder="Search..." />
+                      <i class="fas fa-search"></i>
+                    </div>
+
+                    <div class="notification-icon">
+                      <i class="fas fa-bell"></i>
+                      <span class="badge">3</span>
+                    </div>
+
+                    <img src="../assets/images/Profile.png" alt="img" class="profile-img" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <br />
+      <br />
+
+      <section id="overview2">
+        <div class="container-fluid secondcontainer">
+          <div class="row firstrow">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="col-12 col-sm-12 col-md-6 col-lg-3 p-3">
+                <div class="employeecorner d-flex">
+                  <div class="employeeimg">
+                    <img src="../assets/images/Total.png" />
+                  </div>
+
+                  <h4>Total <br />Employees</h4>
+                </div>
+              </div>
+              <div class="col-12 col-sm-12 col-md-6 col-lg-3 p-3">
+                <div class="employeecorner d-flex">
+                  <div class="employeeimg">
+                    <img src="../assets/images/no of leave.png" />
+                  </div>
+                  <h4>Number of <br />Leave</h4>
+                </div>
+              </div>
+              <div class="col-12 col-sm-12 col-md-6 col-lg-3 p-3">
+                <div class="employeecorner d-flex">
+                  <div class="employeeimg">
+                    <img src="../assets/images/add.png" />
+                  </div>
+                  <h4>New <br />Employee's</h4>
+                </div>
+              </div>
+              <div class="col-12 col-sm-12 col-md-6 col-lg-3 p-3">
+                <div class="employeecorner d-flex">
+                  <div class="employeeimg">
+                    <img src="../assets/images/holiday.png" />
+                  </div>
+                  <h4>
+                    Holiday of <br />
+                    this Year
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row secondrow">
+            <div class="d-flex justify-content-between align-items-center">
+
+              <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                <h2 class="calclass">Calender</h2>
+                <div class="calendar-container text-center">
+                  <div
+                    class="calendar-header d-flex justify-content-between align-items-center gap-2 p-3 text-white flex-wrap">
+
+
+                    <div class="d-flex align-items-center gap-2">
+                      <select id="monthSelect" class="form-select w-auto"></select>
+                      <select id="yearSelect" class="form-select w-auto"></select>
+                    </div>
+                    <button id="prevMonth" class="btn btn-sm">←</button>
+                    <button id="nextMonth" class="btn btn-sm">→</button>
+                  </div>
+
+                  <div class="calendar-body">
+                    <div class="calendar-weekdays d-flex border-bottom">
+                      <div class="flex-fill p-2">Sun</div>
+                      <div class="flex-fill p-2">Mon</div>
+                      <div class="flex-fill p-2">Tue</div>
+                      <div class="flex-fill p-2">Wed</div>
+                      <div class="flex-fill p-2">Thu</div>
+                      <div class="flex-fill p-2">Fri</div>
+                      <div class="flex-fill p-2">Sat</div>
+                    </div>
+                    <div id="calendarDays" class="d-flex flex-wrap text-center"></div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+
+                <div class="mt-4 Upcomingevents">
+                  <h5 class="upcomingmeet">Upcoming Meetings</h5>
+                  <ul id="eventList" class="list-group"></ul>
+                </div>
+
+                <div class="modal fade" id="eventModal" tabindex="-1" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <form id="eventForm" class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitle">Add Event</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                      </div>
+                      <div class="modal-body">
+                        <input type="hidden" id="eventDate">
+                        <input type="hidden" id="eventIndex">
+                        <div class="mb-3">
+                          <label for="eventTitle" class="form-label">Event Title</label>
+                          <input type="text" class="form-control" id="eventTitle" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="eventTime" class="form-label">Time</label>
+                          <input type="time" class="form-control" id="eventTime" required>
+                        </div>
+                      </div>
+                      <div class="modal-footer justify-content-between">
+                        <button type="button" id="deleteEventBtn" class="btn btn-danger d-none">Delete</button>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+
+  </div>
+  </section>
+  </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/script.js"></script>
+  <script src="../assets/js/calender1.js"></script>
+  <script src="../assets/js/meetings.js"></script>
+</body>
+
+</html>

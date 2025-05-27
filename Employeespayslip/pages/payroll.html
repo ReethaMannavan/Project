@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="payslip,employees">
+    <meta name="keywords" content="login,payslip,payroll">
+    <link rel='stylesheet' href="../assets/css/style.css">
+    <title>payroll - Employee's PaySlip</title>
+    <link rel="icon" href="../assets/images/Profile.png" type="image/png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        .sidebar {
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 2rem;
+            background-color: #455a64;
+            color: white;
+            width: 210px;
+            transition: all 0.3s;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+        }
+
+        .sidebar a.active {
+            color: #f8cc14;
+        }
+
+        .sidebar a:hover {
+            color: #f8cc14;
+        }
+
+        @media (max-width: 767px) {
+            .sidebar {
+                position: absolute;
+                left: -250px;
+            }
+
+            .sidebar.active {
+                left: 0;
+            }
+        }
+
+        .content {
+            padding: 20px;
+            margin-left: 220px;
+            transition: margin-left 0.3s;
+        }
+
+        @media (max-width: 767px) {
+            .content {
+                margin-left: 0;
+            }
+        }
+
+        .submitcancel {
+            padding-top: 5%;
+            display: flex;
+            gap: 5%;
+            justify-content: center;
+        }
+
+        .submitBtn {
+            color: white;
+            background-color: #f8cc14;
+            height: 35px;
+            width: 180px;
+            border: none;
+            border-radius: 5px;
+            font-size: 22px;
+        }
+
+        .cancelBtn {
+            color: white;
+            background-color: #455a64;
+            height: 35px;
+            border: none;
+            border-radius: 5px;
+            font-size: 22px;
+            width: 160px;
+        }
+
+        .payrolldet {
+            display: flex;
+            margin-bottom: 5%;
+        }
+
+        .thismonth {
+            margin-left: auto;
+        }
+
+        .formcontainer {
+            background-color: #feeba8;
+            height: 90vh;
+            padding: 5%;
+        }
+
+        label {
+            margin-bottom: 3%;
+        }
+
+        .form-control {
+            background-color: #feeba8;
+            border: 1px solid rgb(138, 135, 135);
+        }
+
+        .overviewside,
+        .overviewside2,
+        .overviewside3 {
+            display: flex;
+        }
+
+        .overviewside img {
+            width: 30px;
+            height: 30px;
+            padding-left: 5%;
+            margin-top: 3%;
+        }
+
+        .payrollimg {
+            width: 25px;
+            height: 25px;
+            padding-left: 5%;
+            margin-top: 4%;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-dark d-md-none">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" id="sidebarToggle">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <span class="navbar-brand">Employee Payroll</span>
+            </div>
+        </nav>
+
+        <div class="sidebar" id="sidebarMenu">
+
+            <div class="overviewside">
+                <img src="../assets/images/Overview.png"><a href="../pages/overviewfinal.html">Overview</a>
+            </div>
+            <div class="overviewside2">
+                <img class="payrollimg" src="../assets/images/Payroll.png">
+                <a href="../pages/payroll.html" class="active">Payroll</a>
+            </div>
+            <div class="overviewside3">
+                <img class="payrollimg" src="../assets/images/Payroll.png">
+                <a href="../pages/payslip.html">Payslip</a>
+            </div>
+        </div>
+    </header>
+
+    </header>
+
+
+
+    <div class="content">
+        <main>
+            <form id="payrollForm" class="container mt-4">
+                <div class="payrolldet">
+                    <h3>Payroll Details</h3>
+                    <div class="thismonth">
+
+                        <button type="submit" class="cancelBtn">This Month <img
+                                src="../assets/images/calendar.png"></button>
+
+
+                        <button type="reset" class="submitBtn">Download</button>
+                    </div>
+                </div>
+
+
+                <div class="formcontainer">
+
+
+                    <div class="row">
+                        <div class="col-md-4"><label for="empName">Employee Name</label><input type="text"
+                                class="form-control" id="empName" required></div>
+                        <div class="col-md-4"><label for="empRole">Employee Role</label><input type="text"
+                                class="form-control" id="empRole" placeholder="" required></div>
+                        <div class="col-md-4"><label for="empId">Employee ID</label><input type="text"
+                                class="form-control" id="empId" placeholder="" required></div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-4"><label for="date">Date</label><input type="date" class="form-control"
+                                id="date" required></div>
+                        <div class="col-md-4"><label for="basicSalary">Basic Salary</label><input type="number"
+                                class="form-control" id="basicSalary" placeholder="" required></div>
+                        <div class="col-md-4"><label for="totalSalary">Total Salary</label><input type="number"
+                                class="form-control totalsal" id="totalSalary" placeholder="" readonly></div>
+
+                    </div>
+                    <div class="row mt-3">
+
+                        <div class="col-md-4"><label for="workingDays">No. of Working Days</label><input type="number"
+                                class="form-control" id="workingDays" placeholder=""></div>
+                        <div class="col-md-4"><label for="presentDays">Total Present Days</label><input type="number"
+                                class="form-control" id="presentDays" placeholder=""></div>
+                        <div class="col-md-4"><label for="leaveDays">Total Leave Days</label><input type="number"
+                                class="form-control" id="leaveDays" placeholder=""></div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-4"><label for="additions">Additions</label><input type="number"
+                                class="form-control" id="additions" placeholder="" required></div>
+                        <div class="col-md-4"><label for="deductions">Deductions</label><input type="number"
+                                class="form-control" id="deductions" placeholder="" required></div>
+                    </div>
+                    <div class="mt-4 submitcancel">
+                        <button type="submit" class="submitBtn">Submit Payroll</button>
+                        <button type="reset" class="cancelBtn">Cancel</button>
+                    </div>
+                </div>
+            </form>
+
+
+        </main>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <script src="js/bootstrap.bundle.min.js">
+
+    </script>
+    <script src="../assets/js/payroll.js"></script>
+</body>
+
+</html>

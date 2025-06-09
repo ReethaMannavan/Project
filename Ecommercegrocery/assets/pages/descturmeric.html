@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="grocery,vegetables,lentils" />
+    <meta name="keywords" content="fresh,vegetables,grocery,diary,fruits" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Ground Turmeric Description - E-Commerce</title>
+    <link rel="icon" href="./assets/images/logo.png" type="image/png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+
+          @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+  
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Open sans";
+
+    }
+        
+        .image-grid {
+            max-width: 400px;
+            margin: auto;
+            margin-top: 12%;
+        }
+
+        .row1 img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 15px;
+            border-radius: 8px;
+          
+        }
+
+        .row2 {
+            display: flex;
+            gap: 15px;
+        }
+
+        .row2 img {
+            width: calc((100% - 50px) / 3);
+            height: auto;
+            border-radius: 8px;
+        }
+
+         .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+         
+        }
+        .strawberrycont{
+            padding:3%;
+        }
+
+    
+        .cart-icon {
+            position: relative;
+            font-size: 22px;
+            cursor: pointer;
+        }
+        
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            background-color: #ff5722;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .product-container {
+            display: flex;
+            padding: 40px;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .product-image {
+            flex: 1;
+            min-width: 300px;
+            background: #f9f9f9;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+        }
+        
+        .product-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+        
+        .product-image img:hover {
+            transform: scale(1.03);
+        }
+        
+        .product-details {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .product-title {
+            font-size: 36px;
+            margin-bottom: 15px;
+            color: black;
+            font-weight: 700;
+        }
+        
+        .product-description {
+            color: #555;
+            margin-bottom: 15px;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        
+        .product-price {
+            font-size: 30px;
+            font-weight: bold;
+            color: black;
+            margin-bottom: 5px;
+            position: relative;
+            display: inline-block;
+        }
+        
+    
+        
+        .tax-info {
+            color: #777;
+            font-size: 16px;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        
+        .quantity-section {
+            margin-bottom: 10px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 12px;
+        }
+        
+        .quantity-label {
+            font-weight: 500;
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: #444;
+        }
+        
+        .weight-options {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .weight-option {
+            padding: 10px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+            font-size: 17px;
+            flex: 1;
+            text-align: center;
+            min-width: 120px;
+        }
+        
+        .weight-option:hover, .weight-option.active {
+            border-color: #4caf50;
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            color: #2e7d32;
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.15);
+            transform: translateY(-3px);
+        }
+        
+        .add-to-cart-btn {
+            background:#4eb528;
+            color: white;
+            border: none;
+            padding: 20px 30px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 12px;
+            cursor: pointer;
+            width: 50%;
+            transition: all 0.3s;
+            margin: 25px 0;
+            margin-left: 25%;
+            box-shadow: 0 6px 15px rgba(255, 87, 34, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .add-to-cart-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(255, 87, 34, 0.4);
+        }
+        
+        .add-to-cart-btn:active {
+            transform: translateY(-2px);
+        }
+        
+        .shipping-info ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+        
+        .shipping-info li {
+            margin-bottom: 5px;
+            display: flex;
+            align-items: flex-start;
+            font-size: 18px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .shipping-info li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .shipping-info li i {
+            margin-right: 15px;
+            font-size: 24px;
+            color: #4caf50;
+            min-width: 30px;
+            background: #e8f5e9;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .shipping-info li.free-shipping i {
+            color: #ff9800;
+            background: #fff3e0;
+        }
+        
+        .shipping-policy {
+            font-size: 18px;
+            padding: 10px;
+            background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+            border-radius: 12px;
+            text-align: center;
+            color:#4eb528;
+            font-weight: bold;
+            text-decoration: underline;
+    
+        }
+        
+        .notification {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            background-color: #4caf50;
+            color: white;
+            padding: 20px 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            transform: translateX(200%);
+            transition: transform 0.4s ease;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 18px;
+        }
+        
+        .notification.show {
+            transform: translateX(0);
+        }
+
+        #description {
+            color:black;
+            margin-left: 7%;
+            padding:5%;
+        }
+
+        .descriptionh2{
+            text-decoration: underline;
+            margin-bottom: 5%;
+        }
+        #description ul li{
+            font-size: 23px;
+        }
+        #description p{
+            font-size: 23px;
+        }
+        
+       
+
+
+      
+        
+        @media (max-width: 768px) {
+            .product-container {
+                flex-direction: column;
+                padding: 25px;
+            }
+            
+            .product-title {
+                font-size: 28px;
+            }
+            
+            .product-price {
+                font-size: 40px;
+            }
+            
+            .weight-option {
+                min-width: 100px;
+                padding: 12px 15px;
+            }
+            
+            .add-to-cart-btn {
+                padding: 16px;
+                font-size: 18px;
+            }
+            
+    
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+     <header class="homeheader">
+        <div class="home-topbar">
+            <p>Fresh & Organic Produce from our farmers to your kitchen</p>
+        </div>
+        <br />
+        <div class="header-container">
+            <div class="logo-container">
+                <div class="homelogo">
+                    <img class="logoimg" src="../images/logoimg.PNG" /><br />
+                    <a href="../pages/index.html" class="home-logo">GROCERIES <br />
+                        AT DOORSTEP</a>
+                </div>
+                <div class="home-search">
+                    <input type="text" class="search-bar" id="searchInput" placeholder="Search for Products..." />
+                    <button class="search-button" onclick="alert('Search clicked!')">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-md navbar-default">
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navContent">
+                    <div class="container-fluid justify-content-center">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link link active" href="./index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link" href="./2categories.html">Categories</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link" href="./3bestsales.html">Best Sales</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link" href="./4blogs.html">Blogs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link" href="./addtocart.html">
+                                <div class="cart-icon" id="cart-icon">
+                                    <img src="../images/cart icon.png">
+                                    <span class="cart-count" id="cart-count"></span>
+                                </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./5Registration.html" id="account-link">Register</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-strawberry">
+
+        <div class="container-fluid strawberrycont">
+            <div class="row">
+
+                <div class="left-column col-12 col-sm-12 col-md-6 col-lg-6">
+                    <div class="image-grid">
+                        <div class="row1">
+                            <img src="../images/pantry des 3.png" alt="Main Image" />
+                        </div>
+
+                        <div class="row2">
+                            <img src="../images/pantry des 3.png" alt="Image 1" />
+                            <img src="../images/pantry des 2.png" alt="Image 2" />
+                            <img src="../images/pantry des 1.png" alt="Image 3" />
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="right-column col-12 col-sm-12 col-md-6 col-lg-6">
+
+
+                    <div class="product-container">
+
+
+                        <div class="product-details">
+
+                            <h1 class="product-title">Ground Turmeric</h1>
+                            <p class="product-description">
+                                Each of our products are hand-selected from local farmers and helps you improve good
+                                health.
+                            </p>
+
+                            <div class="product-price">₹120</div>
+                            <div class="tax-info">TAX INCLUDED | SHIPPING CALCULATED AT CHECKOUT</div>
+
+                            <div class="quantity-section">
+                                <div class="quantity-label">Select Quantity:</div>
+                                <div class="weight-options">
+                                    <div class="weight-option active" data-weight="250">250g</div>
+                                    <div class="weight-option" data-weight="500">500g</div>
+                                    <div class="weight-option" data-weight="1000">1kg</div>
+                                </div>
+                            </div>
+
+                            <button class="add-to-cart-btn" id="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+
+                            <div class="shipping-info">
+                                
+                                <ul>
+                                    <li class="free-shipping">
+                                        <i class="fas fa-shipping-fast"></i>
+                                        <span>Free shipping on all orders over ₹450</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-calendar-check"></i>
+                                        <span>Delivery in 3-4 working days shipping & return</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="shipping-policy">
+                                Free delivery and return policies.
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="notification" id="notification">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Ground Turmeric added to your cart!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <Section id="description">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-12">
+                        <h2 class="descriptionh2">Description</h2>
+                        <p>Ground Turmeric are often described as organic,fresh eggs with a
+                            fragrant,
+                            fruity aroma. They are typically sold fresh in containers or boxes and are a
+                            popular
+                            addition to various recipes and snacks.
+                            Here's a more detailed look at how strawberries might be described in a grocery
+                            store
+                            setting.</p>
+                        <p>Appearance:</p>
+                        <ul>
+                            <li>
+                                Color: Bright red, with variations depending on the variety.
+                            </li>
+                            <li>Shape: Typically round or oval, with a smooth surface.</li>
+                            <li>Seeds: The seeds are small, whitish or brownish specks that cover the
+                                surface of the
+                                fruit.</li>
+                            <li> Freshness: Shiny, firm, and free from blemishes or mold.
+                                </li>
+                                </ul>
+                                <p>Taste and Aroma.</p>
+                                <ul>
+                            <li> Flavor: Sweet and juicy, with a slightly tart or sour note in some
+                                varieties.</li>
+                            <li>Aroma: A pleasant, fruity, and fragrant aroma. </li>
+                            </ul>
+                              <p>Nutrition:</p>
+                            <ul>
+                          
+                            <li>Vitamin C: Rich in vitamin C, an important antioxidant.</li>
+                            <li>Fiber: A good source of fiber.</li>
+                            <li>Other nutrients: Contains other vitamins, minerals, and antioxidants.</li>
+                            <li> Low in calories: A healthy and low-calorie fruit.</li>
+                            </ul>
+                            <p>Uses:</p>
+                            <ul>
+                            <li> Fresh consumption: Enjoyed as a snack or added to salads, desserts, or
+                                smoothies.</li>
+                            <li> Culinary applications: Used in jams, sauces, desserts, and other dishes.
+                            </li>
+                            </ul>
+
+                            <p>Storage:</p>
+                            <ul>
+                            <li> Refrigeration: Should be refrigerated to maintain freshness</li>
+                            <li>Humidity: Best stored in the refrigerator at high humidity</li>
+                            </ul>
+                        </ul>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </Section>
+
+
+
+    </main>
+
+     <footer>
+       
+            <div class="container-fluid contactshippingcont">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="contact-banner">
+                            <div>
+                                Get in Touch with us <br />
+                                <span style="font-size: 21px; font-weight: normal;">+91 91010 90000</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-8 shippingcol">
+                        <div class="shipping-col">
+                            <div class="shipping">
+                                <div class="shipping-img">
+                                    <img src="../images/free shipping icon.png">
+                                </div>
+
+                                <div class="freeshipping">
+                                    <p>Free Shipping</p>
+                                    <p>For Orders Above 500</p>
+                                </div>
+                            </div>
+                            <div class="produce">
+                                <div class="shipping-img">
+                                    <img src="../images/fresh produce icon.png">
+                                </div>
+                                <div class="freeshipping">
+                                    <p>Fresh Produce</p>
+                                    <p>Guaranteed Product Warranty</p>
+                                </div>
+                            </div>
+                            <div class="safety">
+                                <div class="shipping-img">
+                                    <img src="../images/safety icon.png">
+                                </div>
+                                <div class="freeshipping">
+                                    <p>100% Safety & Security</p>
+                                    <p>Your Data is Highly Secured</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+      
+        <div class="footer-div container-fluid align-items-center">
+            <div class="row footerrow">
+                <div class="footer-div1 col-sm-12 col-12 col-md-6 col-lg-5">
+                    <div class="footer-logo">
+                        <div class="foot-logo">
+                            <img class="logoimg2" src="../images/logofooter.PNG" /><br />
+                            <a href="./index.html" class="home-logo">GROCERIES <br />AT DOORSTEP</a>
+                        </div>
+
+                        <p>
+                            Fresh groceries, particularly fruits, vegetables,<br> whole grains,
+                            and lean proteins, play a crucial<br> role in nourishing our bodies
+                            and promoting<br> overall well-being
+                        </p>
+                    </div>
+                </div>
+                <div class="footer-div2 col-sm-12 col-12 col-md-6 col-lg-4">
+                    <h5>NAVIGATE</h5>
+                    <ul>
+                        <li><a href="./privacypolicy.html">Privacy Policy</a></li>
+                        <li><a href="./termsconditions.html">Terms & conditions</a></li>
+                        <li><a href="./termsconditions.html">How to Order</a></li>
+                        <li><a href="./aboutus.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-div3 col-sm-12 col-12 col-md-6 col-lg-3">
+                    <h5>G-STORE</h5>
+                    <p>REG: T21542GST548</p>
+                    <p>TIN: 14578452884</p>
+                    <p>Email: groceriesatdoorstep@gmail.com</p>
+                </div>
+
+            </div>
+            <p class="copyright">
+                Copyrights 2022 &copy; Groceries At Doorsteps Ltd
+            </p>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="../js/turmeric.js"></script>
+</body>
+
+</html>
